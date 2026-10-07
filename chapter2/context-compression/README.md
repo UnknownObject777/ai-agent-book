@@ -33,7 +33,7 @@
 
 #### 1. 无压缩
 - 网页原文直接进入上下文  
-- 预期：几次工具调用后溢出失败  
+- 检查：上下文随工具返回增长的速度及预算边界
 - 目的：展示基线问题  
 
 #### 2. 非任务感知：逐页摘要
@@ -55,7 +55,7 @@
 - 利于追问；上下文略大  
 
 #### 6. 窗口化上下文
-- 最近一次工具调用保留全文，更早历史压缩  
+- 新工具结果先保留原文，达到预算阈值后批量压缩尚未标记的工具消息
 - 细节与效率折中  
 - 只压缩尚未标记 `[COMPRESSED]` 的消息
 
@@ -76,13 +76,9 @@
 
 策略别名：`no_compression`、`individual`、`combined`、`context_aware`、`citations`、`windowed`。
 
-### 定性预期
+### 比较问题
 
-1. 无压缩 → 溢出失败  
-2. 非任务感知 → 可能完成但丢细节  
-3. 上下文感知 → 体积与相关性较均衡  
-4. 带引用 → 最利于追问  
-5. 窗口化 → 长对话更高效
+逐页摘要能否保留页内事实？合并摘要能否正确合并重复内容？任务感知摘要是否保留下一步所需信息？引用是否对应支持该事实的原文？窗口化整理后能否继续执行？用相同材料分别检查这些问题，再比较整体任务开销。
 
 <a id="learning-1"></a>
 
@@ -118,7 +114,7 @@ cp env.example .env
 
 - `LLM_PROVIDER`：`kimi`（默认）、`dashscope`/`qwen`/`bailian` 或 `openrouter`。
 - `DASHSCOPE_API_KEY`：使用阿里云百炼 / Model Studio 时的 Key，默认模型 `qwen3.7-plus`（国际区 Key 可设置 `DASHSCOPE_BASE_URL`）。
-- `MOONSHOT_API_KEY`：Kimi/Moonshot（在线跑必需）。书中实验 2-10 使用 Kimi K3（真实窗口约 1M）；演示通过 `CONTEXT_WINDOW_SIZE`（默认 128K）**故意收紧**溢出/压缩预算以便观察。可用 `MODEL_NAME` 或 `-m/--model` 覆盖（如 `kimi-k2.5`、`kimi-k3`、`moonshot-v1-128k`）。
+- `MOONSHOT_API_KEY`：Kimi/Moonshot（在线跑必需）。实验通过 `CONTEXT_WINDOW_SIZE`（默认 128K）**故意收紧**溢出/压缩预算以便观察。可用 `MODEL_NAME` 或 `-m/--model` 覆盖（如 `kimi-k2.5`、`kimi-k3`、`moonshot-v1-128k`）。
 - `OPENROUTER_API_KEY`：未设置 Moonshot key 时的通用回退（`kimi-*` → `moonshotai/kimi-k2`）。设了 `MOONSHOT_API_KEY` 时行为不变。
 - `SERPER_API_KEY`：联网搜索（可选；缺失则用 mock 数据）
 
@@ -133,7 +129,7 @@ cp env.example .env
 - `MAX_ITERATIONS`（默认 50）  
 - `MAX_WEBPAGE_LENGTH`（默认 50000）  
 - `SUMMARY_MAX_TOKENS`（默认 500）  
-- `CONTEXT_WINDOW_SIZE`（默认 128000；相对 K3 真实 ~1M 的故意收紧）
+- `CONTEXT_WINDOW_SIZE`（默认 128000；应用侧实验预算）
 
 <a id="learning-2"></a>
 
@@ -213,9 +209,11 @@ if result['success']:
 
 成功率、执行时间、压缩比（压缩后/原始）、上下文溢出次数、工具调用次数、最终答案长度。
 
-### 实测结果（真实运行）
+### 历史结果表：待补原始记录
 
-真实端到端（无 mock）：实时 Serper + Moonshot 推理模型。
+以下表格保留此前文稿记录，便于追查。当前工作副本未找到所指的 `results/kimi_k3_real_20260718.json`，各项数值、模型标识和统计口径尚待原始文件核验。正文实验 2-10 现按教学比较方法编写，不引用本表的性能排名。
+
+恢复记录后，应检查：实际服务与模型标识、应用预算与模型窗口的区别、摘要调用是否计入总 token、字符压缩比分母、溢出后的恢复过程，以及答案证据的完整性。以下为历史记录：
 
 - **模型：** `kimi-k3`（真实窗口约 1M；演示预算 `CONTEXT_WINDOW_SIZE = 128000`）  
 - **搜索：** 真实 Serper + 页面抓取  
@@ -237,7 +235,7 @@ if result['success']:
 - **上下文感知摘要（#4）** token 最省（40,157 tokens，字符压缩 3.0%）。  
 - **逐页摘要（#2）**最慢（约 50 分钟）：推理模型对每页单独摘要。  
 - **窗口化（#6）**仅在用量跨过约 80% 预算时批量压缩未压缩工具消息；保留近期全文，字符「压缩比」约 100%，但在可完成任务的策略中总时间最短。  
-- 单次运行绝对值会波动；相对排序是关键 takeaway。
+- 原始记录恢复后，以相同页面和多次重复运行检验各项差异。
 
 ### 检查自己的解释
 
@@ -338,7 +336,7 @@ This lab implements and compares **6** strategies and their trade-offs.
 
 #### 1. No compression
 - Full webpage content into context  
-- Expected: fails after a few tool calls (overflow)  
+- Check context growth and the configured budget boundary
 - Purpose: baseline problem  
 
 #### 2. Non-context-aware: individual summaries
@@ -360,7 +358,7 @@ This lab implements and compares **6** strategies and their trade-offs.
 - Better for follow-ups; slightly larger  
 
 #### 6. Windowed context
-- Full content for latest tool call; compress older history  
+- Keep new results in full; at the budget threshold, compress all unmarked tool messages
 - Balance detail vs efficiency  
 - Only compresses messages not already marked `[COMPRESSED]`  
 
@@ -392,7 +390,7 @@ cp env.example .env
 
 - `LLM_PROVIDER` — `kimi` (default), `dashscope`/`qwen`/`bailian`, or `openrouter`.
 - `DASHSCOPE_API_KEY` — Alibaba Cloud Model Studio / Bailian key when using DashScope; default model is `qwen3.7-plus` (set `DASHSCOPE_BASE_URL` for international keys).
-- `MOONSHOT_API_KEY` — Kimi/Moonshot for live runs. Book 实验 2-10 uses Kimi K3 (~1M real window); the demo **caps** the compression/overflow budget at `CONTEXT_WINDOW_SIZE` (default 128K) so overflow/compression is observable. Override model via `MODEL_NAME` or `-m/--model` (e.g. `kimi-k2.5`, `kimi-k3`, `moonshot-v1-128k`).
+- `MOONSHOT_API_KEY` — Kimi/Moonshot for live runs. The experiment configures its application-side compression/overflow budget with `CONTEXT_WINDOW_SIZE` (default 128K) so overflow/compression is observable. Override model via `MODEL_NAME` or `-m/--model` (e.g. `kimi-k2.5`, `kimi-k3`, `moonshot-v1-128k`).
 - `OPENROUTER_API_KEY` — fallback if Moonshot key unset (`kimi-*` → `moonshotai/kimi-k2`). Unchanged if `MOONSHOT_API_KEY` is set.
 - `SERPER_API_KEY` — web search (optional; mock data if missing)
 
@@ -506,17 +504,15 @@ context-compression/
 
 Success rate, execution time, compression ratio (compressed/original size), context overflows, tool calls, final answer length.
 
-### Expected results (qualitative)
+### Comparison questions
 
-1. No compression → overflow fail  
-2. Non-context-aware → may complete, miss detail  
-3. Context-aware → good size/relevance balance  
-4. With citations → best for follow-ups  
-5. Windowed → efficient for long multi-turn  
+Check fact retention, deduplication, task relevance, source attribution, and continuity after windowed compression using the same input pages. Then compare end-to-end quality and cost across repeated runs.
 
-### Measured results (real run)
+### Historical result table: source record pending
 
-Real end-to-end run (no mock): live Serper + Moonshot reasoning model.
+The current working copy does not contain the referenced `results/kimi_k3_real_20260718.json`. The table below preserves the previous manuscript's figures for investigation. Model identity, metrics, and accounting need verification against that artifact. Book Experiment 2-10 now teaches the comparison procedure without citing this ranking.
+
+Verify the service/model identity, application budget versus model window, inclusion of summary calls in token totals, compression-ratio denominator, overflow recovery, and answer evidence before reusing these figures. Historical record follows:
 
 - **Model:** `kimi-k3` (real window ~1M; demo budget `CONTEXT_WINDOW_SIZE = 128000`)  
 - **Search:** real Serper + page crawl  
@@ -538,7 +534,7 @@ Notes:
 - **Context-aware summary (#4)** most token-efficient success (40,157 tokens, 3.0% char compression).  
 - **Individual summaries (#2)** slowest (~50 min): per-page summaries on a reasoning model.  
 - **Windowed (#6)** compresses only when usage crosses ~80% of budget; keeps recent full content → char “compression ratio” ~100% while still finishing fastest among compressing strategies.  
-- Single-run numbers vary; relative ordering is the takeaway.
+- Once the source record is restored, use fixed pages and repeated runs to evaluate differences.
 
 ### Configuration
 
@@ -549,7 +545,7 @@ Notes:
 - `MAX_ITERATIONS` (default 50)  
 - `MAX_WEBPAGE_LENGTH` (default 50000)  
 - `SUMMARY_MAX_TOKENS` (default 500)  
-- `CONTEXT_WINDOW_SIZE` (default 128000; intentional cap vs K3’s real ~1M window)  
+- `CONTEXT_WINDOW_SIZE` (default 128000; application-side experiment budget)
 
 ### Troubleshooting
 

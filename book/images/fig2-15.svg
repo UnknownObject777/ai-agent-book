@@ -1,66 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 40 820 460" width="820" height="460" style="background:#ffffff">
-<defs><marker id="ah" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#333333"/></marker><marker id="ah-light" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#999999"/></marker></defs>
-
-
-<!-- messages array label -->
-<text x="40" y="60" font-family="'Courier New', Courier, monospace" font-size="16" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="bold">messages: [</text>
-
-<!-- Row 1: system -->
-<rect x="50" y="78" width="480" height="32" rx="4" fill="#e8e8e8" stroke="#999999" stroke-width="1.5"/>
-<text x="62" y="94" font-family="'Courier New', Courier, monospace" font-size="13" fill="#333333" text-anchor="start" dominant-baseline="central">{ role: "system", content: "你是电信客服..." }</text>
-
-<!-- Row 2: tools -->
-<rect x="50" y="114" width="480" height="32" rx="4" fill="#e8e8e8" stroke="#999999" stroke-width="1.5"/>
-<text x="62" y="130" font-family="'Courier New', Courier, monospace" font-size="13" fill="#333333" text-anchor="start" dominant-baseline="central">tools: [cancel_plan, query_records, ...]</text>
-
-<!-- Bracket for "固定不变" -->
-<path d="M 540,78 C 555,78 555,114 560,123 C 555,132 555,146 540,146" fill="none" stroke="#999999" stroke-width="1.5"/>
-<text x="570" y="112" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13" fill="#666666" text-anchor="start" dominant-baseline="central">固定不变</text>
-<text x="570" y="130" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13" fill="#666666" text-anchor="start" dominant-baseline="central">(KV Cache 缓存)</text>
-
-<!-- Row 3: user message -->
-<rect x="50" y="154" width="480" height="32" rx="4" fill="#dce9f5" stroke="#999999" stroke-width="1.5"/>
-<text x="62" y="170" font-family="'Courier New', Courier, monospace" font-size="13" fill="#333333" text-anchor="start" dominant-baseline="central">{ role: "user", content: "帮我取消套餐" }</text>
-
-<!-- Row 4: assistant tool_calls -->
-<rect x="50" y="190" width="480" height="32" rx="4" fill="#d9f0d9" stroke="#999999" stroke-width="1.5"/>
-<text x="62" y="206" font-family="'Courier New', Courier, monospace" font-size="13" fill="#333333" text-anchor="start" dominant-baseline="central">{ role: "assistant", tool_calls: [cancel_plan(...)] }</text>
-
-<!-- Row 5: tool result -->
-<rect x="50" y="226" width="480" height="32" rx="4" fill="#fdf6e3" stroke="#999999" stroke-width="1.5"/>
-<text x="62" y="242" font-family="'Courier New', Courier, monospace" font-size="13" fill="#333333" text-anchor="start" dominant-baseline="central">{ role: "tool", content: "该套餐有合约期..." }</text>
-
-<!-- Row 6: assistant text -->
-<rect x="50" y="262" width="480" height="32" rx="4" fill="#d9f0d9" stroke="#999999" stroke-width="1.5"/>
-<text x="62" y="278" font-family="'Courier New', Courier, monospace" font-size="13" fill="#333333" text-anchor="start" dominant-baseline="central">{ role: "assistant", content: "您的套餐在合约期内..." }</text>
-
-<!-- Ellipsis row -->
-<text x="280" y="306" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#999999" text-anchor="middle" dominant-baseline="central">... 更多对话轮次 ...</text>
-
-<!-- Row 7: user follow-up -->
-<rect x="50" y="322" width="480" height="32" rx="4" fill="#dce9f5" stroke="#999999" stroke-width="1.5"/>
-<text x="62" y="338" font-family="'Courier New', Courier, monospace" font-size="13" fill="#333333" text-anchor="start" dominant-baseline="central">{ role: "user", content: "那帮我查一下通话记录" }</text>
-<text x="570" y="338" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="start" dominant-baseline="central">用户追问</text>
-
-<!-- Row 8: Agent 状态栏 (highlighted) -->
-<rect x="50" y="362" width="480" height="48" rx="4" fill="#fff3cd" stroke="#e6a817" stroke-width="2.5"/>
-<text x="62" y="380" font-family="'Courier New', Courier, monospace" font-size="13" fill="#333333" text-anchor="start" dominant-baseline="central">{ role: "user", content: "&lt;agent_status&gt;</text>
-<text x="62" y="398" font-family="'Courier New', Courier, monospace" font-size="13" fill="#333333" text-anchor="start" dominant-baseline="central">  已呼叫 3/3 次 · TODO: 取消套餐(进行中)&lt;/agent_status&gt;" }</text>
-
-<!-- Arrow pointing to system hint -->
-<line x1="570" y1="386" x2="538" y2="386" stroke="#e6a817" stroke-width="2" marker-end="url(#ah)"/>
-<text x="578" y="378" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#c9a227" text-anchor="start" dominant-baseline="central" font-weight="bold">Agent 框架插入</text>
-<text x="578" y="396" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#c9a227" text-anchor="start" dominant-baseline="central" font-weight="bold">的 Agent 状态栏</text>
-
-<!-- Closing bracket -->
-<text x="40" y="428" font-family="'Courier New', Courier, monospace" font-size="16" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="bold">]</text>
-
-<!-- Generation position arrow and label -->
-<line x1="50" y1="422" x2="50" y2="450" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<rect x="60" y="442" width="20" height="20" rx="2" fill="#d9f0d9" stroke="#999999" stroke-width="1"/>
-<text x="88" y="452" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#333333" text-anchor="start" dominant-baseline="central">模型从此处开始生成</text>
-
-<!-- Bottom note -->
-<rect x="50" y="472" width="720" height="22" rx="4" fill="#f5f5f5" stroke="none"/>
-<text x="410" y="483" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central">← 紧邻模型生成位置，获得最高注意力权重</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="150mm" height="116.67mm" viewBox="0 0 720 560" role="img" aria-labelledby="title desc">
+<title id="title">最新状态的上下文位置</title>
+<desc id="desc">规则、相关历史和最新状态组成一次请求，末尾状态由 Harness 生成。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#292929"/></marker></defs>
+<rect width="720" height="560" fill="#ffffff"/>
+<rect x="55" y="25" width="610" height="70" rx="6" fill="#dedede" stroke="#292929" stroke-width="1.5"/>
+<text x="360.0" y="66.0" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">稳定规则与工具定义</text>
+<rect x="55" y="120" width="610" height="110" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
+<text x="360.0" y="150" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">任务历史</text>
+<text x="360.0" y="181" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">用户要求、模型请求、通话与搜索结果</text>
+<rect x="55" y="255" width="610" height="120" rx="6" fill="#ffffff" stroke="#292929" stroke-width="1.5"/>
+<text x="360.0" y="285" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">Harness 生成的最新状态</text>
+<text x="360.0" y="316" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">已拨打三次，达到上限</text>
+<text x="360.0" y="341" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">退款仍在处理；下一步核实到账</text>
+<path d="M 360 375 L 360 425" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="175" y="430" width="370" height="65" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
+<text x="360.0" y="468.5" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">模型基于本轮上下文继续决策</text>
+<text x="360" y="537" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">状态注明来源与更新时间，随任务推进更新。</text>
 </svg>

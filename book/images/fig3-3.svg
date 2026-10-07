@@ -1,61 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 340" width="920" height="340" style="background:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="8" refX="10" refY="4" orient="auto">
-      <polygon points="0 0, 10 4, 0 8" fill="#555"/>
-    </marker>
-    <style>
-      text { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; fill: #333; }
-      .title { font-size: 18px; font-weight: 700; }
-      .label { font-size: 15px; font-weight: 700; }
-      .detail { font-size: 13px; fill: #666; }
-      .box { fill: #f4f4f4; stroke: #555; stroke-width: 1.6; }
-      .new { fill: #e8f3ec; stroke: #39734f; }
-      .flow { stroke: #555; stroke-width: 1.8; marker-end: url(#arrow); }
-    </style>
-  </defs>
-
-  <text x="28" y="32" class="title">v2 (2025 paper)</text>
-  <rect x="28" y="50" width="125" height="58" rx="6" class="box"/>
-  <text x="90" y="84" text-anchor="middle" class="label">Dialogue</text>
-  <line x1="153" y1="79" x2="180" y2="79" class="flow"/>
-  <rect x="180" y="50" width="135" height="58" rx="6" class="box"/>
-  <text x="248" y="76" text-anchor="middle" class="label">LLM extract</text>
-  <text x="248" y="96" text-anchor="middle" class="detail">candidate facts</text>
-  <line x1="315" y1="79" x2="342" y2="79" class="flow"/>
-  <rect x="342" y="50" width="135" height="58" rx="6" class="box"/>
-  <text x="410" y="76" text-anchor="middle" class="label">Vector search</text>
-  <text x="410" y="96" text-anchor="middle" class="detail">existing memory</text>
-  <line x1="477" y1="79" x2="504" y2="79" class="flow"/>
-  <rect x="504" y="50" width="135" height="58" rx="6" class="box"/>
-  <text x="572" y="76" text-anchor="middle" class="label">LLM decide</text>
-  <text x="572" y="96" text-anchor="middle" class="detail">compare facts</text>
-  <line x1="639" y1="79" x2="666" y2="79" class="flow"/>
-  <rect x="666" y="50" width="226" height="58" rx="6" class="box"/>
-  <text x="779" y="76" text-anchor="middle" class="label">ADD · UPDATE</text>
-  <text x="779" y="98" text-anchor="middle" class="label">DELETE · NOOP</text>
-  <text x="460" y="133" text-anchor="middle" class="detail">Conflicts resolved at write time; old facts may be overwritten or deleted</text>
-
-  <line x1="28" y1="158" x2="892" y2="158" stroke="#bbb" stroke-width="1"/>
-
-  <text x="28" y="194" class="title">v3 (April 2026)</text>
-  <rect x="28" y="212" width="125" height="58" rx="6" class="box new"/>
-  <text x="90" y="246" text-anchor="middle" class="label">Dialogue</text>
-  <line x1="153" y1="241" x2="180" y2="241" class="flow"/>
-  <rect x="180" y="212" width="150" height="58" rx="6" class="box new"/>
-  <text x="255" y="238" text-anchor="middle" class="label">1× LLM extract</text>
-  <text x="255" y="258" text-anchor="middle" class="detail">single pass</text>
-  <line x1="330" y1="241" x2="357" y2="241" class="flow"/>
-  <rect x="357" y="212" width="150" height="58" rx="6" class="box new"/>
-  <text x="432" y="238" text-anchor="middle" class="label">ADD-only store</text>
-  <text x="432" y="258" text-anchor="middle" class="detail">preserve history</text>
-  <line x1="507" y1="241" x2="534" y2="241" class="flow"/>
-  <rect x="534" y="212" width="218" height="58" rx="6" class="box new"/>
-  <text x="643" y="236" text-anchor="middle" class="label">Hybrid retrieval</text>
-  <text x="643" y="258" text-anchor="middle" class="detail">semantic · BM25 · entity · time</text>
-  <line x1="752" y1="241" x2="779" y2="241" class="flow"/>
-  <rect x="779" y="212" width="113" height="58" rx="6" class="box new"/>
-  <text x="835" y="238" text-anchor="middle" class="label">Top-k</text>
-  <text x="835" y="258" text-anchor="middle" class="detail">ranked facts</text>
-  <text x="460" y="299" text-anchor="middle" class="detail">LoCoMo 71.4 → 92.5 (+21.1) · LongMemEval 67.8 → 94.4 (+26.6)</text>
-  <text x="460" y="323" text-anchor="middle" class="detail">History is preserved; relevance and time resolve conflicts during retrieval</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="150mm" height="131.25mm" viewBox="0 0 720 630" role="img" aria-labelledby="title desc">
+<title id="title">Mem0 记忆管理架构</title>
+<desc id="desc">对比旧流程写入时更新事实与新流程追加事实后检索的分工。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#292929"/></marker></defs>
+<rect width="720" height="630" fill="#ffffff"/>
+<text x="185" y="30" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">论文中的更新流程</text>
+<text x="535" y="30" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">新版开源追加流程</text>
+<rect x="30" y="65" width="310" height="95" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
+<text x="185.0" y="95" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">提取候选事实</text>
+<text x="185.0" y="126" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">用户说明搬到上海</text>
+<path d="M 185 160 L 185 193" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="30" y="193" width="310" height="95" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
+<text x="185.0" y="223" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">检索相近记忆</text>
+<text x="185.0" y="254" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">找到此前居住地</text>
+<path d="M 185 288 L 185 321" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="30" y="321" width="310" height="95" rx="6" fill="#dedede" stroke="#292929" stroke-width="1.5"/>
+<text x="185.0" y="351" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">决定怎样更新</text>
+<text x="185.0" y="382" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">新增、修改、删除或保留</text>
+<path d="M 185 416 L 185 449" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="30" y="449" width="310" height="95" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
+<text x="185.0" y="479" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">读取整理后的事实</text>
+<text x="185.0" y="510" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">当前居住地：上海</text>
+<rect x="380" y="65" width="310" height="95" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
+<text x="535.0" y="95" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">提取新增事实</text>
+<text x="535.0" y="126" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">参考已有记忆去重</text>
+<path d="M 535 160 L 535 193" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="380" y="193" width="310" height="95" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
+<text x="535.0" y="223" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">追加保存</text>
+<text x="535.0" y="254" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">北京、搬到上海的记录并存</text>
+<path d="M 535 288 L 535 321" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="380" y="321" width="310" height="95" rx="6" fill="#dedede" stroke="#292929" stroke-width="1.5"/>
+<text x="535.0" y="351" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">混合检索</text>
+<text x="535.0" y="382" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">语义、关键词与实体匹配</text>
+<path d="M 535 416 L 535 449" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="380" y="449" width="310" height="95" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
+<text x="535.0" y="479" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">结合时间与情境使用</text>
+<text x="535.0" y="510" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">判断当前适用信息</text>
+<text x="360" y="589" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">事实变化需要在写入、检索与使用过程中得到处理。</text>
 </svg>
