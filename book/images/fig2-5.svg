@@ -1,22 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 40 900 184" width="900" height="184" style="background:#ffffff">
-<defs><marker id="ah" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#333333"/></marker><marker id="ah-light" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#999999"/></marker></defs>
-<rect x="26.0" y="44" width="200" height="84" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="126.0" y="74.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">用户请求</text>
-<text x="126.0" y="100.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="bold">“帮我联系 Xfinity 砍价”</text>
-<rect x="242.0" y="44" width="200" height="84" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="342.0" y="74.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">本地 LLM 服务</text>
-<text x="342.0" y="100.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="bold">vLLM/Ollama（OpenAI 兼容）</text>
-<line x1="228.0" y1="86.0" x2="240.0" y2="86.0" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<rect x="458.0" y="44" width="200" height="84" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="558.0" y="74.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">模型推理</text>
-<text x="558.0" y="100.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="bold">决定并生成 tool_call</text>
-<line x1="444.0" y1="86.0" x2="456.0" y2="86.0" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<rect x="674.0" y="44" width="200" height="84" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="774.0" y="74.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">本地工具执行</text>
-<text x="774.0" y="100.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="bold">调用函数 / 外部 API</text>
-<line x1="660.0" y1="86.0" x2="672.0" y2="86.0" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<line x1="774.0" y1="128" x2="774.0" y2="158" stroke="#333333" stroke-width="2" stroke-dasharray="8,4"/>
-<line x1="774.0" y1="158" x2="558.0" y2="158" stroke="#333333" stroke-width="2" stroke-dasharray="8,4"/>
-<line x1="558.0" y1="158" x2="558.0" y2="130" stroke="#333333" stroke-width="2" stroke-dasharray="8,4" marker-end="url(#ah)"/>
-<text x="666.0" y="176" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">工具结果回传模型，生成最终回复</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="150mm" height="106.67mm" viewBox="0 0 900 640" role="img" aria-labelledby="title desc">
+<title id="title">本地 LLM 工具调用架构</title><desc id="desc">温哥华时间与天气任务：客户端维护消息、调用本地模型并调度两个工具，再将观测回传模型。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#333333"/></marker></defs>
+<rect width="900" height="640" fill="#ffffff"/>
+<rect x="20" y="20" width="860" height="80" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="450" y="52" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="24" font-weight="700" fill="#292929">用户请求</text>
+<text x="450" y="83" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="400" fill="#292929">查询温哥华当前时间与天气</text>
+<path d="M 195 100 L 195 150" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="20" y="150" width="350" height="470" rx="6" fill="#f2f2f2" stroke="#333333" stroke-width="1.8"/>
+<text x="195" y="188" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="25" font-weight="700" fill="#292929">客户端 Harness</text>
+<text x="195" y="240" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="400" fill="#292929">组织 messages 与 tools</text>
+<text x="195" y="289" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="21" font-weight="400" fill="#292929">保存模型回复与调用 ID</text>
+<text x="195" y="395" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="400" fill="#292929">解析与校验参数</text>
+<text x="195" y="441" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="400" fill="#292929">调度独立调用</text>
+<text x="195" y="537" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="400" fill="#292929">追加工具结果</text>
+<text x="195" y="583" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="21" font-weight="400" fill="#292929">再次调用模型 → 最终回复</text>
+<rect x="520" y="150" width="360" height="190" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="700" y="188" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="25" font-weight="700" fill="#292929">本地 LLM 服务</text>
+<text x="700" y="229" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="400" fill="#292929">vLLM / Ollama</text>
+<text x="700" y="269" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="24" font-weight="700" fill="#292929">Qwen3-0.6B</text>
+<text x="700" y="311" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="21" font-weight="400" fill="#292929">推理 · 生成工具调用或回答</text>
+<path d="M 370 220 L 520 220" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="445" y="207" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">模型请求</text>
+<path d="M 520 300 L 370 300" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="445" y="287" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">模型响应</text>
+<rect x="520" y="380" width="360" height="240" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="700" y="419" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="25" font-weight="700" fill="#292929">工具执行</text>
+<text x="700" y="462" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="21" font-weight="400" fill="#292929">时间：America/Vancouver</text>
+<text x="700" y="502" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="21" font-weight="400" fill="#292929">天气：Vancouver、celsius</text>
+<text x="700" y="550" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="400" fill="#292929">函数 / 外部 API</text>
+<text x="700" y="591" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="21" font-weight="400" fill="#292929">返回时间、气温等观测</text>
+<path d="M 370 447 L 520 447" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="445" y="433" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">调用请求</text>
+<path d="M 520 550 L 370 550" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="445" y="536" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">执行结果</text>
 </svg>
