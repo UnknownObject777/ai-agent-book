@@ -12,21 +12,6 @@
 
 因果模型在生成后续词元时可以复用前缀的计算。若每轮都改写前面的系统消息、重排工具定义或移动历史窗口，原来相同的前缀就可能变短。缓存复用关注的是实际输入序列，而不是两段文字在人看来是否意思相同。
 
-### 正文实验 2-3 的固定依据
-
-正文采用 2026 年 7 月 18 日 Kimi K2.6 的六份记录：
-
-| 条件 | 固定记录 | 轮数 | 完成 | 累计缓存 token |
-| --- | --- | ---: | --- | ---: |
-| 稳定前缀 | [correct](result_correct_20260718_kimi_k2_6.json) | 3 | 是 | 768 |
-| 动态系统提示 | [dynamic_system](result_dynamic_system_20260718_kimi_k2_6.json) | 3 | 是 | 768 |
-| 动态用户配置 | [dynamic_profile](result_dynamic_profile_20260718_kimi_k2_6.json) | 3 | 是 | 768 |
-| 工具重排 | [shuffled_tools](result_shuffled_tools_20260718_kimi_k2_6.json) | 3 | 是 | 256 |
-| 滑动窗口 | [sliding_window](result_sliding_window_20260718_kimi_k2_6.json) | 5 | 否 | 1510 |
-| 文本改写 | [text_format](result_text_format_20260718_kimi_k2_6.json) | 3 | 是 | 674 |
-
-滑动窗口组记录了重复查找；缓存 token 是各次请求累计值，比较时还要结合总输入量、轮数和输出长度。原稿中“所有动态信息都会完全破坏缓存”“文本改写必然失败”等概括已按这些记录修正。运行参数、消息处理和更多指标继续见下文。
-
 ### 概述
 
 用带本地文件系统工具的 ReAct Agent，展示 **KV（Key-Value）Cache** 在六种实现模式（一种正确、五种错误）下的利用率差异。看似无害的改动可能让缓存失效，显著拖慢延迟并推高成本。

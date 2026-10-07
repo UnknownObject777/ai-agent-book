@@ -1,37 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="150mm" height="105.21mm" viewBox="0 0 720 505" role="img" aria-labelledby="title desc">
-<title id="title">注意力的信息汇总</title>
-<desc id="desc">四词组教学示意，权重由作者设定，用于说明加权计算。</desc>
-<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#292929"/></marker></defs>
-<rect width="720" height="505" fill="#ffffff"/>
-<rect x="190" y="20" width="340" height="75" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
-<text x="360.0" y="50" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">当前位置：怎么样</text>
-<text x="360.0" y="81" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">Query 与各位置的 Key 匹配</text>
-<path d="M 360 95 L 360 135" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<rect x="75" y="140" width="570" height="58" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
-<text x="360.0" y="175.0" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">分数经缩放、掩码与 softmax 得到权重</text>
-<path d="M 360 198 L 360 213 L 97 213 L 97 230" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<rect x="25" y="230" width="145" height="85" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
-<text x="97.5" y="260" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">北京</text>
-<text x="97.5" y="291" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">权重 0.35</text>
-<path d="M 97 315 L 97 345 L 360 345" fill="none" stroke="#292929" stroke-width="1.8"/>
-<path d="M 360 198 L 360 213 L 272 213 L 272 230" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<rect x="200" y="230" width="145" height="85" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
-<text x="272.5" y="260" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">的</text>
-<text x="272.5" y="291" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">权重 0.05</text>
-<path d="M 272 315 L 272 345 L 360 345" fill="none" stroke="#292929" stroke-width="1.8"/>
-<path d="M 360 198 L 360 213 L 447 213 L 447 230" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<rect x="375" y="230" width="145" height="85" rx="6" fill="#dedede" stroke="#292929" stroke-width="1.5"/>
-<text x="447.5" y="260" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">天气</text>
-<text x="447.5" y="291" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">权重 0.55</text>
-<path d="M 447 315 L 447 345 L 360 345" fill="none" stroke="#292929" stroke-width="1.8"/>
-<path d="M 360 198 L 360 213 L 622 213 L 622 230" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<rect x="550" y="230" width="145" height="85" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
-<text x="622.5" y="260" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">怎么样</text>
-<text x="622.5" y="291" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">权重 0.05</text>
-<path d="M 622 315 L 622 345 L 360 345" fill="none" stroke="#292929" stroke-width="1.8"/>
-<path d="M 360 345 L 360 375" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<rect x="120" y="380" width="480" height="65" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
-<text x="360.0" y="418.5" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">各位置的 Value 按权重求和</text>
-<text x="360" y="480" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">权重合计为 1；词组与数值用于解释计算过程。</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 40 760 570" width="760" height="570" style="background:#ffffff">
+<defs><marker id="ah" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#333333"/></marker><marker id="ah-light" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#999999"/></marker></defs>
+<text x="40" y="78" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="bold">① 「怎么样」对前文每个词的注意力权重</text>
+<rect x="60" y="96" width="150" height="66" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
+<text x="135.0" y="118" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">北京</text>
+<text x="135.0" y="143" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">Key · 权重 0.35</text>
+<rect x="228" y="96" width="150" height="66" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
+<text x="303.0" y="118" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">的</text>
+<text x="303.0" y="143" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">Key · 权重 0.05</text>
+<rect x="396" y="96" width="150" height="66" rx="6" fill="#d0d0d0" stroke="#333333" stroke-width="2"/>
+<text x="471.0" y="118" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">天气</text>
+<text x="471.0" y="143" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">Key · 权重 0.55</text>
+<rect x="564" y="96" width="150" height="66" rx="6" fill="#f5f5f5" stroke="#999999" stroke-width="2"/>
+<text x="639.0" y="118" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">怎么样</text>
+<text x="639.0" y="143" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">Query（当前）</text>
+<text x="380" y="192" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">Query 与各 Key 打分 → 归一化为权重 → 对 Value 加权求和（重点参考「天气」）</text>
+<text x="40" y="244" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="bold">② 注意力热力图：每个词只能看自己与前文（因果三角）</text>
+<text x="176" y="284" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="end" dominant-baseline="central" font-weight="normal">Key →</text>
+<text x="232.0" y="284" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">北京</text>
+<text x="296.0" y="284" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">的</text>
+<text x="360.0" y="284" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">天气</text>
+<text x="424.0" y="284" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">怎么样</text>
+<text x="110" y="428" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">Query ↓</text>
+<text x="176" y="332.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="end" dominant-baseline="central" font-weight="normal">北京</text>
+<rect x="200" y="300" width="64" height="64" fill="#555555" stroke="#ffffff" stroke-width="2"/>
+<text x="232.0" y="332.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" dominant-baseline="central">1.00</text>
+<rect x="264" y="300" width="64" height="64" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+<rect x="328" y="300" width="64" height="64" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+<rect x="392" y="300" width="64" height="64" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+<text x="176" y="396.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="end" dominant-baseline="central" font-weight="normal">的</text>
+<rect x="200" y="364" width="64" height="64" fill="#b0b0b0" stroke="#ffffff" stroke-width="2"/>
+<text x="232.0" y="396.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#333333" text-anchor="middle" dominant-baseline="central">0.30</text>
+<rect x="264" y="364" width="64" height="64" fill="#555555" stroke="#ffffff" stroke-width="2"/>
+<text x="296.0" y="396.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" dominant-baseline="central">0.70</text>
+<rect x="328" y="364" width="64" height="64" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+<rect x="392" y="364" width="64" height="64" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+<text x="176" y="460.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="end" dominant-baseline="central" font-weight="normal">天气</text>
+<rect x="200" y="428" width="64" height="64" fill="#b0b0b0" stroke="#ffffff" stroke-width="2"/>
+<text x="232.0" y="460.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#333333" text-anchor="middle" dominant-baseline="central">0.20</text>
+<rect x="264" y="428" width="64" height="64" fill="#dcdcdc" stroke="#ffffff" stroke-width="2"/>
+<text x="296.0" y="460.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#333333" text-anchor="middle" dominant-baseline="central">0.10</text>
+<rect x="328" y="428" width="64" height="64" fill="#555555" stroke="#ffffff" stroke-width="2"/>
+<text x="360.0" y="460.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" dominant-baseline="central">0.70</text>
+<rect x="392" y="428" width="64" height="64" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+<text x="176" y="524.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="end" dominant-baseline="central" font-weight="normal">怎么样</text>
+<rect x="200" y="492" width="64" height="64" fill="#b0b0b0" stroke="#ffffff" stroke-width="2"/>
+<text x="232.0" y="524.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#333333" text-anchor="middle" dominant-baseline="central">0.35</text>
+<rect x="264" y="492" width="64" height="64" fill="#dcdcdc" stroke="#ffffff" stroke-width="2"/>
+<text x="296.0" y="524.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#333333" text-anchor="middle" dominant-baseline="central">0.05</text>
+<rect x="328" y="492" width="64" height="64" fill="#888888" stroke="#ffffff" stroke-width="2"/>
+<text x="360.0" y="524.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" dominant-baseline="central">0.55</text>
+<rect x="392" y="492" width="64" height="64" fill="#dcdcdc" stroke="#ffffff" stroke-width="2"/>
+<text x="424.0" y="524.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#333333" text-anchor="middle" dominant-baseline="central">0.05</text>
+<text x="380" y="586" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">格子越深 = 注意力越集中；上三角为空 = 不能看到还没生成的词</text>
 </svg>

@@ -1,35 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="150mm" height="154.17mm" viewBox="0 0 720 740" role="img" aria-labelledby="title desc">
-<title id="title">MCP 工具发现与调用流程</title>
-<desc id="desc">宿主中的客户端取得工具定义，模型提出调用，经宿主检查后由服务器执行，再将结果送回模型。</desc>
-<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#292929"/></marker></defs>
-<rect width="720" height="740" fill="#ffffff"/>
-<rect x="20" y="25" width="160" height="65" rx="6" fill="#dedede" stroke="#292929" stroke-width="1.5"/>
-<text x="100.0" y="63.5" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">模型</text>
-<path d="M 100.0 90 L 100.0 680" fill="none" stroke="#292929" stroke-width="1.8" stroke-dasharray="6 5"/>
-<rect x="245" y="25" width="230" height="65" rx="6" fill="#dedede" stroke="#292929" stroke-width="1.5"/>
-<text x="360.0" y="63.5" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">宿主／客户端</text>
-<path d="M 360.0 90 L 360.0 680" fill="none" stroke="#292929" stroke-width="1.8" stroke-dasharray="6 5"/>
-<rect x="535" y="25" width="165" height="65" rx="6" fill="#dedede" stroke="#292929" stroke-width="1.5"/>
-<text x="617.5" y="63.5" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">MCP 服务器</text>
-<path d="M 617.5 90 L 617.5 680" fill="none" stroke="#292929" stroke-width="1.8" stroke-dasharray="6 5"/>
-<path d="M 360 150 L 617 150" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<text x="488.5" y="138" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">取得可用工具定义</text>
-<path d="M 617 215 L 360 215" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<text x="488.5" y="203" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">返回定义</text>
-<path d="M 360 280 L 100 280" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<text x="230.0" y="268" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">提供当前所需定义</text>
-<path d="M 100 345 L 360 345" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<text x="230.0" y="333" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">提出调用与参数</text>
-<rect x="255" y="375" width="210" height="60" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
-<text x="360.0" y="411.0" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">检查参数与权限</text>
-<path d="M 360 475 L 617 475" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<text x="488.5" y="463" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">发送工具调用</text>
-<rect x="540" y="500" width="155" height="55" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
-<text x="617.5" y="533.5" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">检查并执行</text>
-<path d="M 617 590 L 360 590" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<text x="488.5" y="578" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">返回结果与状态</text>
-<path d="M 360 650 L 100 650" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<text x="230.0" y="638" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">组织结果进入上下文</text>
-<text x="360" y="714" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">宿主管理模型交互；客户端承担协议通信。</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 40 880 580" width="880" height="580">
+<defs>
+  <marker id="ah" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto">
+    <polygon points="0 0, 12 4, 0 8" fill="#333333"/>
+  </marker>
+</defs>
+<rect x="0" y="40" width="880" height="580" fill="#ffffff"/>
+
+<rect x="120" y="50" width="160" height="44" rx="6" fill="#d0d0d0" stroke="#333333" stroke-width="2"/>
+<text x="200" y="72" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">MCP Client</text>
+<rect x="600" y="50" width="160" height="44" rx="6" fill="#d0d0d0" stroke="#333333" stroke-width="2"/>
+<text x="680" y="72" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">MCP Server</text>
+<line x1="200" y1="94" x2="200" y2="600" stroke="#999999" stroke-width="2" stroke-dasharray="8,4"/>
+<line x1="680" y1="94" x2="680" y2="600" stroke="#999999" stroke-width="2" stroke-dasharray="8,4"/>
+
+<line x1="204" y1="140" x2="676" y2="140" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
+<text x="440" y="120" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" font-weight="bold">发现服务器能力（可选）</text>
+<text x="440" y="162" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#777777" text-anchor="middle">server/discover</text>
+<line x1="676" y1="205" x2="204" y2="205" stroke="#333333" stroke-width="2" stroke-dasharray="8,4" marker-end="url(#ah)"/>
+<text x="440" y="191" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#333333" text-anchor="middle" font-weight="bold">返回能力说明</text>
+<rect x="285" y="218" width="310" height="42" rx="5" fill="#f5f5f5" stroke="#999999" stroke-width="2"/>
+<text x="440" y="244" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#555555" text-anchor="middle">服务器支持哪些能力、如何交互</text>
+
+<line x1="204" y1="305" x2="676" y2="305" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
+<text x="440" y="285" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" font-weight="bold">获取工具清单</text>
+<text x="440" y="327" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#777777" text-anchor="middle">tools/list</text>
+<line x1="676" y1="370" x2="204" y2="370" stroke="#333333" stroke-width="2" stroke-dasharray="8,4" marker-end="url(#ah)"/>
+<text x="440" y="356" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#333333" text-anchor="middle" font-weight="bold">返回标准化工具定义</text>
+<rect x="255" y="383" width="370" height="58" rx="5" fill="#f5f5f5" stroke="#999999" stroke-width="2"/>
+<text x="440" y="406" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#444444" text-anchor="middle" font-weight="bold">get_weather — 查询指定城市天气</text>
+<text x="440" y="428" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="15" fill="#666666" text-anchor="middle">输入：城市　　输出：天气信息</text>
+
+<line x1="204" y1="485" x2="676" y2="485" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
+<text x="440" y="465" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" font-weight="bold">调用选定工具</text>
+<text x="440" y="507" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#777777" text-anchor="middle">tools/call：get_weather（Beijing）</text>
+<line x1="676" y1="550" x2="204" y2="550" stroke="#333333" stroke-width="2" stroke-dasharray="8,4" marker-end="url(#ah)"/>
+<text x="440" y="536" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#333333" text-anchor="middle" font-weight="bold">返回工具结果</text>
+<rect x="300" y="563" width="280" height="38" rx="5" fill="#f5f5f5" stroke="#999999" stroke-width="2"/>
+<text x="440" y="587" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#555555" text-anchor="middle">Beijing：22°C，晴</text>
+
+<text x="55" y="205" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#666666" text-anchor="middle" font-weight="bold">① 能力发现</text>
+<text x="55" y="370" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#666666" text-anchor="middle" font-weight="bold">② 工具发现</text>
+<text x="55" y="550" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#666666" text-anchor="middle" font-weight="bold">③ 工具调用</text>
 </svg>

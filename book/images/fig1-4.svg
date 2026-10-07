@@ -1,44 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="150mm" height="145.83mm" viewBox="0 0 720 700" role="img" aria-labelledby="title desc">
-<title id="title">三笔收入的简化轨迹</title>
-<desc id="desc">每次调用都带上稳定前缀和截至当前的消息。三笔收入示例包含三次模型调用、三次工具调用。</desc>
-<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#292929"/></marker></defs>
-<rect width="720" height="700" fill="#ffffff"/>
-<rect x="25" y="20" width="670" height="65" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
-<text x="360.0" y="58.5" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">每次调用：稳定前缀 + 截至当前的轨迹消息</text>
-<text x="185" y="122" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">模型本轮看到的信息</text>
-<text x="535" y="122" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">模型输出与实际执行</text>
-<rect x="25" y="145" width="320" height="137" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
-<text x="185.0" y="175" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">第 1 次调用</text>
-<text x="185.0" y="206" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">任务：三笔收入汇总</text>
-<text x="185.0" y="231" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">250 万美元、210 万欧元</text>
-<text x="185.0" y="256" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">180 万英镑</text>
-<path d="M 345 211 L 375 211" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<rect x="380" y="145" width="315" height="137" rx="6" fill="#ffffff" stroke="#292929" stroke-width="1.5"/>
-<text x="537.5" y="175" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">请求两次换汇</text>
-<text x="537.5" y="206" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">Harness 调度换汇工具</text>
-<text x="537.5" y="231" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">结果写入两条工具消息</text>
-<path d="M 535 282 L 535 302 L 185 302 L 185 320" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<rect x="25" y="320" width="320" height="137" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
-<text x="185.0" y="350" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">第 2 次调用</text>
-<text x="185.0" y="381" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">此前消息 + 两条换汇结果</text>
-<text x="185.0" y="406" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">欧元折合 2,282,608.70 美元</text>
-<text x="185.0" y="431" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">英镑折合 2,278,481.01 美元</text>
-<path d="M 345 386 L 375 386" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<rect x="380" y="320" width="315" height="137" rx="6" fill="#ffffff" stroke="#292929" stroke-width="1.5"/>
-<text x="537.5" y="350" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">请求一次代码计算</text>
-<text x="537.5" y="381" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">Harness 调度代码工具</text>
-<text x="537.5" y="406" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">计算总额与平均值</text>
-<path d="M 535 457 L 535 477 L 185 477 L 185 495" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<rect x="25" y="495" width="320" height="137" rx="6" fill="#f2f2f2" stroke="#292929" stroke-width="1.5"/>
-<text x="185.0" y="525" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">第 3 次调用</text>
-<text x="185.0" y="556" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">此前消息 + 计算结果</text>
-<text x="185.0" y="581" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">总额 7,061,089.71 美元</text>
-<text x="185.0" y="606" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">平均 2,353,696.57 美元</text>
-<path d="M 345 561 L 375 561" fill="none" stroke="#292929" stroke-width="1.8" marker-end="url(#arrow)"/>
-<rect x="380" y="495" width="315" height="137" rx="6" fill="#ffffff" stroke="#292929" stroke-width="1.5"/>
-<text x="537.5" y="525" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#292929">返回最终答案</text>
-<text x="537.5" y="556" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">总额 7,061,089.71 美元</text>
-<text x="537.5" y="581" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">平均 2,353,696.57 美元</text>
-<text x="360" y="677" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#292929">共 3 次模型调用、3 次工具调用；连线表示消息进入下一轮。</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 40 820 640" width="820" height="640" style="background:#ffffff">
+<defs><marker id="ah" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#333333"/></marker><marker id="ah-light" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#999999"/></marker></defs>
+<rect x="40" y="60" width="80" height="26" rx="13" fill="#666666" stroke="#333333" stroke-width="2"/>
+<text x="80.0" y="73.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#ffffff" text-anchor="middle" dominant-baseline="central" font-weight="bold">第 1 轮</text>
+<rect x="40" y="96" width="480" height="50" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
+<text x="50" y="112" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="bold">user</text>
+<text x="50" y="134" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="normal">&quot;计算年度总收入：Q1 $2.5M, Q2 €2.1M, Q3 £1.8M&quot;</text>
+<rect x="40" y="156" width="480" height="45" rx="6" fill="#e8e8e8" stroke="#333333" stroke-width="2"/>
+<text x="50" y="170" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#666666" text-anchor="start" dominant-baseline="central" font-weight="bold">assistant.reasoning</text>
+<text x="50" y="190" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="normal">&quot;需要将 EUR 和 GBP 转换为 USD，再汇总计算&quot;</text>
+<rect x="40" y="211" width="480" height="70" rx="4" fill="#f5f5f5" stroke="#999999" stroke-width="2"/>
+<text x="50" y="225" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#666666" text-anchor="start" dominant-baseline="central" font-weight="bold">assistant.tool_calls</text>
+<text x="50" y="247" font-family="'Courier New', Courier, monospace" font-size="14" fill="#333333" text-anchor="start" dominant-baseline="central">convert_currency(2100000, &quot;EUR&quot;, &quot;USD&quot;)</text>
+<text x="50" y="265" font-family="'Courier New', Courier, monospace" font-size="14" fill="#333333" text-anchor="start" dominant-baseline="central">convert_currency(1800000, &quot;GBP&quot;, &quot;USD&quot;)</text>
+<rect x="40" y="291" width="480" height="55" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
+<text x="50" y="305" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#666666" text-anchor="start" dominant-baseline="central" font-weight="bold">tool (结果)</text>
+<text x="50" y="327" font-family="'Courier New', Courier, monospace" font-size="14" fill="#333333" text-anchor="start" dominant-baseline="central">EUR→USD: 2,282,608.70</text>
+<text x="290" y="327" font-family="'Courier New', Courier, monospace" font-size="14" fill="#333333" text-anchor="start" dominant-baseline="central">GBP→USD: 2,278,481.01</text>
+<rect x="40" y="356" width="80" height="26" rx="13" fill="#666666" stroke="#333333" stroke-width="2"/>
+<text x="80.0" y="369.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#ffffff" text-anchor="middle" dominant-baseline="central" font-weight="bold">第 2 轮</text>
+<rect x="40" y="392" width="480" height="45" rx="6" fill="#e8e8e8" stroke="#333333" stroke-width="2"/>
+<text x="50" y="406" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#666666" text-anchor="start" dominant-baseline="central" font-weight="bold">assistant.reasoning</text>
+<text x="50" y="426" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="normal">&quot;已获得汇率，调用代码解释器汇总&quot;</text>
+<rect x="40" y="447" width="480" height="50" rx="4" fill="#f5f5f5" stroke="#999999" stroke-width="2"/>
+<text x="50" y="461" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#666666" text-anchor="start" dominant-baseline="central" font-weight="bold">assistant.tool_calls</text>
+<text x="50" y="483" font-family="'Courier New', Courier, monospace" font-size="14" fill="#333333" text-anchor="start" dominant-baseline="central">code_interpreter(&quot;total = 2.5M + 2.28M + 2.28M&quot;)</text>
+<rect x="40" y="507" width="80" height="26" rx="13" fill="#666666" stroke="#333333" stroke-width="2"/>
+<text x="80.0" y="520.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#ffffff" text-anchor="middle" dominant-baseline="central" font-weight="bold">第 3 轮</text>
+<rect x="40" y="543" width="480" height="45" rx="6" fill="#d0d0d0" stroke="#333333" stroke-width="2"/>
+<text x="50" y="557" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="bold">assistant.content（最终回答）</text>
+<text x="50" y="579" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="normal">&quot;年度总收入 $7,061,089.71，季度均值 $2,353,696.57&quot;</text>
+<path d="M 540,60 C 560,60 560,319.0 565,324.0 C 560,329.0 560,588 540,588" fill="none" stroke="#333333" stroke-width="2"/>
+<text x="600" y="250" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="bold">轨迹</text>
+<text x="600" y="280" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="normal">=</text>
+<text x="600" y="310" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="normal">LLM 每次</text>
+<text x="600" y="340" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="normal">调用时看到</text>
+<text x="600" y="370" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="normal">的完整输入</text>
+<rect x="570" y="410" width="230" height="140" rx="8" fill="#ffffff" stroke="#333333" stroke-width="2" stroke-dasharray="8,4"/>
+<text x="582" y="428" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#666666" text-anchor="start" dominant-baseline="central" font-weight="bold">关键特性</text>
+<text x="685" y="445" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">上下文累积</text>
+<text x="685" y="470" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">每轮都看到全部历史</text>
+<text x="685" y="500" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">结构化轨迹</text>
+<text x="685" y="525" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">user / assistant / tool</text>
 </svg>
