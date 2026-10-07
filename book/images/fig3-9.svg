@@ -1,39 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 40 1130 440" width="1130" height="440" style="background:#ffffff">
-<defs><marker id="ah" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#333333"/></marker><marker id="ah-light" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#999999"/></marker></defs>
-<rect x="30" y="55" width="160" height="50" rx="6" fill="#d0d0d0" stroke="#333333" stroke-width="2"/>
-<text x="110" y="73" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">用户查询</text>
-<text x="110" y="93" font-family="'Courier New', Courier, monospace" font-size="14" fill="#333333" text-anchor="middle" dominant-baseline="central">&quot;kitty behavior&quot;</text>
-<line x1="190" y1="68" x2="238" y2="68" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<rect x="240" y="50" width="180" height="50" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="330.0" y="75.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">稠密检索</text>
-<text x="330" y="118" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">语义匹配: kitty ≈ cat</text>
-<text x="250" y="140" font-family="'Courier New', Courier, monospace" font-size="14" fill="#333333" text-anchor="start" dominant-baseline="central">doc3: &quot;feline habits and cat play...&quot;</text>
-<text x="700" y="140" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="start" dominant-baseline="central" font-weight="normal">cos=0.87</text>
-<text x="250" y="172" font-family="'Courier New', Courier, monospace" font-size="14" fill="#333333" text-anchor="start" dominant-baseline="central">doc7: &quot;cat grooming patterns...&quot;</text>
-<text x="700" y="172" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="start" dominant-baseline="central" font-weight="normal">cos=0.82</text>
-<text x="250" y="204" font-family="'Courier New', Courier, monospace" font-size="14" fill="#333333" text-anchor="start" dominant-baseline="central">doc1: &quot;pet care basics...&quot;</text>
-<text x="700" y="204" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="start" dominant-baseline="central" font-weight="normal">cos=0.71</text>
-<line x1="190" y1="90" x2="238" y2="270" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<rect x="240" y="250" width="180" height="50" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="330.0" y="275.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">稀疏检索 (BM25)</text>
-<text x="330" y="318" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">精确匹配: &quot;kitty&quot; 关键词</text>
-<text x="250" y="340" font-family="'Courier New', Courier, monospace" font-size="14" fill="#333333" text-anchor="start" dominant-baseline="central">doc5: &quot;kitty litter training...&quot;</text>
-<text x="700" y="340" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="start" dominant-baseline="central" font-weight="normal">BM25=8.4</text>
-<text x="250" y="372" font-family="'Courier New', Courier, monospace" font-size="14" fill="#333333" text-anchor="start" dominant-baseline="central">doc9: &quot;kitty adoption guide...&quot;</text>
-<text x="700" y="372" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="start" dominant-baseline="central" font-weight="normal">BM25=6.1</text>
-<text x="250" y="404" font-family="'Courier New', Courier, monospace" font-size="14" fill="#333333" text-anchor="start" dominant-baseline="central">doc2: &quot;kitten health tips...&quot;</text>
-<text x="700" y="404" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="start" dominant-baseline="central" font-weight="normal">BM25=3.2</text>
-<line x1="770" y1="180" x2="808" y2="220" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<line x1="770" y1="370" x2="808" y2="330" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<rect x="790" y="215" width="70" height="120" rx="6" fill="#d0d0d0" stroke="#333333" stroke-width="2"/>
-<text x="825" y="250" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">结果</text>
-<text x="825" y="275" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">融合</text>
-<text x="825" y="300" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">RRF·6→5</text>
-<line x1="860" y1="275" x2="898" y2="275" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<rect x="900" y="215" width="120" height="120" rx="6" fill="#c8c8c8" stroke="#333333" stroke-width="2"/>
-<text x="960" y="250" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">神经</text>
-<text x="960" y="275" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">重排序</text>
-<text x="960" y="305" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">跨编码器精排</text>
-<line x1="960" y1="335" x2="960" y2="352" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<text x="960" y="370" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="15" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">最终排序 Top-N</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="150mm" height="155.00mm" viewBox="0 0 900 930" role="img" aria-labelledby="title desc">
+<title id="title">混合检索与重排序流水线</title><desc id="desc">同一查询并行进入稠密与稀疏检索，合并候选后通过RRF融合，并可使用跨编码器重排序。图中分数为示例。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#333333"/></marker></defs>
+<rect width="900" height="930" fill="#ffffff"/>
+<rect x="240" y="20" width="420" height="80" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="450" y="52" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">用户查询</text>
+<text x="450" y="84" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="400" fill="#292929">kitty behavior</text>
+<path d="M 450 100 L 450 125 L 225 125 L 225 150" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M 450 125 L 675 125 L 675 150" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="20" y="150" width="410" height="380" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="225" y="190" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="24" font-weight="700" fill="#292929">稠密检索</text>
+<text x="225" y="232" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="21" font-weight="400" fill="#292929">语义：kitty ≈ cat / feline</text>
+<text x="225" y="270" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">余弦相似度（示例）</text>
+<text x="225" y="317" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">doc3：feline habits and cat play</text>
+<text x="225" y="346" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="21" font-weight="700" fill="#292929">0.87</text>
+<text x="225" y="389" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">doc7：cat grooming patterns</text>
+<text x="225" y="418" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="21" font-weight="700" fill="#292929">0.82</text>
+<text x="225" y="461" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">doc1：pet care basics</text>
+<text x="225" y="490" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="21" font-weight="700" fill="#292929">0.71</text>
+<path d="M 225 530 L 225 560 L 450 560" fill="none" stroke="#333333" stroke-width="1.8"/>
+<rect x="470" y="150" width="410" height="380" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="675" y="190" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="24" font-weight="700" fill="#292929">稀疏检索 · BM25</text>
+<text x="675" y="232" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="21" font-weight="400" fill="#292929">词项：kitty / behavior</text>
+<text x="675" y="270" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">BM25 分数（示例）</text>
+<text x="675" y="317" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">doc5：kitty litter training</text>
+<text x="675" y="346" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="21" font-weight="700" fill="#292929">8.4</text>
+<text x="675" y="389" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">doc9：kitty adoption guide</text>
+<text x="675" y="418" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="21" font-weight="700" fill="#292929">6.1</text>
+<text x="675" y="461" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">doc2：kitty behavior and health</text>
+<text x="675" y="490" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="21" font-weight="700" fill="#292929">3.2</text>
+<path d="M 675 530 L 675 560 L 450 560" fill="none" stroke="#333333" stroke-width="1.8"/>
+<path d="M 450 560 L 450 590" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="120" y="590" width="660" height="90" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="450" y="624" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="24" font-weight="700" fill="#292929">合并去重 → RRF 融合</text>
+<text x="450" y="659" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="400" fill="#292929">6 个不同候选 → 按融合排名取前 5 个</text>
+<path d="M 450 680 L 450 715" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="120" y="715" width="660" height="90" rx="6" fill="#f2f2f2" stroke="#333333" stroke-width="1.8"/>
+<text x="450" y="750" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="24" font-weight="700" fill="#292929">可选：跨编码器重排序</text>
+<text x="450" y="785" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="400" fill="#292929">逐对输入“查询 + 候选文本”，重新评分</text>
+<path d="M 450 805 L 450 840" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="240" y="840" width="420" height="65" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="450" y="882" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="24" font-weight="700" fill="#292929">最终排序 Top-N</text>
 </svg>

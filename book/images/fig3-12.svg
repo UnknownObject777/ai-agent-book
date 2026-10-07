@@ -1,32 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 40 900 340" width="900" height="340" style="background:#ffffff">
-<defs><marker id="ah" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#333333"/></marker><marker id="ah-light" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#999999"/></marker></defs>
-<rect x="30" y="44" width="370" height="46" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="215.0" y="55.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">非智能体化 RAG</text>
-<text x="215.0" y="81.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="bold">固定前置步骤，一次性检索</text>
-<rect x="80" y="110" width="270" height="44" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="215.0" y="132" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="normal">用户查询</text>
-<line x1="215.0" y1="156" x2="215.0" y2="174" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<rect x="80" y="174" width="270" height="44" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="215.0" y="196" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="normal">检索（一次）</text>
-<line x1="215.0" y1="220" x2="215.0" y2="238" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<rect x="80" y="238" width="270" height="44" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="215.0" y="260" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="normal">直接生成答案</text>
-<rect x="500" y="44" width="370" height="46" rx="6" fill="#eef3f6" stroke="#333333" stroke-width="2"/>
-<text x="685.0" y="55.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">智能体化 RAG（Agentic）</text>
-<text x="685.0" y="81.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="bold">Agent 用 ReAct 主导，迭代检索</text>
-<rect x="530" y="110" width="310" height="44" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="685.0" y="132" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="normal">思考：分析需求、定关键词</text>
-<line x1="685.0" y1="156" x2="685.0" y2="174" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<rect x="530" y="174" width="310" height="44" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="685.0" y="196" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="normal">行动：调用检索工具</text>
-<line x1="685.0" y1="220" x2="685.0" y2="238" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<rect x="530" y="238" width="310" height="44" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="685.0" y="260" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="normal">观察：信息是否充分？</text>
-<line x1="840" y1="260" x2="858" y2="260" stroke="#333333" stroke-width="2" stroke-dasharray="8,4"/>
-<line x1="858" y1="260" x2="858" y2="196" stroke="#333333" stroke-width="2" stroke-dasharray="8,4"/>
-<line x1="858" y1="196" x2="840" y2="196" stroke="#333333" stroke-width="2" stroke-dasharray="8,4" marker-end="url(#ah)"/>
-<text x="862" y="228.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="start" dominant-baseline="central" font-weight="normal">不够</text>
-<line x1="685.0" y1="302" x2="685.0" y2="320" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<rect x="550" y="322" width="270" height="44" rx="6" fill="#dfeef0" stroke="#333333" stroke-width="2"/>
-<text x="685.0" y="344" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">充分 → 综合生成答案</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="150mm" height="123.33mm" viewBox="0 0 900 740" role="img" aria-labelledby="title desc">
+<title id="title">智能体化 RAG 与非智能体化 RAG 对比</title><desc id="desc">左侧固定执行一次检索；右侧由模型根据返回观测决定继续查询或生成回答，Harness执行搜索预算。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#333333"/></marker></defs>
+<rect width="900" height="740" fill="#ffffff"/>
+<rect x="20" y="20" width="410" height="65" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="225" y="62" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="25" font-weight="700" fill="#292929">单次检索 RAG</text>
+<rect x="470" y="20" width="410" height="65" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="675" y="62" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="25" font-weight="700" fill="#292929">Agentic RAG</text>
+<rect x="50" y="125" width="350" height="115" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="225" y="167" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="24" font-weight="700" fill="#292929">用户查询</text>
+<text x="225" y="211" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="400" fill="#292929">原始问题</text>
+<path d="M 225 240 L 225 290" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="50" y="290" width="350" height="115" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="225" y="332" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="24" font-weight="700" fill="#292929">检索一次</text>
+<text x="225" y="376" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="400" fill="#292929">取回相关片段</text>
+<path d="M 225 405 L 225 455" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="50" y="455" width="350" height="115" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="225" y="497" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="24" font-weight="700" fill="#292929">生成回答</text>
+<text x="225" y="541" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="400" fill="#292929">问题 + 检索材料</text>
+<rect x="500" y="125" width="350" height="115" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="675" y="167" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">分析需求</text>
+<text x="675" y="211" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="400" fill="#292929">选择或改写查询</text>
+<path d="M 675 240 L 675 290" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="500" y="290" width="350" height="115" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="675" y="332" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">行动：调用检索工具</text>
+<text x="675" y="376" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="400" fill="#292929">取得相关片段</text>
+<path d="M 675 405 L 675 455" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="500" y="455" width="350" height="115" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="675" y="497" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">观测与判断</text>
+<text x="675" y="541" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="400" fill="#292929">检查证据及信息缺口</text>
+<path d="M 500 510 L 450 510 L 450 103 L 675 103 L 675 125" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="675" y="607" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="21" font-weight="400" fill="#292929">充分 / 预算耗尽</text>
+<path d="M 675 570 L 675 580" fill="none" stroke="#333333" stroke-width="1.8"/>
+<path d="M 675 615 L 675 650" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="500" y="650" width="350" height="65" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="675" y="692" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">回答或请求补充信息</text>
+<rect x="403" y="327" width="94" height="94" fill="white"/>
+<text x="450" y="350" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">证据不足</text>
+<text x="450" y="380" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">预算可用</text>
+<text x="450" y="410" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">继续检索</text>
 </svg>
