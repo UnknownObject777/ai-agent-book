@@ -1,0 +1,104 @@
+{
+  "baseline_commit": "dbc046eb",
+  "restart_commit": "0c6208a7",
+  "review_pr": "https://github.com/bojieli/ai-agent-book/pull/1173",
+  "approved_principles": [
+    "保留技术细节、具体案例、输入参数、返回值、步骤、推理依据和设计取舍；事实问题优先局部修正。",
+    "正文保留承担教学作用的字段和代码示例；完整命令、路径、配置与日志放README。",
+    "压缩重复评述与无助于理解的说明，清理自我否定和免责声明式句子。",
+    "以原图为信息底稿保留大部分技术信息，统一黑白灰度、字体与线条；移走图顶图底解释性小字。",
+    "每章完成技术、教学、图文三轮检查后更新PR供作者审阅，作者反馈贯穿后续工作。"
+  ],
+  "chapters": {
+    "preface": {
+      "status": "ready_for_author_review",
+      "files": [
+        "book/introduction.md",
+        "book/images/fig0-1.svg",
+        "book/images/fig0-2.svg"
+      ],
+      "preserved": [
+        "Pine三组工程案例",
+        "长任务与评估论述",
+        "口述协作经历",
+        "Sutton设计实体与程序员类比",
+        "十章技术主题",
+        "阅读路线、难度、前置知识和致谢",
+        "原图的技术关键词与章节映射"
+      ],
+      "localized_corrections": [
+        "工程方法与原则",
+        "课程信息",
+        "核心公式和功能比喻",
+        "观测、动作接口与空间",
+        "第8章中期训练",
+        "图0-2评估与三种提升方向"
+      ],
+      "relocated": [
+        {
+          "content": "成书经历、设计实体延伸思考",
+          "destination": "前言中的文本框"
+        },
+        {
+          "content": "Git命令与实验目录路径",
+          "destination": "README.md 运行配套实验"
+        }
+      ],
+      "figures": {
+        "generator": "scripts/book_figures/introduction.py",
+        "visual_review": true,
+        "publication_review": false
+      },
+      "checks": [
+        "逐段对照原稿和编辑稿",
+        "原图标签与重绘图核对",
+        "四条脚注引用配对",
+        "图片引用、SVG结构、灰度和最小字号",
+        "Markdown渲染",
+        "git diff --check"
+      ],
+      "pending": [
+        "作者审阅",
+        "随各章定稿复核阅读地图",
+        "最终PDF和黑白印刷版式"
+      ]
+    },
+    "chapter1": {
+      "status": "pending"
+    },
+    "chapter2": {
+      "status": "pending"
+    },
+    "chapter3": {
+      "status": "pending"
+    },
+    "chapter4": {
+      "status": "pending"
+    },
+    "chapter5": {
+      "status": "pending"
+    },
+    "chapter6": {
+      "status": "pending"
+    },
+    "chapter7": {
+      "status": "pending"
+    },
+    "chapter8": {
+      "status": "pending"
+    },
+    "chapter9": {
+      "status": "pending"
+    },
+    "chapter10": {
+      "status": "pending"
+    },
+    "afterword": {
+      "status": "pending"
+    },
+    "reference_answers": {
+      "status": "pending"
+    }
+  },
+  "next": "第1章：先逐项对照编辑意见与原稿，保留原有技术展开和消息示例。"
+}
