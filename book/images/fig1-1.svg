@@ -1,71 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="900" height="450" role="img" aria-labelledby="title desc">
-  <title id="title">Agent 与 Environment 的闭环交互</title>
-  <desc id="desc">Agent 内部由 Model 和环绕它的 Harness 构成。Environment 向 Agent 返回观察，Agent 向 Environment 发出行动；Harness 中介交互，但不包含 Environment。</desc>
-  <defs>
-    <marker id="arrow-dark" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse">
-      <polygon points="0 0, 10 4, 0 8" fill="#333333"/>
-    </marker>
-    <style>
-      .sans { font-family: Arial, "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei", sans-serif; }
-      .heading { fill: #303030; font-size: 20px; font-weight: 700; }
-      .subheading { fill: #333333; font-size: 17px; font-weight: 700; }
-      .body { fill: #333333; font-size: 15px; }
-      .note { fill: #666666; font-size: 13.5px; }
-      .box { stroke: #3f3f3f; stroke-width: 2; }
-      .flow { fill: none; stroke: #333333; stroke-width: 2.2; marker-end: url(#arrow-dark); }
-    </style>
-  </defs>
-
-  <rect width="900" height="500" fill="#ffffff"/>
-
-  <!-- Agent boundary -->
-  <rect class="box" x="28" y="42" width="432" height="382" rx="12" fill="#ffffff"/>
-  <text class="sans heading" x="50" y="72" dominant-baseline="middle">Agent（智能体）</text>
-
-  <!-- Harness surrounds the model but remains inside the Agent boundary -->
-  <rect x="58" y="92" width="372" height="300" rx="10" fill="#f3f3f3" stroke="#666666" stroke-width="2" stroke-dasharray="8 4"/>
-  <text class="sans subheading" x="244" y="112" text-anchor="middle" dominant-baseline="middle">Harness（模型运行与交互层）</text>
-
-  <rect class="box" x="145" y="130" width="250" height="58" rx="7" fill="#ffffff"/>
-  <text class="sans subheading" x="270" y="151" text-anchor="middle" dominant-baseline="middle">上下文</text>
-  <text class="sans note" x="270" y="172" text-anchor="middle" dominant-baseline="middle">观察 · 历史 · 记忆 · 任务状态</text>
-
-  <line class="flow" x1="270" y1="190" x2="270" y2="207"/>
-
-  <rect class="box" x="145" y="210" width="250" height="78" rx="8" fill="#d5d5d5"/>
-  <text class="sans heading" x="270" y="236" text-anchor="middle" dominant-baseline="middle">Model</text>
-  <text class="sans body" x="270" y="263" text-anchor="middle" dominant-baseline="middle">理解 · 推理 · 选择下一步行动</text>
-
-  <line class="flow" x1="270" y1="290" x2="270" y2="313"/>
-
-  <rect class="box" x="145" y="316" width="250" height="50" rx="7" fill="#ffffff"/>
-  <text class="sans subheading" x="270" y="341" text-anchor="middle" dominant-baseline="middle">工具与动作接口</text>
-
-  <text class="sans note" x="244" y="382" text-anchor="middle" dominant-baseline="middle">循环 · 状态管理 · 权限 · 验证 · 纠正</text>
-
-  <!-- Environment boundary -->
-  <rect class="box" x="620" y="78" width="252" height="322" rx="12" fill="#eeeeee"/>
-  <text class="sans heading" x="746" y="111" text-anchor="middle" dominant-baseline="middle">Environment（环境）</text>
-  <text class="sans note" x="746" y="136" text-anchor="middle" dominant-baseline="middle">状态与转移规律</text>
-
-  <rect x="650" y="161" width="192" height="67" rx="7" fill="#ffffff" stroke="#777777" stroke-width="1.7"/>
-  <text class="sans subheading" x="746" y="184" text-anchor="middle" dominant-baseline="middle">当前状态</text>
-  <text class="sans note" x="746" y="207" text-anchor="middle" dominant-baseline="middle">执行行动后产生新状态</text>
-
-  <line x1="650" y1="247" x2="842" y2="247" stroke="#b0b0b0"/>
-  <text class="sans body" x="670" y="274" dominant-baseline="middle">文件系统 · 数据库</text>
-  <text class="sans body" x="670" y="304" dominant-baseline="middle">网页 · API · 应用程序</text>
-  <text class="sans body" x="670" y="334" dominant-baseline="middle">用户 · 其他 Agent</text>
-  <text class="sans body" x="670" y="364" dominant-baseline="middle">仿真或物理世界</text>
-
-  <!-- Classic Agent–Environment loop -->
-  <path class="flow" d="M 620 145 H 398"/>
-  <rect x="477" y="119" width="116" height="22" rx="4" fill="#ffffff"/>
-  <text class="sans body" x="535" y="131" text-anchor="middle" dominant-baseline="middle">观察</text>
-
-  <path class="flow" d="M 398 341 H 617"/>
-  <rect x="477" y="311" width="116" height="22" rx="4" fill="#ffffff"/>
-  <text class="sans body" x="535" y="323" text-anchor="middle" dominant-baseline="middle">行动</text>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="150mm" height="121.67mm" viewBox="0 0 900 730" role="img" aria-labelledby="title desc">
+<title id="title">Agent 与 Environment 的闭环交互，以及 Agent 内部的 Model–Harness 结构</title><desc id="desc">Agent 包含并列的 Model 与 Harness。Harness 组织上下文、调度工具并管理运行；环境接收行动、更新状态并返回观测。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#333333"/></marker></defs>
+<rect width="900" height="730" fill="#ffffff"/>
+<rect x="20" y="20" width="550" height="690" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="295" y="58" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="26" font-weight="700" fill="#292929">Agent（智能体）</text>
+<rect x="45" y="100" width="220" height="185" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="155" y="140" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="26" font-weight="700" fill="#292929">Model</text>
+<text x="155" y="185" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="400" fill="#292929">理解 · 推理</text>
+<text x="155" y="221" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="400" fill="#292929">选择下一步行动</text>
+<rect x="295" y="100" width="250" height="580" rx="6" fill="#f2f2f2" stroke="#333333" stroke-width="1.8"/>
+<text x="420" y="140" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="25" font-weight="700" fill="#292929">Harness</text>
+<rect x="310" y="165" width="220" height="185" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="420" y="199" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">上下文管理</text>
+<text x="420" y="236" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">指令 · 工具定义</text>
+<text x="420" y="266" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">观测 · 历史 · 记忆</text>
+<text x="420" y="296" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">任务状态</text>
+<rect x="310" y="430" width="220" height="80" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="420" y="463" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">工具接口</text>
+<text x="420" y="494" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">调用校验 · 调度</text>
+<rect x="310" y="540" width="220" height="115" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="420" y="575" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="21" font-weight="700" fill="#292929">循环 · 状态管理</text>
+<text x="420" y="618" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">约束 · 验证 · 纠正</text>
+<path d="M 310 260 L 265 260" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="185" y="350" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">工具调用请求</text>
+<path d="M 70 285 L 70 470 L 310 470" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="690" y="100" width="190" height="580" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="785" y="140" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">Environment</text>
+<text x="785" y="175" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">环境</text>
+<rect x="705" y="210" width="160" height="110" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="785" y="248" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="700" fill="#292929">当前状态</text>
+<text x="785" y="287" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">状态转移</text>
+<text x="785" y="378" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">文件 · 数据库</text>
+<text x="785" y="408" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">网页 · API</text>
+<text x="785" y="438" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">应用程序</text>
+<text x="785" y="468" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">用户</text>
+<text x="785" y="498" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">其他 Agent</text>
+<text x="785" y="528" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">物理或仿真世界</text>
+<path d="M 690 260 L 530 260" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="610" y="241" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="700" fill="#292929">观测</text>
+<path d="M 530 470 L 690 470" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="610" y="450" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="700" fill="#292929">行动</text>
 </svg>
