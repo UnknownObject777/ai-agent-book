@@ -121,7 +121,7 @@
   boxed title style={colback=accent, colframe=accent, arc=0.8mm, outer arc=0.8mm}
 }
 
-% ── Figures: force [H] so they can sit inside callout/quote boxes ─
+% ── Figures: float in body text; stay in place inside callout boxes ─
 \usepackage{float}
 \let\origfigure\figure
 \let\origendfigure\endfigure
@@ -138,13 +138,7 @@
 
 % ── Figure captions: manual numbering in text, so suppress label ──
 \usepackage{caption}
-% Captions apply \sffamily, which switches Chinese to a CJK sans (Heiti SC).
-% The earlier fix used Scale=MatchLowercase, which scales CJK down to the Latin
-% x-height — wrong for Chinese, whose glyphs should sit at the nominal point
-% size (as they do in the body, which is why the body looks fine and only
-% captions were off). Render Heiti SC at nominal size (no MatchLowercase) with a
-% faux bold, so 中文 matches the Latin in captions. Injected into captions only;
-% headings and body are untouched.
+% Match AI Infra captions with pinned Source Han Sans at nominal CJK size.
 \setCJKfamilyfont{capcjksf}[Path=fonts/,Scale=1,BoldFont=SourceHanSansCN-Bold.otf]{SourceHanSansCN-Regular.otf}
 \DeclareCaptionFont{cjkmatch}{\CJKfamily{capcjksf}}
 \captionsetup{font={small,sf,cjkmatch}, labelformat=empty, skip=4pt, justification=centering}

@@ -21,7 +21,7 @@ def main():
     thinking = min(evidence['generated']['regions']['thinking'])
     answer = min(evidence['generated']['regions']['answer'])
     fig, axes = plt.subplots(3, 2, figsize=(5.3, 8.2))
-    fig.subplots_adjust(left=.14, right=.96, top=.94, bottom=.13, wspace=.62, hspace=.43)
+    fig.subplots_adjust(left=.14, right=.96, top=.94, bottom=.18, wspace=.62, hspace=.43)
     cmap = plt.get_cmap('Greys').copy()
     cmap.set_bad('white')
     for row, layer in enumerate([0, 13, 27]):
@@ -37,16 +37,17 @@ def main():
             ax.set_xticks(ticks);ax.set_yticks(ticks)
             ax.tick_params(labelsize=11)
             if col:
-                ax.text(.98,.94, '输入：0–47\n推理：48–565\n回答：566–579', transform=ax.transAxes, ha='right', va='top', fontsize=12, bbox={'facecolor':'white','edgecolor':'none','pad':1.5})
                 for boundary, style in [(thinking, '--'), (answer, ':')]:
                     ax.axhline(boundary-.5, color='#777777', linestyle=style, linewidth=.65)
                     ax.axvline(boundary-.5, color='#777777', linestyle=style, linewidth=.65)
-    cax=fig.add_axes([.20,.055,.60,.016])
+    cax=fig.add_axes([.20,.075,.60,.016])
     cb=fig.colorbar(im,cax=cax,orientation='horizontal',ticks=[1e-4,1e-3,1e-2,1e-1,1])
     cb.set_ticklabels(['0.0001','0.001','0.01','0.1','1'])
     cb.ax.minorticks_off()
     cb.set_label('注意力权重（对数灰度）',fontsize=12)
-    fig.savefig(ROOT/'book/images/fig2-7.png',dpi=350,facecolor='white')
+    fig.text(.5, .012, '输入：0–47　推理：48–565　回答：566–579',
+             ha='center', fontsize=11)
+    fig.savefig(ROOT/'book/images/fig2-7.png',dpi=350,facecolor='white',bbox_inches='tight',pad_inches=.04)
     plt.close(fig)
 
 if __name__ == '__main__':
