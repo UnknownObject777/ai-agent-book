@@ -37,10 +37,24 @@
       ]
     },
     "chapter2": {
-      "pass1": "in_progress",
-      "pass2": "pending",
-      "author_voice": "pending",
-      "read_through_line": 700
+      "pass1": "complete",
+      "pass2": "complete",
+      "author_voice": "compared_with_original_and_restored",
+      "read_through_line": 1136,
+      "changes": [
+        "恢复端侧Agent更近的作者判断",
+        "恢复产品负责人主导业务规则设计的建议",
+        "强化聊天模板的基础地位与缓存作为架构约束的判断",
+        "保留作者预填充笔记与ContextDistill研究",
+        "改善API、缓存、状态栏、压缩与下一章的过渡",
+        "保留所有代码块、实验标题和图片引用"
+      ],
+      "method": "第一遍全文审读并对照原稿观点；第二遍重新通读全部正文、代码、实验、脚注和思考题，再检查第3章开头的衔接",
+      "checks": [
+        "代码块、插图引用、实验标题和思考题与本轮基线一致",
+        "延迟降低倍数改写为基线比例，保留原有数值含义",
+        "未复核实验原始记录"
+      ]
     },
     "chapter3": {
       "pass1": "pending",
@@ -135,5 +149,5 @@
   },
   "editor_feedback_audit": "前言及第一章已按13项编辑反馈审读；后续章节待逐章复审，实验原始记录不再复核",
   "author_voice_candidates": "/tmp/agent-book-author-voice-candidates.json",
-  "next": "第二章第一遍从第701行继续，前700行已读待修改；随后全文第二遍；继续第3—10章和答案；最终PDF须重编译"
+  "next": "第三章两遍逐句审读和作者观点对照；继续第4—10章及参考答案；最终PDF须重编译"
 }
