@@ -62,7 +62,8 @@
         "十章阅读地图与当前章名和主题核对；第六章使用完整章名",
         "四脚注配对、Markdown渲染、禁用句式与git diff --check通过"
       ],
-      "pending": [
+      "pending": [],
+      "review_handoff": [
         "作者审阅",
         "最终出版版式检查"
       ]
@@ -187,10 +188,7 @@
         "chapter1/search-codegen/validation/latest.json",
         "chapter1/image-gen-workflow/validation/latest.json"
       ],
-      "pending": [
-        "发布到 PR #1173 后供作者审阅",
-        "最终 PDF 版式、黑白印刷及 n8n 截图字号检查"
-      ],
+      "pending": [],
       "checks": [
         "逐段对照原稿，检查技术案例、消息字段、步骤与设计取舍",
         "四组实验对应运行记录复核；正文与图中的收入数值独立重算",
@@ -220,6 +218,9 @@
           "content": "重复过渡、读者免责声明、反复自我辩解式评述",
           "reason": "压缩并融入相关概念和教学步骤"
         }
+      ],
+      "review_handoff": [
+        "最终 PDF 版式、黑白印刷及 n8n 截图字号检查"
       ]
     },
     "chapter2": {
@@ -387,10 +388,7 @@
         "图2-7按150mm宽度提高字号至约9pt并重新渲染目视检查",
         "同步章节索引与实验台账，撤回实验2-10原始记录已保留的错误状态"
       ],
-      "pending": [
-        "作者审阅",
-        "最终PDF和黑白印刷版式"
-      ],
+      "pending": [],
       "figures": {
         "fig2-5": "已重绘并目视检查；将原图Xfinity任务改为本节温哥华例子，保留本地服务/推理/工具执行并补齐客户端调度与结果回传",
         "fig2-6": "已重绘并渲染检查；保留四语义单元、完整权重与因果矩阵，正文解释屏蔽位置，灰度层级保持文字可读",
@@ -421,6 +419,10 @@
       ],
       "historical_notes_not_gating": [
         "实验2-10原始JSON待作者提供位置，核对历史字符比率、轨迹与最终回答质量"
+      ],
+      "review_handoff": [
+        "作者审阅",
+        "最终PDF和黑白印刷版式"
       ]
     },
     "chapter3": {
@@ -550,10 +552,7 @@
         "17条脚注、15幅图引用、9道题与答案一致",
         "Markdown渲染及BM25手算、UaC代码执行"
       ],
-      "pending": [
-        "作者审阅",
-        "最终PDF和黑白印刷版式"
-      ],
+      "pending": [],
       "figures": {
         "fig3-1": "已按原图主题重绘灰度阅读地图；双层记忆改为图内结构，删除底部说明小字",
         "fig3-2": "已重绘2×2格式对照并渲染目视检查；保留邮箱/TechCorp/五人团队、字段、关系与取舍，O(1)限定按键定位",
@@ -586,6 +585,10 @@
       },
       "historical_notes_not_gating": [
         "实验3-8评审分数与解释矛盾，答案质量评分待独立核验；正文采用已检查的来源法条覆盖、搜索次数和耗时"
+      ],
+      "review_handoff": [
+        "作者审阅",
+        "最终PDF和黑白印刷版式"
       ]
     },
     "chapter4": {
@@ -751,7 +754,8 @@
         "日历、Notion、邮件和通知的授权缺口保留在实验范围说明",
         "最终PDF与印刷版式待出版流程验收"
       ],
-      "commit": "d96ae6da4e83457826080f93b22ad96c55079c26"
+      "commit": "d96ae6da4e83457826080f93b22ad96c55079c26",
+      "review_handoff": []
     },
     "chapter5": {
       "status": "ready_for_author_review",
@@ -863,9 +867,7 @@
         "读取只检查权限；写入在持久化前校验与引用检查，后续反应入队",
         "实验5-15按available原型与练习写，未宣称完成运行验收"
       ],
-      "pending": [
-        "最终PDF与印刷版式检查"
-      ],
+      "pending": [],
       "checks": [
         "首轮修改段落Markdown渲染、脚注与图引用存在性、git diff --check",
         "实验5-1 18个单元文件哈希通过；实验5-2 summary哈希通过",
@@ -905,6 +907,9 @@
       ],
       "historical_notes_not_gating": [
         "历史产物归档：5-8缺少视频与部分日志，5-9缺少13项输出，5-16缺少原始comparison；其余缺失日志详见实验记录"
+      ],
+      "review_handoff": [
+        "最终PDF与印刷版式检查"
       ]
     },
     "chapter6": {
@@ -971,16 +976,17 @@
         "段落教学改写及技术保留复审：事件JSON、异步状态、四个子进程场景、场地表、语音标记、DOM四元素、坐标计算、五个机器人技能及三组控制策略保留",
         "未重新运行付费模型或真实机械臂实验；归档记录未重写"
       ],
-      "pending": [
-        "作者审阅与修改意见",
-        "最终PDF与印刷版式检查"
-      ],
+      "pending": [],
       "iteration_notes": [
         "机器人部分及本章小结完成首轮教学式改写：保留任务、控制层级、技能接口、动作分块、世界模型与域随机化；按实现校正模拟范围。6-11 阶段切换问题记入 README 与 ledger，历史证据不改写。机器人三个项目共10项产物哈希通过。图6-1至6-5已重绘，图6-2/6-3预览检查后修正箭头与顺序。",
         "图6-6至6-14已重绘，14幅图均通过SVG解析、灰阶与最小字号检查及渲染。图6-7/8/9/13已视觉复核。12道思考题与参考答案全部重写并同步。语音与Computer Use产物只读哈希检查完成，缺失或变化记录写入README与ledger；未重写历史证据。"
       ],
       "historical_notes_not_gating": [
         "实验原始材料缺失/哈希变化及6-11控制器阶段转换问题见README和台账；未据此新增性能结论"
+      ],
+      "review_handoff": [
+        "作者审阅与修改意见",
+        "最终PDF与印刷版式检查"
       ]
     },
     "chapter7": {
@@ -1019,10 +1025,7 @@
         "10幅图渲染并视觉检查；重复生成内容一致",
         "按作者最新要求停止实验记录复核；沿用现稿与已有汇总，不以补档为章节完成条件"
       ],
-      "pending": [
-        "作者审阅与反馈",
-        "最终PDF与印刷版式检查"
-      ],
+      "pending": [],
       "evidence_issues": [
         {
           "path": "chapter7/tau2-bench-eval/validation/runs/exp7-1-openrouter-gpt41mini-telecom-20260802-v1/trajectories.json",
@@ -1049,6 +1052,10 @@
         "仿真与后训练接口",
         "小结与9道思考题及参考答案",
         "10幅灰度图重绘与图文对应"
+      ],
+      "review_handoff": [
+        "作者审阅与反馈",
+        "最终PDF与印刷版式检查"
       ]
     },
     "chapter8": {
@@ -1119,10 +1126,7 @@
         "最终原稿对照发现GRPO/on-policy/数值误差/模型仿真仍有沿用段落，已补做逐段改写；保留所有公式与数值例子",
         "重新通过13阅读页渲染，147公式无错误；235脚注与93题配对通过"
       ],
-      "pending": [
-        "作者审阅与反馈",
-        "最终PDF与印刷版式检查"
-      ],
+      "pending": [],
       "figures": {
         "generator": "scripts/book_figures/chapter8.py",
         "rewritten": [
@@ -1147,7 +1151,11 @@
         ],
         "pending": "最终PDF与黑白印刷版式",
         "visual_review": true
-      }
+      },
+      "review_handoff": [
+        "作者审阅与反馈",
+        "最终PDF与印刷版式检查"
+      ]
     },
     "chapter9": {
       "status": "ready_for_author_review",
@@ -1209,7 +1217,8 @@
         "book/images/fig9-3.svg",
         "book/images/fig9-4.svg",
         "book/images/fig9-5.svg"
-      ]
+      ],
+      "review_handoff": []
     },
     "chapter10": {
       "status": "ready_for_author_review",
@@ -1330,16 +1339,16 @@
         "三份Markdown渲染；SVG解析、灰阶、最小字号、文本锚点边界、渲染与视觉检查通过",
         "重复生成一致性及git diff --check通过；不复核实验原始记录"
       ],
-      "pending": [
-        "作者审阅",
-        "全书一致性与最终出版版式检查"
-      ],
+      "pending": [],
       "figures": {
         "generator": "scripts/book_figures/chapter10.py",
         "count": 11,
         "visual_review": true,
         "publication_review": false
-      }
+      },
+      "review_handoff": [
+        "作者审阅"
+      ]
     },
     "afterword": {
       "status": "ready_for_author_review",
@@ -1364,9 +1373,9 @@
         "三个脚注配对、Markdown渲染、禁用句式及git diff --check通过",
         "MiMo与Taalas采用厂商技术资料；实验记录未复核"
       ],
-      "pending": [
-        "作者审阅",
-        "全书一致性复审"
+      "pending": [],
+      "review_handoff": [
+        "作者审阅"
       ]
     },
     "reference_answers": {
@@ -1377,12 +1386,13 @@
         "保留四类可简化工程方法、调用/缓存成本、权限/风险/恢复等技术细节",
         "清理开头免责声明式评述；Markdown与禁用句式检查通过"
       ],
-      "pending": [
+      "pending": [],
+      "review_handoff": [
         "随作者反馈继续同步"
       ]
     }
   },
-  "next": "完成最终要求审计与PR交付核对；据证据确认本轮全书改稿完成。",
+  "next": "本轮全书改稿完成，PR待作者审阅；后续按具体反馈迭代。",
   "publishing": {
     "status": "available",
     "pr": "https://github.com/bojieli/ai-agent-book/pull/1173",
@@ -1403,7 +1413,7 @@
     ]
   },
   "consistency_review": {
-    "status": "in_progress",
+    "status": "complete",
     "checked": [
       "十三份Markdown渲染、全部脚注定义/引用配对及无重复通过",
       "全书114幅图片引用对应文件存在",
@@ -1419,17 +1429,112 @@
       "113幅SVG的显式色值均为灰阶，注意力PNG像素灰阶检查通过；有效图示最小字号检查通过",
       "重新目视检查用户重点关注的图1-4、1-5、1-6及2-1，保留调用字段、具体值、循环关系与上下文实例",
       "13份完整阅读页浏览器检查：114图加载、脚注锚点与147处数学公式渲染通过，无公式错误",
-      "PR #1173保持打开，截至本次检查无新增评论或评审意见"
+      "PR #1173保持打开，截至本次检查无新增评论或评审意见",
+      "原稿长段落对照完成：第八章遗漏的语言改写已补齐；保留原样的公式与教学数据按技术内容保留",
+      "最终13文件：235脚注定义/引用一致、114图引用存在、93题与答案一致；十章实验编号集合与原稿一致",
+      "最终禁用句式及免责声明式用语扫描通过；逐章改稿已提交并推送PR，未收到待处理作者反馈"
     ],
-    "remaining": [
-      "汇总逐章技术保留记录与原稿差异，完成要求逐项审计",
-      "最终PR审阅交付检查"
-    ],
+    "remaining": [],
     "artifacts": {
       "reading_proof": "/tmp/agent-book-reading-proof/index.html",
       "reading_checks": "/tmp/agent-book-reading-proof/render-check.json",
       "figure_proof": "/tmp/agent-book-figure-proof/figures.pdf",
       "figure_bounds": "/tmp/agent-book-figure-proof/bounds.json"
+    }
+  },
+  "completion_audit": {
+    "status": "passed",
+    "requirements": [
+      {
+        "requirement": "恢复原稿重新修改",
+        "evidence": "0c6208a7恢复提交；其后按章提交和逐项保留记录",
+        "result": "verified"
+      },
+      {
+        "requirement": "工程方法/实践/评估/原则层次",
+        "evidence": "book/introduction.md与book/afterword.md",
+        "result": "verified"
+      },
+      {
+        "requirement": "核心公式、比喻及观测/动作空间",
+        "evidence": "book/chapter1.md、chapter2.md、chapter6.md、chapter8.md",
+        "result": "verified"
+      },
+      {
+        "requirement": "Model/Harness/环境与真实权限",
+        "evidence": "chapter1五功能及边界段、chapter4执行校验、chapter10通信和运行时",
+        "result": "verified"
+      },
+      {
+        "requirement": "实验基线/消融、ReAct及轨迹含义",
+        "evidence": "chapter1实验1-1与循环、chapter2 API消息；用户指示后停止复核原始记录",
+        "result": "verified"
+      },
+      {
+        "requirement": "产品事实及工程五阶段的关系",
+        "evidence": "chapter1局部修正与来源注释；五阶段写为工程关注范围扩展",
+        "result": "verified"
+      },
+      {
+        "requirement": "正文、文本框、实验与注释分工",
+        "evidence": "前言两文本框、各章正式实验与脚注；完整运行细节保留README",
+        "result": "verified"
+      },
+      {
+        "requirement": "逐句教学语言与作者表达",
+        "evidence": "前言、十章、后记逐段提交；原稿长段落比对及第八章最终补改",
+        "result": "verified"
+      },
+      {
+        "requirement": "保留关键技术内容和具体例子",
+        "evidence": "各章preserved条目及localized_corrections记录；参数、代码、公式、案例和设计取舍对照",
+        "result": "verified"
+      },
+      {
+        "requirement": "图示恢复技术信息并保持灰阶",
+        "evidence": "114幅引用与原稿数量对应；13处图题统一；重点四图目视检查和全图实际文字边界检查",
+        "result": "verified"
+      },
+      {
+        "requirement": "去除独立评述性图中文字",
+        "evidence": "各章绘图生成源与逐图视觉检查记录",
+        "result": "verified"
+      },
+      {
+        "requirement": "题目、答案与章节同步",
+        "evidence": "十章93道题题干与答案逐字配对；第一章旧答案已补改",
+        "result": "verified"
+      },
+      {
+        "requirement": "按章更新PR供审阅",
+        "evidence": "00981357至c88cdf5f等逐章提交；PR #1173打开，当前无评论及评审意见",
+        "result": "verified"
+      },
+      {
+        "requirement": "全书渲染及交付检查",
+        "evidence": "13页完整浏览器渲染；235脚注、114图、147公式；git diff --check",
+        "result": "verified"
+      }
+    ],
+    "delivery": "前言、十章、后记、参考答案、配图生成源及README改稿已在PR供作者审阅",
+    "future_handoff": [
+      "作者审阅后的新一轮修改",
+      "出版社成书模板的最终排版与打样"
+    ],
+    "source_hashes": {
+      "book/introduction.md": "3bfa864ee3db14985ef13c645736539301a88ea919bf410b1b7f696d99a443cd",
+      "book/chapter1.md": "567af20aea81c2f18e89a7347347800c0dba35c638641432b3e5009aeec7a634",
+      "book/chapter2.md": "c9f08911c33b291e733d2d200daa6b9b7094e52308884d730f123731a8364210",
+      "book/chapter3.md": "63ebf28c6c227383abcff30f11c4d3f3355002de21b9a70c59c511f9803bd12e",
+      "book/chapter4.md": "451595d167f17ae2d714b9f922400087fd1341e6b224d6216914913f692f920d",
+      "book/chapter5.md": "bf77f1859acb3ef09a7f6b02d26ff48aa209f7fcb05d88f46edc2df4d36fe84b",
+      "book/chapter6.md": "4dd607f1caa346b0b25352db008c043bb1b1216e30da3d809d2546eed21d684a",
+      "book/chapter7.md": "e73725c96eaf282e9d6c2cd6bfe10b591666ed712bd637d5e4a884cf8e592c0c",
+      "book/chapter8.md": "b81bfe834a1384297182265cd267800323bd61d2820f7981d2e28e2399b93798",
+      "book/chapter9.md": "1eb20e4b57ff998ee5facf4838f070498fcb9877aa23a7b59085fb5cda99d8d7",
+      "book/chapter10.md": "4a96808ab9e7082081feffadc2a8bc962fae7e2f86a2a461a5d9365606d54aeb",
+      "book/afterword.md": "dc4f973fba46af2711f13eac6c986fc685f2eb7d004d3915ab26249d51181d1b",
+      "book/reference-answers.md": "e2a3deee6728ce01581dfcc3f663fbae98e36e1480ed1aa9217ff13e3554fd53"
     }
   }
 }
