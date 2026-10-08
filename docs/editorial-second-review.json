@@ -95,9 +95,25 @@
       ]
     },
     "chapter5": {
-      "pass1": "pending",
-      "pass2": "pending",
-      "author_voice": "pending"
+      "pass1": "complete",
+      "pass2": "complete",
+      "author_voice": "compared_with_original_and_restored",
+      "changes": [
+        "保留代码生成作为通用Agent基础能力的主张",
+        "恢复持久化终端的设计取向及具体适用任务",
+        "恢复持久记忆放大提示注入影响的作者观察",
+        "恢复双Agent上下文管理优势与研究网站活文档的作者表达",
+        "保留内科指标比喻，解释与最终任务指标的关系",
+        "保留故障恢复、文件编辑、业务规则代码和全部实验技术细节",
+        "改善任务流程、六类代码用途与下一章异步交互的衔接"
+      ],
+      "method": "第一遍逐句审读并对照原稿主张与个人实践；第二遍重新通读全文、代码、表格、实验、脚注和思考题，并检查第6章开头的衔接",
+      "checks": [
+        "保留代码块、图片引用、实验标题和思考题",
+        "修正章首路线图与实际小节顺序的一致性",
+        "行号示例改为读取范围内的第142行",
+        "未复核实验原始记录"
+      ]
     },
     "chapter6": {
       "pass1": "pending",
@@ -177,5 +193,5 @@
   },
   "editor_feedback_audit": "前言及第一章已按13项编辑反馈审读；后续章节待逐章复审，实验原始记录不再复核",
   "author_voice_candidates": "/tmp/agent-book-author-voice-candidates.json",
-  "next": "第5—10章与参考答案两遍逐句审读；最终PDF重编译和全部实页检查"
+  "next": "第6—10章与参考答案两遍逐句审读；最终PDF重编译和全部实页检查"
 }
