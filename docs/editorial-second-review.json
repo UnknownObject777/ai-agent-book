@@ -224,9 +224,19 @@
       ]
     },
     "reference-answers": {
-      "pass1": "pending",
-      "pass2": "pending",
-      "author_voice": "pending"
+      "pass1": "complete",
+      "pass2": "complete",
+      "author_voice": "compared_with_original",
+      "method": "两遍完整逐题通读全部405行，检查技术解释、语句衔接及与正文题目的对应",
+      "changes": [
+        "保留全部93道题与分析思路",
+        "明确累计输入量公式、调用额度、统计摘要及模块通信成本",
+        "改善经验版本、独立评估和多Agent协作等回答的具体表达"
+      ],
+      "checks": [
+        "93道题与十章末尾逐题一致",
+        "未复核实验原始记录"
+      ]
     }
   },
   "pdf": {
@@ -263,5 +273,5 @@
   },
   "editor_feedback_audit": "前言及第一章已按13项编辑反馈审读；后续章节待逐章复审，实验原始记录不再复核",
   "author_voice_candidates": "/tmp/agent-book-author-voice-candidates.json",
-  "next": "参考答案两遍逐句审读；最终PDF重编译、全部实页检查和编辑13项意见全书核对"
+  "next": "最终PDF重编译、全部实页检查和编辑13项意见全书核对"
 }
