@@ -1910,5 +1910,34 @@
         "questions_unchanged": 93
       }
     }
+  },
+  "full_book_passes": {
+    "pass1": {
+      "status": "in_progress",
+      "purpose": "逐段通读恢复后的全书，检查论证顺序、技术判断与前后文及章节间的一致性。",
+      "chapters": {
+        "introduction": {
+          "status": "reviewed",
+          "notes": [
+            "完整通读前言，包括阅读地图、课程时间与致谢。",
+            "合并复杂业务形成持久工程优势的重复解释，保留短期补丁与长期积累的因果判断。"
+          ],
+          "sha256": "de0cfe7801c9f73a5c1d1ffa3a1e46d018e1f1cf4b9c8016af9839b86015f465"
+        },
+        "chapter1": {
+          "status": "reviewed",
+          "notes": [
+            "完整通读第一章，包括例子、表格、实验、伪代码与思考题。",
+            "模型优先比较的建议补明信息充分、工具可用这一前提，与参考答案中的失败诊断顺序一致。",
+            "核对两套公式、Harness 五项功能与观测/动作边界；恢复的选择建议均接在相应机制与案例之后。"
+          ],
+          "sha256": "ef0048fd0effc8faba113255dbece1cc0669b8c04ab5befa3c892877f723c41c"
+        }
+      }
+    },
+    "pass2": {
+      "status": "pending",
+      "purpose": "第一轮完成后重新完整通读，逐句检查中文表达、衔接和重复。"
+    }
   }
 }
