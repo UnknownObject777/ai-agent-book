@@ -37,9 +37,10 @@
       ]
     },
     "chapter2": {
-      "pass1": "pending",
+      "pass1": "in_progress",
       "pass2": "pending",
-      "author_voice": "pending"
+      "author_voice": "pending",
+      "read_through_line": 700
     },
     "chapter3": {
       "pass1": "pending",
@@ -104,7 +105,7 @@
     "baseline": "initial_compile_saved",
     "initial_pdf": "/tmp/agent-book-full-pdf-review/initial-full-book.pdf",
     "initial_pages": 261,
-    "layout_revision_pages": 313,
+    "layout_revision_pages": 314,
     "fixed": [
       "Linux等宽字体回退",
       "明确顶级标题为chapter，修正0.x章号",
@@ -112,7 +113,8 @@
       "第7、8章公式内中文句号缺字",
       "下标字符字体缺字",
       "竖向图高度上限从0.38提升到0.68正文高度",
-      "前言不编号小节增加独立目录锚点，逐项跳转页核对通过"
+      "前言不编号小节增加独立目录锚点，逐项跳转页核对通过",
+      "为全部表格计算显式列宽并折行，修复24处页面边界外文字"
     ],
     "remaining": [
       "全书实页检查",
@@ -120,13 +122,18 @@
     ],
     "final": "pending",
     "checks": {
-      "pages": 313,
-      "out_of_page_text_spans": 24,
+      "pages": 314,
+      "out_of_page_text_spans": 0,
       "missing_figure_numbers": [],
-      "latex_missing_glyph_warnings": 0
+      "latex_missing_glyph_warnings": 0,
+      "visual_samples": [
+        "图1-4竖向流程",
+        "框架平台表格",
+        "前言小节目录跳转"
+      ]
     }
   },
   "editor_feedback_audit": "前言及第一章已按13项编辑反馈审读；后续章节待逐章复审，实验原始记录不再复核",
   "author_voice_candidates": "/tmp/agent-book-author-voice-candidates.json",
-  "next": "核对PDF表格折行；继续第二章两遍逐句审读及作者观点对照；每章更新PR"
+  "next": "第二章第一遍从第701行继续，前700行已读待修改；随后全文第二遍；继续第3—10章和答案；最终PDF须重编译"
 }
