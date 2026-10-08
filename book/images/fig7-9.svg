@@ -1,41 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 40 950 460" width="950" height="460" style="background:#ffffff">
-<defs><marker id="ah" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#333333"/></marker><marker id="ah-light" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#999999"/></marker></defs>
-
-<line x1="100" y1="420" x2="860" y2="420" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<line x1="100" y1="420" x2="100" y2="90" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<text x="460.0" y="460" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">仿真保真度 →</text>
-<text x="85" y="255.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">可</text>
-<text x="85" y="277.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">扩</text>
-<text x="85" y="299.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">展</text>
-<text x="85" y="321.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">性</text>
-<text x="85" y="343.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">↑</text>
-<circle cx="172.0" cy="123.0" r="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="172.0" y="105.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">Mock API</text>
-<text x="172.0" y="143.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">单元测试级</text>
-<text x="172.0" y="159.0" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">百万次/小时</text>
-<circle cx="301.6" cy="172.5" r="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="301.6" y="133" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">AWorld</text>
-<text x="301.6" y="153" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">MCP 沙盒</text>
-<text x="301.6" y="195" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">126个工具函数</text>
-<text x="301.6" y="213" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">525s/轮 分布式</text>
-<circle cx="445.59999999999997" cy="255.0" r="6" fill="#d0d0d0" stroke="#333333" stroke-width="2"/>
-<text x="430" y="222" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="end" dominant-baseline="central" font-weight="bold">AndroidWorld</text>
-<text x="430" y="240" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="end" dominant-baseline="central" font-weight="bold">模拟器</text>
-<text x="430" y="262" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="end" dominant-baseline="central" font-weight="normal">116真实应用任务</text>
-<text x="430" y="280" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="end" dominant-baseline="central" font-weight="normal">UI Automator</text>
-<circle cx="568.0" cy="304.5" r="6" fill="#d0d0d0" stroke="#333333" stroke-width="2"/>
-<text x="585" y="285" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="bold">Isaac Gym</text>
-<text x="585" y="303" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="bold">GPU 并行</text>
-<text x="585" y="325" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="start" dominant-baseline="central" font-weight="normal">千级并行实例</text>
-<text x="585" y="343" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="start" dominant-baseline="central" font-weight="normal">精度略妥协</text>
-<circle cx="661.6" cy="360.6" r="6" fill="#999999" stroke="#333333" stroke-width="2"/>
-<text x="705" y="335" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">RoboTwin2</text>
-<text x="705" y="355" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">物理引擎</text>
-<text x="705" y="385" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">高精度碰撞</text>
-<text x="705" y="403" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">单实例 CPU</text>
-<circle cx="769.6" cy="403.5" r="6" fill="#999999" stroke="#333333" stroke-width="2"/>
-<text x="830" y="370" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="bold">真实世界</text>
-<text x="830" y="390" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="start" dominant-baseline="central" font-weight="normal">完美保真度</text>
-<text x="830" y="408" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="start" dominant-baseline="central" font-weight="normal">不可重置</text>
-<line x1="157.6" y1="116.39999999999998" x2="784.0" y2="410.1" stroke="#999999" stroke-width="2" stroke-dasharray="8,4"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="150mm" height="147.50mm" viewBox="0 0 900 885" role="img" aria-labelledby="title desc">
+<title id="title">仿真保真度谱</title><desc id="desc">工具模拟、应用执行和物理环境的机制与成本取舍。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#333333"/></marker></defs>
+<rect width="900" height="885" fill="#ffffff"/>
+<rect x="85" y="20" width="745" height="180" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="85" y="20" width="745" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="457.5" y="53" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">工具级模拟</text>
+<text x="457.5" y="100" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">Mock API：固定或参数化结果</text>
+<text x="457.5" y="132" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">状态转移：账户 / 文件 / 任务字段</text>
+<text x="457.5" y="164" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">低开销 · 直接检查接口与规则</text>
+<path d="M 450 200 L 450 235" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="85" y="235" width="745" height="180" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="85" y="235" width="745" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="457.5" y="268" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">数字应用环境</text>
+<text x="457.5" y="315" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">AWorld：MCP 工具服务与任务实例</text>
+<text x="457.5" y="347" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">AndroidWorld：应用状态与 UIAutomator</text>
+<text x="457.5" y="379" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">OSWorld：虚拟机快照与桌面交互</text>
+<path d="M 450 415 L 450 450" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="85" y="450" width="745" height="180" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="85" y="450" width="745" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="457.5" y="483" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">物理仿真环境</text>
+<text x="457.5" y="530" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">Isaac Gym：GPU 并行物理仿真</text>
+<text x="457.5" y="562" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">RoboTwin2：双臂操作与领域随机化</text>
+<text x="457.5" y="594" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">接触 / 摩擦 / 相机 / 关节控制</text>
+<path d="M 450 630 L 450 665" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="85" y="665" width="745" height="180" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="85" y="665" width="745" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="457.5" y="698" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">目标运行环境</text>
+<text x="457.5" y="745" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">实际服务与真实机器人</text>
+<text x="457.5" y="777" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">真实延迟、权限和物理变化</text>
+<text x="457.5" y="809" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">重置成本 · 副作用 · 迁移评估</text>
+<text x="40" y="310" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="700" fill="#292929">环</text>
+<text x="40" y="342" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="700" fill="#292929">境</text>
+<text x="40" y="374" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="700" fill="#292929">细</text>
+<text x="40" y="406" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="22" font-weight="700" fill="#292929">节</text>
+<path d="M 40 460 L 40 765" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
 </svg>

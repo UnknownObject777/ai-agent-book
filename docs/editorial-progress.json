@@ -8,7 +8,8 @@
     "压缩重复评述与无助于理解的说明，清理自我否定和免责声明式句子。",
     "以原图为信息底稿保留大部分技术信息，统一黑白灰度、字体与线条；移走图顶图底解释性小字。",
     "每章完成技术、教学、图文三轮检查后更新PR供作者审阅，作者反馈贯穿后续工作。",
-    "每个段落、每句话逐一检查并作语言提升，保留技术论证，消除翻译腔、AI式套话、冗长评述和免责声明式表达。"
+    "每个段落、每句话逐一检查并作语言提升，保留技术论证，消除翻译腔、AI式套话、冗长评述和免责声明式表达。",
+    "用户最新要求：不再复核实验原始记录，沿用现稿与汇总，不追查缺失文件，不以补档作为章节完成条件；已发现的概念或评分解释问题仍修正。"
   ],
   "chapters": {
     "preface": {
@@ -974,7 +975,72 @@
       ]
     },
     "chapter7": {
-      "status": "pending"
+      "status": "ready_for_author_review",
+      "rewritten_sections": [
+        "开篇：对比、消融、模型替换与交叉配置",
+        "τ²-bench任务定义、双控与成功/失败轨迹",
+        "Pass@k、Best@k、Pass^k及业务可靠性",
+        "评估环境五要素、两类交互与四类Verifiers接口",
+        "六类基准、验证器、难度与泄漏防范",
+        "数据质量维护、实验7-2与评估集三类来源"
+      ],
+      "preserved": [
+        "模型/工具/知识/记忆/Skills/Harness选择与为未来模型开发产品的作者观点",
+        "John Smith、号码、C1001/L1002、法国漫游、2GB与套餐约束",
+        "四类任务字段、双侧初始化、设备工具、275Mbps成功与错误线路失败",
+        "两类重复指标公式、p=0.6且k=5数例及Manus/OpenClaw案例",
+        "FAIL_TO_PASS/PASS_TO_PASS、OSWorld134评估函数、Linux6.9/initramfs/QEMU运行验证",
+        "GAIA466题及三级人类/模型历史对照、联系人参数化、canary GUID",
+        "SWE-bench93人/1699样本/500发布集、OSWorld300多条维护反馈",
+        "公开基准、自建业务集、生产轨迹回流及18个跨基准操作案例",
+        "Rubric四准则、Lily/Dr.Chen四档例子与否决项",
+        "三种记忆方案分层成绩、TTS四维评分、9类失败、文档作用域与精确复制链路",
+        "Elo公式与更新例子、行动阈值18轨迹汇总、八轮成本四组对照",
+        "配对统计、特性开关、提示快照、类型化采集、AWorld与双臂VLA接口"
+      ],
+      "checks": [
+        "当前τ²-bench轨迹五题奖励4/5复算通过；两项文件与manifest哈希不符，已记入README",
+        "首批改写段Markdown渲染、技术字段保留、禁用句式与git diff --check通过",
+        "核对固定提交的用户工具和评分入口；编译器案例按官方长程团队记录校正",
+        "核对Verifiers v0.1.9源码、GAIA原始论文、AndroidWorld论文及SWE-bench/OSWorld官方设计资料",
+        "实验7-2当前汇总18题/13通过复算；各题引用证据均存在，未重新运行评估器",
+        "新增段落Markdown渲染、脚注配对、禁用句式及git diff --check通过",
+        "14个实验、10幅图及图题、11条脚注、9道题与答案配对通过",
+        "15份Markdown渲染；禁用句式、SVG灰阶/最小字号/文本边界与git diff --check通过",
+        "10幅图渲染并视觉检查；重复生成内容一致",
+        "按作者最新要求停止实验记录复核；沿用现稿与已有汇总，不以补档为章节完成条件"
+      ],
+      "pending": [
+        "作者审阅与反馈",
+        "最终PDF与印刷版式检查"
+      ],
+      "evidence_issues": [
+        {
+          "path": "chapter7/tau2-bench-eval/validation/runs/exp7-1-openrouter-gpt41mini-telecom-20260802-v1/trajectories.json",
+          "status": "mismatch",
+          "recorded": "22e217ca849848e4d50c3ff257bea5ce691f226066fb0af3ca3c43bdae27631b",
+          "current": "9e7a1013a2c57cc3c0baf3f841665a4ecaed5d5b774ace91a27cea48e9b1f743"
+        },
+        {
+          "path": "chapter7/tau2-bench-eval/validation/runs/exp7-1-openrouter-gpt41mini-telecom-20260802-v1/evidence.json",
+          "status": "mismatch",
+          "recorded": "4a79db9c6f73ba8c9b7c55a8e1b43b55e7a798c6c631938af39260461250aef9",
+          "current": "2b7497a45c9786386a91606b43b2c900315116f3e2d72003516f3f07a7895099"
+        }
+      ],
+      "completed_sections": [
+        "自动化评估与Rubric",
+        "失败归因与轨迹前缀回归",
+        "配对比较与模型排名",
+        "评估驱动的模型选型",
+        "统计显著性与配对分析",
+        "可观测性",
+        "AndroidWorld连续改进",
+        "内部评估基础设施",
+        "仿真与后训练接口",
+        "小结与9道思考题及参考答案",
+        "10幅灰度图重绘与图文对应"
+      ]
     },
     "chapter8": {
       "status": "pending"
@@ -992,7 +1058,7 @@
       "status": "pending"
     }
   },
-  "next": "提交第6章并更新PR；开始第7章评估的原稿、实验与图示对照改写。",
+  "next": "第7章更新PR后，继续第8章教学式改写；保留技术细节，不再复核实验原始记录。",
   "publishing": {
     "status": "available",
     "pr": "https://github.com/bojieli/ai-agent-book/pull/1173",
@@ -1004,7 +1070,8 @@
       "chapter3",
       "chapter4",
       "chapter5",
-      "chapter6"
+      "chapter6",
+      "chapter7"
     ]
   }
 }
