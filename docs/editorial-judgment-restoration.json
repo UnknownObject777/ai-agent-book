@@ -1968,6 +1968,24 @@
             "questions": 9
           },
           "sha256": "fdef3aaedc8fb4ce1e2309b537858c6d691c45592f631d4ecf3b7dbe37e91fa9"
+        },
+        "chapter4": {
+          "status": "reviewed",
+          "notes": [
+            "完整通读第四章全部 493 行，涵盖通用设计、MCP、发现、感知、执行、协作、实验和思考题。",
+            "事件触发的表格与注册说明补齐开发者预先配置，与第一章一致。",
+            "子 Agent 选型补上 Skill 加载与独立上下文、权限及并行需求的关系，与第十章一致。",
+            "合并 Sidecar 并行检查的重复说明，保留放行前等待与界面状态区分。",
+            "RFC3339/E.164 完整参数例子、字符串与静默参数转换案例、模型审核选择依据及图文和实验内容保留。"
+          ],
+          "invariant_checks": {
+            "figures": 4,
+            "experiments": 5,
+            "code_blocks": 0,
+            "formulas": 0,
+            "questions": 4
+          },
+          "sha256": "a7110a89a1f71eee880641aaedd00921a7becc4eb72341322415a2f81f627ad7"
         }
       }
     },
