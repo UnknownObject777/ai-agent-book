@@ -583,7 +583,168 @@
       }
     },
     "chapter4": {
-      "status": "pending"
+      "status": "ready_for_author_review",
+      "rewritten_sections": [
+        "开篇与五类工具",
+        "ACI与能力封装：专用工具、通用执行器、Skill",
+        "工具描述与timestamp/phone完整例子",
+        "参数保真：弯引号转换与静默参数注入",
+        "MCP宿主/客户端/服务器，工具/资源/提示模板",
+        "Skill Hub与实际上下文加载",
+        "第三方描述、服务器、同名工具风险及权限约束",
+        "工具组织与主动发现的引入"
+      ],
+      "preserved": [
+        "五类工具名称和API例子",
+        "部署三步流程、SymPy/NumPy/pandas",
+        "文档格式合并及file_type参数",
+        "四类专用接口场景、四个选型维度",
+        "代码编排保留中间结果",
+        "RFC3339与E.164格式及中美号码",
+        "返回字段、5–10秒延迟示例、1–5个调用示例",
+        "old_string/new_string与Unicode弯引号、git参数注入故障"
+      ],
+      "localized_corrections": [
+        "Skill元数据/附带脚本也有格式和执行要求",
+        "JSON Schema可表达约束，业务与权限另由执行层校验",
+        "72%至90%归于Anthropic2025内部复杂参数测试",
+        "工具定义与目录项token成本按实际描述和加载策略计算",
+        "事件回调由调度系统唤醒Agent，用户沟通可主动调用",
+        "协议对齐仓库2026-07-28，server/discover与逐请求元数据；避免误用旧版握手",
+        "Streamable HTTP仍使用SSE响应，旧HTTP+SSE是被替代的传输方案",
+        "工具允许列表与延迟加载分别描述",
+        "Skills可通过MCP扩展分发，协议与能力形式可组合",
+        "Sidecar独立检查不能替代确定性权限规则"
+      ],
+      "checks": [
+        "首轮开篇Markdown渲染、脚注配对",
+        "关键技术字段与示例字符串保留",
+        "git diff --check",
+        "MCP生态段落脚注配对与Markdown渲染",
+        "图4-1原图关键标签保留、SVG解析、最小字号与目视检查",
+        "实验4-1 rerun_20260825全部20个manifest文件哈希核对通过（完整性检查）",
+        "工具发现实验与Skills改写后脚注配对、Markdown渲染、git diff --check通过",
+        "工具发现与感知接口改写：脚注无缺失或重复、Markdown渲染、关键字段示例保留、git diff --check通过",
+        "实验4-3两份证据文件哈希通过；十二个回答与参考答案逐条核对；本轮正文及README渲染、脚注与差异检查",
+        "图4-1至4-4 SVG解析、灰度色值、最小20px字号通过；图4-2至4-4 rsvg-convert渲染与目视检查通过",
+        "二轮保留性审读；24条脚注、4幅引图、5个实验、4道题答案一致；关键字段保留、7份Markdown渲染、四图重复生成一致；PR无新评论"
+      ],
+      "pending": [],
+      "figures": {
+        "fig4-1": "保留原图三阶段、可选server/discover、tools/list、tools/call、get_weather与Beijing22°C例子；灰度重绘并渲染目视检查",
+        "fig4-2": "灰度重绘，保留五服务器、相似度、26工具示意、五工具候选及Top-3结果；数据标明示意",
+        "fig4-3": "灰度重绘，保留NVDA、工具定义、基础工具、发现调用与状态更新；纠正整段缓存失效，删除无来源的95%命中率及延迟数字，改画前缀变动点",
+        "fig4-4": "灰度重绘，保留股价/GitHub两轮、tool_search_call/output、两组schema及工具结果顺序；去除缓存恒命中断言和图外解释性小字"
+      },
+      "relocated": [
+        {
+          "content": "npx skills add 安装命令",
+          "destination": "chapter4/README.md Skill分发与安装入口"
+        }
+      ],
+      "experiment_4_1_review": {
+        "canonical_run": "rerun_20260825",
+        "catalog_tools": 127,
+        "findings": [
+          "旧正文预期退化与提升未获运行结果支持，改为已记录能力覆盖和定义加载量",
+          "grade_plan计必需能力覆盖，未惩罚额外调用或检查参数",
+          "适配层替换任务参数、展开三次下载并生成绘图代码",
+          "产物门禁只检查执行成功、数量、签名和大小，任务内容质量需另评估",
+          "README和ledger混用7月/8月轨迹，已按8月回执修正",
+          "o200k计数标明为统一文本规模估计"
+        ],
+        "updated": [
+          "book/chapter4.md",
+          "chapter4/README.md",
+          "chapter4/active-tool-discovery/README.md",
+          "chapter4/EXPERIMENT_LEDGER.md"
+        ]
+      },
+      "skills_review": "重写渐进披露三步，保留name/description、SKILL.md、引用资源与检索方式；纠正总目录固定数百token和必须层层sub-skill说法；核对官方规范与Skills Over MCP工作组",
+      "discovery_review": [
+        "重写目录分组、预筛选、主动发现、两层匹配与阈值回退",
+        "Cursor46.9%限定为调用MCP的AB测试运行",
+        "MCP-Zero2797工具目录与APIBank约98%降幅分开，校正论文标题",
+        "Pi早期CLI方案与后续0.99内置MCP区分，保留代理发现与延迟启动",
+        "缓存改为首个变化位置后的重算，明确TTL、路由、粒度、模型配置，不再断言仅有两种失效原因",
+        "保留OpenAI/Anthropic字段并与第2章已核对机制对齐"
+      ],
+      "perception_review": "完成感知工具开篇及分页、offset/limit、显式截断、TTL、授权缓存键、并发一致性与多模态输出的逐段改写；实验4-2及多模态节待核对",
+      "multimodal_review": {
+        "status": "正文及实验4-3初轮完成",
+        "preserved": [
+          "Qwen-VL与LLaVA",
+          "ViT/patch/视觉连接模块",
+          "OCR、音频转录、PDF文字提取与页面图像",
+          "analyze_image/analyze_pdf/analyze_audio参数与返回",
+          "主模型与工具内模型分工及上下文成本"
+        ],
+        "evidence": "20260729T185433Z-4_2-e028c9db",
+        "result": "同一豆包模型；四个组合，直接看图4/4、文本0/4、工具4/4；逐条复核十二个回答",
+        "changes": [
+          "用季度收入与OCR对应关系丢失的案例讲解",
+          "去除原生路线恒最佳、文本完全无法处理视觉问题等泛化",
+          "PDF页面解析边界与图像成本口径明确",
+          "README补充工具三次调用链及耗时、用量"
+        ]
+      },
+      "experiment_4_2_review": {
+        "status": "正文初轮完成，四类调用结果及授权缺口与记录对齐",
+        "integrity": "45个普通文件哈希通过；escape-link符号链接目标与manifest的28字节目标记录不符，历史证据保留并记入ledger",
+        "pending": "符号链接历史来源待核对"
+      },
+      "execution_review": {
+        "status": "执行工具及实验4-4初轮完成",
+        "preserved": [
+          "参数校验、权限及分层约束",
+          "提议者—审核者的事前审批、事后验证、不同模型视角与反馈",
+          "Sidecar并行、门控、拒绝熔断与上下文辅助",
+          "write_file、linter、结构化诊断与变量result例子",
+          "200行/10000字符阈值、头尾50行与省略8523行例子",
+          "venv、进程、容器、microVM、资源限制",
+          "可观测性、幂等、取消与预检确认流程",
+          "实验4-4各类工具与具体界面操作"
+        ],
+        "corrections": [
+          "Auto Mode按官方资料限定分层审批和分类器输入，删除数百毫秒与纯字段免注入断言",
+          "Reviewer是职责、Sidecar是运行方式，可组合",
+          "审核能力按任务评估，跨家族作为作者选型偏好保留",
+          "本地执行权限取决于运行配置，容器/VM不写成绝对安全等级",
+          "幂等键、并发去重、查询状态与审批分工，补齐取消语义",
+          "实验界面演示对齐脚本实际动作，Calendar和Email授权未完成"
+        ],
+        "checks": [
+          "Markdown渲染、脚注配对、git diff --check",
+          "实验4-4 manifest 35项核对，差异：[]"
+        ]
+      },
+      "collaboration_review": {
+        "status": "正文、实验4-5、小结与四道题及参考答案初轮完成",
+        "preserved": [
+          "角色/来源标签/边界/输出格式",
+          "spawn/message/cancel/status/list五种原语",
+          "同步异步流式多轮与任务ID",
+          "HITL超时、优先级通知与反馈学习",
+          "minimal与llm_generated退款实例"
+        ],
+        "corrections": [
+          "来源标签由Harness真实来源支持，文本标签不赋予权限",
+          "任务取消与外部副作用分别处理",
+          "最小组仅policy导致缺信息，与包含必要事实摘要分开说明",
+          "真实HITL与未配置通知渠道区分",
+          "参考答案纠正邮件转账无法事后验证的说法"
+        ],
+        "checks": [
+          "61个manifest文件哈希通过",
+          "01/02/03上下文与子Agent答复逐条核对",
+          "51人工答复与52超时回执核对"
+        ]
+      },
+      "review_notes": [
+        "实验4-2历史符号链接目标与manifest不一致，45个普通文件通过；来源待核对",
+        "日历、Notion、邮件和通知的授权缺口保留在实验范围说明",
+        "最终PDF与印刷版式待出版流程验收"
+      ]
     },
     "chapter5": {
       "status": "pending"
@@ -610,7 +771,7 @@
       "status": "pending"
     }
   },
-  "next": "第3章提交PR供作者审阅；继续第4章工具，优先保留参数描述、协议消息、具体调用与安全边界等技术细节。",
+  "next": "提交第4章并更新PR，随后开始第5章逐段改写与技术细节核对。",
   "publishing": {
     "status": "available",
     "pr": "https://github.com/bojieli/ai-agent-book/pull/1173",
@@ -619,7 +780,8 @@
       "preface",
       "chapter1",
       "chapter2",
-      "chapter3"
+      "chapter3",
+      "chapter4"
     ]
   }
 }
