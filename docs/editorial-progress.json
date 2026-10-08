@@ -1331,13 +1331,38 @@
       }
     },
     "afterword": {
-      "status": "pending"
+      "status": "ready_for_author_review",
+      "preserved": [
+        "核心公式与十章回顾",
+        "两朵乌云：实时交互与持续学习",
+        "快慢分离、推理加速、MiMo和Taalas例子",
+        "小世界/大世界、行业数据、公司规范/PPT风格/客户习惯",
+        "RSI与AI for Science",
+        "模型与Harness共同演进、Claude Code、52.8%至66.5%",
+        "模型与应用团队的长期竞争力、开源与动手邀请"
+      ],
+      "localized_corrections": [
+        "与第一章两套分解及Harness五功能统一",
+        "生成速度与端到端延迟分开，补齐事件、取消与状态关系",
+        "模型内化操作能力后仍由运行时执行授权、配额及工具调度",
+        "Taalas沿用官方17000 token/s，去掉缺少测量口径的100ms；补充LoRA与可配置上下文",
+        "开尔文历史改为原始演讲涉及的两类难题"
+      ],
+      "checks": [
+        "逐段重写并与原文论点对照",
+        "三个脚注配对、Markdown渲染、禁用句式及git diff --check通过",
+        "MiMo与Taalas采用厂商技术资料；实验记录未复核"
+      ],
+      "pending": [
+        "作者审阅",
+        "全书一致性复审"
+      ]
     },
     "reference_answers": {
       "status": "pending"
     }
   },
-  "next": "后记逐段语言修改；前言阅读地图与全书术语、图题、脚注、题目交叉检查。",
+  "next": "全书一致性复审：前言逐句语言与阅读地图、跨章术语、图题/脚注/题目、原稿技术保留情况。",
   "publishing": {
     "status": "available",
     "pr": "https://github.com/bojieli/ai-agent-book/pull/1173",
@@ -1353,7 +1378,8 @@
       "chapter7",
       "chapter8",
       "chapter9",
-      "chapter10"
+      "chapter10",
+      "afterword"
     ]
   }
 }
