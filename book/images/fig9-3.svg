@@ -1,42 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 410" width="1000" height="410" style="background:#ffffff">
-  <defs>
-    <style>
-      .t{font-family:Arial,'PingFang SC','Microsoft YaHei',sans-serif;fill:#26343c}
-      .h{font-size:20px;font-weight:700}
-      .s{font-size:16px;fill:#52636d}
-      .box{fill:#f5f7f8;stroke:#33434d;stroke-width:2}
-      .accent{fill:#e8f1f5;stroke:#2f617a;stroke-width:2}
-    </style>
-  </defs>
-  <text x="500" y="30" text-anchor="middle" class="t h">能力的表示性质决定主要更新位置</text>
-
-  <rect x="35" y="72" width="220" height="126" rx="9" class="box"/>
-  <text x="145" y="105" text-anchor="middle" class="t h">知识</text>
-  <text x="145" y="135" text-anchor="middle" class="t s">事实、经验与例外</text>
-  <text x="145" y="164" text-anchor="middle" class="t s">Markdown / 知识库</text>
-
-  <rect x="275" y="72" width="220" height="126" rx="9" class="box"/>
-  <text x="385" y="105" text-anchor="middle" class="t h">指令</text>
-  <text x="385" y="135" text-anchor="middle" class="t s">可语言化的判断原则</text>
-  <text x="385" y="164" text-anchor="middle" class="t s">Prompt / Skill</text>
-
-  <rect x="515" y="72" width="220" height="126" rx="9" class="box"/>
-  <text x="625" y="105" text-anchor="middle" class="t h">程序</text>
-  <text x="625" y="135" text-anchor="middle" class="t s">确定性流程与强约束</text>
-  <text x="625" y="164" text-anchor="middle" class="t s">工具 / 工作流 / Harness</text>
-
-  <rect x="755" y="72" width="220" height="126" rx="9" class="accent"/>
-  <text x="865" y="105" text-anchor="middle" class="t h">参数</text>
-  <text x="865" y="135" text-anchor="middle" class="t s">高维感知与隐式策略</text>
-  <text x="865" y="164" text-anchor="middle" class="t s">SFT / 蒸馏 / RL</text>
-
-  <line x1="145" y1="226" x2="865" y2="226" stroke="#33434d" stroke-width="2"/>
-  <path d="M145 218 V234 M865 218 V234" stroke="#33434d" stroke-width="2"/>
-  <text x="145" y="260" text-anchor="middle" class="t s">易更新、可追溯</text>
-  <text x="865" y="260" text-anchor="middle" class="t s">内化、低推理开销</text>
-  <text x="500" y="289" text-anchor="middle" class="t h">不是单向阶梯，而是四种互补载体</text>
-
-  <rect x="145" y="320" width="710" height="58" rx="8" class="accent"/>
-  <text x="500" y="344" text-anchor="middle" class="t h">首要判断：能力能否被事实、语言规则或程序完整表达？</text>
-  <text x="500" y="367" text-anchor="middle" class="t s">稳定性、成本与更新频率决定具体部署方式，而非能力能否参数化</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="150mm" height="116.67mm" viewBox="0 0 900 700" role="img" aria-labelledby="title desc">
+<title id="title">持续进化的四种更新方式</title><desc id="desc">四种互补载体及其适用内容、实现与选择因素。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#333333"/></marker></defs>
+<rect width="900" height="700" fill="#ffffff"/>
+<rect x="20" y="20" width="410" height="215" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="20" y="20" width="410" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="225.0" y="53" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">知识</text>
+<text x="225.0" y="100" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">事实 · 经验 · 例外</text>
+<text x="225.0" y="132" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">Markdown / 知识库</text>
+<text x="225.0" y="164" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">来源与适用条件可追溯</text>
+<rect x="470" y="20" width="410" height="215" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="470" y="20" width="410" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="675.0" y="53" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">指令</text>
+<text x="675.0" y="100" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">可语言化的判断原则</text>
+<text x="675.0" y="132" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">Prompt / Skill</text>
+<text x="675.0" y="164" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">触发条件与执行步骤</text>
+<rect x="20" y="280" width="410" height="215" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="20" y="280" width="410" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="225.0" y="313" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">程序</text>
+<text x="225.0" y="360" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">确定性流程与强约束</text>
+<text x="225.0" y="392" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">工具 / 工作流 / Harness</text>
+<text x="225.0" y="424" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">执行状态与权限检查</text>
+<rect x="470" y="280" width="410" height="215" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="470" y="280" width="410" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="675.0" y="313" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">参数</text>
+<text x="675.0" y="360" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">高维感知与隐式策略</text>
+<text x="675.0" y="392" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">SFT / 蒸馏 / RL</text>
+<text x="675.0" y="424" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">训练后由模型生成行为</text>
+<rect x="20" y="545" width="860" height="110" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="20" y="545" width="860" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="450.0" y="578" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">更新位置的选择</text>
+<text x="450.0" y="625" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">能力表示 · 更新频率 · 可追溯性 · 稳定性 · 运行成本</text>
 </svg>

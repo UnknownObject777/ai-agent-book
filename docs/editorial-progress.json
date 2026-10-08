@@ -1139,7 +1139,66 @@
       }
     },
     "chapter9": {
-      "status": "pending"
+      "status": "ready_for_author_review",
+      "rewritten_sections": [
+        "开篇：任务内适应、持续学习与系统持续进化",
+        "结果/过程/质量三层评价及客服七维表",
+        "四类更新方式及选择",
+        "原始轨迹、单次分析与知识文档三层存储",
+        "五步提炼管道、GAIA/AWorld/Reflexion",
+        "系统提示学习、DSPy/OPRO/GEPA",
+        "τ²-bench转接与用户工具边界",
+        "航空客服转接规则",
+        "需求澄清与Spec确认Skill",
+        "程序更新与浏览器工作流六步生命周期",
+        "隔离版本、worktree/PR与可检验变更说明",
+        "Agentic Harness Engineering/Self-Harness/Alita案例",
+        "实验9-5至9-7：工作流、重试熔断与授权检查",
+        "DeepSeek Harness/Cordis动态组合",
+        "经验进入模型参数的路径"
+      ],
+      "preserved": [
+        "九个实验模块",
+        "客服七维评价、四项诊断输出、经验适用条件与证据",
+        "User as Code、原始轨迹/分析/文档、支持与反驳轨迹",
+        "20条提炼任务19条转接、12.3%至19.3%、两类错误下降约八成",
+        "错误电话号码参数连续五次调用与SIM卡恢复实例",
+        "身份提供商/回退/兼容/上线范围，三种澄清策略及七项指标",
+        "邮件控件、XPath/CSS、三个模板参数、动作前后及独立回放检查",
+        "PreAct8.5～13倍、Alita字幕API与答案100000000",
+        "失败/成功/历史拒绝三类更新依据、两类验证权限",
+        "时间/空间可组合性、可撤销效果/反应式协效果、插件生命周期与缓存影响",
+        "ACE/MCE/工作流搜索/发现树回放，三种历史复用方式",
+        "在线与离线循环、四项进化指标、五类长期变化",
+        "四次科研尝试与三类问题、四项证据与监督方法",
+        "三道安全边界、睡眠学习五步、Claude Code与Hermes记忆机制",
+        "五幅图的评价字段、四载体、证据链与版本发布关系"
+      ],
+      "checks": [
+        "Markdown渲染通过；九实验完整",
+        "已改写部分关键字段与数字保留，禁用句式清理",
+        "脚注引用均有定义，git diff --check通过",
+        "未复核实验原始记录",
+        "核对dsh/Cordis官方设计说明，修正所有组合静态及所有插件仅内存的绝对表述",
+        "增补程序与插件段Markdown、技术字段、禁用句式、九实验完整性及脚注配对检查通过",
+        "git diff --check通过；未复核实验原始记录",
+        "全章九实验、五图引用顺序、26脚注配对通过",
+        "七道思考题与参考答案同步、三份Markdown渲染通过",
+        "五SVG灰阶、最小字号、锚点边界、渲染及视觉检查通过；修复回路线穿字",
+        "插图重复生成一致性及git diff --check通过"
+      ],
+      "pending": [],
+      "files": [
+        "book/chapter9.md",
+        "book/reference-answers.md",
+        "chapter9/README.md",
+        "scripts/book_figures/chapter9.py",
+        "book/images/fig9-1.svg",
+        "book/images/fig9-2.svg",
+        "book/images/fig9-3.svg",
+        "book/images/fig9-4.svg",
+        "book/images/fig9-5.svg"
+      ]
     },
     "chapter10": {
       "status": "pending"
@@ -1151,7 +1210,7 @@
       "status": "pending"
     }
   },
-  "next": "第8章完成并纳入PR审阅；继续第9章持续进化的逐段教学改写、原图信息保留与题答同步。",
+  "next": "第9章提交审阅；继续第10章多Agent协作逐段改写，再处理后记及全书一致性。",
   "publishing": {
     "status": "available",
     "pr": "https://github.com/bojieli/ai-agent-book/pull/1173",
@@ -1165,7 +1224,8 @@
       "chapter5",
       "chapter6",
       "chapter7",
-      "chapter8"
+      "chapter8",
+      "chapter9"
     ]
   }
 }
