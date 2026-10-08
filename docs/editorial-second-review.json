@@ -175,9 +175,22 @@
       ]
     },
     "chapter9": {
-      "pass1": "pending",
-      "pass2": "pending",
-      "author_voice": "pending"
+      "pass1": "complete",
+      "pass2": "complete",
+      "author_voice": "compared_with_original_and_restored",
+      "method": "第一遍逐句审读全部正文、表格、实验、脚注与思考题并对照原稿；第二遍重新通读全文，检查句间、段间和第10章开头的衔接",
+      "changes": [
+        "恢复持续进化是Agent最重要能力之一的判断",
+        "恢复像新员工一样从工作中长进、从聪明变得熟练的作者表达",
+        "恢复持续进化应遵循科学方法的主张",
+        "保留四种更新载体、工具职责、程序生命周期、插件组合、发现树回放和睡眠学习机制",
+        "改善评价到修复、知识到指令、经验到程序的表达，并补充第9—10章过渡"
+      ],
+      "checks": [
+        "保留5幅图、9个实验和7道思考题",
+        "保留转接规则、工作流变量、加速数据与插件技术术语",
+        "未复核实验原始记录"
+      ]
     },
     "chapter10": {
       "pass1": "pending",
@@ -237,5 +250,5 @@
   },
   "editor_feedback_audit": "前言及第一章已按13项编辑反馈审读；后续章节待逐章复审，实验原始记录不再复核",
   "author_voice_candidates": "/tmp/agent-book-author-voice-candidates.json",
-  "next": "第9—10章与参考答案两遍逐句审读；最终PDF重编译和全部实页检查"
+  "next": "第10章与参考答案两遍逐句审读；最终PDF重编译和全部实页检查"
 }
