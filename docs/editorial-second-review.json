@@ -77,9 +77,22 @@
       ]
     },
     "chapter4": {
-      "pass1": "pending",
-      "pass2": "pending",
-      "author_voice": "pending"
+      "pass1": "complete",
+      "pass2": "complete",
+      "author_voice": "compared_with_original_and_restored",
+      "changes": [
+        "恢复围绕任务设计工具、优先通用执行器的作者主张",
+        "恢复边界条件与优先改进工具描述的判断",
+        "保留RFC3339、E.164、调用与返回的具体例子",
+        "恢复自动验证的作者建议，保留权限、幂等和取消等技术细节",
+        "改善能力封装、工具发现、感知、执行与协作之间的过渡"
+      ],
+      "method": "第一遍逐句审读并对照原稿主张；第二遍重新通读全部正文、实验、表格、脚注和思考题，并检查第5章开头的衔接",
+      "checks": [
+        "保留全部图片引用、实验标题、思考题和技术示例",
+        "第二遍明确代词指向、改进具体动作表述和章节过渡",
+        "未复核实验原始记录"
+      ]
     },
     "chapter5": {
       "pass1": "pending",
@@ -164,5 +177,5 @@
   },
   "editor_feedback_audit": "前言及第一章已按13项编辑反馈审读；后续章节待逐章复审，实验原始记录不再复核",
   "author_voice_candidates": "/tmp/agent-book-author-voice-candidates.json",
-  "next": "第4—10章与参考答案两遍逐句审读；最终PDF重编译和全部实页检查"
+  "next": "第5—10章与参考答案两遍逐句审读；最终PDF重编译和全部实页检查"
 }
