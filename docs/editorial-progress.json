@@ -1043,7 +1043,100 @@
       ]
     },
     "chapter8": {
-      "status": "pending"
+      "status": "ready_for_author_review",
+      "rewritten_sections": [
+        "开篇与阅读路径",
+        "四阶段全景、NTP、Mid-training与SFT",
+        "LoRA文本框",
+        "SFT/RL起点选择、奖励稀疏与成功采样",
+        "两类优化目标、行动阈值与在线数据分布",
+        "经典RL、MDP、Bellman与Q-learning数值示例",
+        "预训练、MiniMind与Mid-training",
+        "SFT、语音条件控制、蒸馏与训练数据合成",
+        "Mid-training/SFT/RL选择与衔接",
+        "单轮RL、AdaptThink与GeneralPoints",
+        "16条rollout的GRPO更新、On-policy与数值一致性",
+        "RL环境、模型模拟器及训练评估隔离",
+        "多轮信用分配、V-IRL、SimpleVLA-RL、ReTool与AWorld",
+        "奖励来源、结果/过程反馈与ORM/PRM边界",
+        "RLVP公式、路径信号与组内差异",
+        "在轨蒸馏、反向KL与采样token评价",
+        "在轨自蒸馏、特权上下文与梯度隔离",
+        "过早结束、中文引号和精确复制三类训练案例",
+        "11项实践检查、本章小结",
+        "13道思考题与参考答案同步重写",
+        "图8-5至8-18灰度重绘及引图文字",
+        "章节README概念口径、精确复制指标解释同步"
+      ],
+      "preserved": [
+        "CPT/DAPT/TAPT、损失屏蔽、参数更新机制",
+        "LoRA公式与rank候选范围、十倍学习率的研究归属",
+        "Pass@k公式、1/p采样等待、GRPO零优势与PPO区别",
+        "GeneralPoints、mass-covering/mode-seeking、协变量漂移和T²/T关系",
+        "寻宝步骤、学习曲线与成本对照",
+        "SFT数据来源、语音标签、语言控制、技能图谱与三类修复案例",
+        "AdaptThink三数据集准确率、长度与路由比例",
+        "GeneralPoints规则/视觉迁移、PPO/GRPO伪代码与16条轨迹的优势计算",
+        "模型模拟两层次、工具反馈损失屏蔽、四个多轮实验",
+        "结果与路径奖励公式及短伪代码、RLVP结果",
+        "蒸馏概率例子、Qwen3-32B时间感任务23～47个百分点结果",
+        "24条过早结束案例与12/8留出任务、弯引号16/10/9生成维度与1024/256/256数据",
+        "精确复制信息链、37.5%至78.9%及80.1%结果，区分模型与tokenizer指标",
+        "前四图寻宝场景、网格数值、探索参数和红钥匙Q值更新数例",
+        "全部18幅图原有任务例子与主要技术字段",
+        "VLM输入尺寸/196token/768至512投影、GeneralPoints牌面与六组变化",
+        "16条rollout成功位置、组内均值与优势、导航错误和恢复",
+        "ReTool方程/sympy/解释器返回/128worker/训练参数",
+        "AWorld工具类别、26服务器126工具、模型与资源及训练配置"
+      ],
+      "checks": [
+        "首批段落Markdown渲染、关键技术项与禁用句式检查通过",
+        "19个实验模块保留，git diff --check通过",
+        "仅核对LoRA方法一手说明；未复核实验原始记录",
+        "扩展段落Markdown渲染通过；实验8-1至8-19完整且顺序正确",
+        "脚注无缺失与重复，git diff --check通过；全章图文与语言终审尚未完成",
+        "遵照作者要求未复核实验原始记录；移除正文中的训练路径、提交号和检查点审计说明",
+        "全章与第8章参考答案Markdown渲染通过；19实验、13题及答案逐字对应",
+        "全章清除“不是”“而是”句式，34条脚注配对无重复",
+        "图8-1至8-4原图标签检查、灰度重绘；SVG/最小字号/文本锚点边界/渲染检查通过",
+        "前四图视觉检查后修正反馈箭头、合流线、底部留白与网格动作；最终整章视觉复审待完成",
+        "git diff --check通过；未复核实验原始记录",
+        "18图全部渲染与视觉检查；修正悬空箭头、反馈经Harness、适配层连接、数学下标和留白",
+        "4份Markdown渲染、19实验、13题答、34脚注、18图题配对通过",
+        "18图SVG/灰度/最小字号/文本锚点边界检查及重复生成一致性通过",
+        "git diff --check通过；沿用现有汇总，未复核实验记录",
+        "最后一轮对照原稿完成；补入GeneralPoints新旧规则两条算式，保留技术细节与19个实验",
+        "最终4份Markdown、13题答、34脚注、18图题及顺序、git diff --check通过"
+      ],
+      "pending": [
+        "作者审阅与反馈",
+        "最终PDF与印刷版式检查"
+      ],
+      "figures": {
+        "generator": "scripts/book_figures/chapter8.py",
+        "rewritten": [
+          "fig8-1.svg",
+          "fig8-2.svg",
+          "fig8-3.svg",
+          "fig8-4.svg",
+          "fig8-5.svg",
+          "fig8-6.svg",
+          "fig8-7.svg",
+          "fig8-8.svg",
+          "fig8-9.svg",
+          "fig8-10.svg",
+          "fig8-11.svg",
+          "fig8-12.svg",
+          "fig8-13.svg",
+          "fig8-14.svg",
+          "fig8-15.svg",
+          "fig8-16.svg",
+          "fig8-17.svg",
+          "fig8-18.svg"
+        ],
+        "pending": "最终PDF与黑白印刷版式",
+        "visual_review": true
+      }
     },
     "chapter9": {
       "status": "pending"
@@ -1058,7 +1151,7 @@
       "status": "pending"
     }
   },
-  "next": "第7章更新PR后，继续第8章教学式改写；保留技术细节，不再复核实验原始记录。",
+  "next": "第8章完成并纳入PR审阅；继续第9章持续进化的逐段教学改写、原图信息保留与题答同步。",
   "publishing": {
     "status": "available",
     "pr": "https://github.com/bojieli/ai-agent-book/pull/1173",
@@ -1071,7 +1164,8 @@
       "chapter4",
       "chapter5",
       "chapter6",
-      "chapter7"
+      "chapter7",
+      "chapter8"
     ]
   }
 }

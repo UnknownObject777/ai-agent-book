@@ -1,27 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 40 780 340" width="780" height="340" style="background:#ffffff">
-<defs><marker id="ah" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#333333"/></marker><marker id="ah-light" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#999999"/></marker></defs>
-
-<line x1="50" y1="120" x2="730" y2="120" stroke="#999999" stroke-width="2"/>
-<circle cx="140" cy="120" r="8" fill="#333333" stroke="#333333" stroke-width="2"/>
-<text x="140" y="95" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">2015-2016</text>
-<rect x="40" y="145" width="200" height="116" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="140" y="167" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">算法中心主义</text>
-<text x="140" y="193" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">DQN · Atari</text>
-<text x="140" y="215" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">更好算法 = 关键</text>
-<text x="140" y="237" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">新环境需从头训练</text>
-<circle cx="390" cy="120" r="8" fill="#333333" stroke="#333333" stroke-width="2"/>
-<text x="390" y="95" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">2016-2018</text>
-<rect x="290" y="145" width="200" height="116" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="390" y="167" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">环境的重要性</text>
-<text x="390" y="193" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">Gym · Universe</text>
-<text x="390" y="215" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">Dota 2 超人表现</text>
-<text x="390" y="237" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">网页导航始终无法突破</text>
-<circle cx="640" cy="120" r="8" fill="#333333" stroke="#333333" stroke-width="2"/>
-<text x="640" y="95" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">2018-至今</text>
-<rect x="540" y="145" width="200" height="116" rx="6" fill="#d0d0d0" stroke="#333333" stroke-width="2"/>
-<text x="640" y="167" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">先验的觉醒</text>
-<text x="640" y="193" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">GPT-2/3 · WebGPT</text>
-<text x="640" y="215" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">ChatGPT · Agent</text>
-<text x="640" y="237" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">先验 &gt; 环境 &gt; 算法</text>
-<text x="390" y="352" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">关键洞察：先验知识可通过与 RL 完全无关的方式获得（语言预训练）</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="150mm" height="120.83mm" viewBox="0 0 900 725" role="img" aria-labelledby="title desc">
+<title id="title">OpenAI 训练范式演进</title><desc id="desc">算法、环境和预训练先验三个关注方向及代表项目。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#333333"/></marker></defs>
+<rect width="900" height="725" fill="#ffffff"/>
+<rect x="20" y="20" width="860" height="110" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="20" y="20" width="860" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="450.0" y="53" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">算法：怎样从反馈更新策略</text>
+<text x="450.0" y="100" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">DQN · Atari：价值估计与探索</text>
+<path d="M 450 130 L 450 165" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="20" y="165" width="860" height="180" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="20" y="165" width="860" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="450.0" y="198" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">环境：模型能经历哪些任务</text>
+<text x="450.0" y="245" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">Gym：统一交互接口</text>
+<text x="450.0" y="277" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">Universe / World of Bits：计算机与网页</text>
+<text x="450.0" y="309" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">Dota 2：复杂任务中的大规模交互</text>
+<path d="M 450 345 L 450 385" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="20" y="385" width="860" height="145" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="20" y="385" width="860" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="450.0" y="418" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">先验：模型从什么能力起点出发</text>
+<text x="450.0" y="465" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">GPT-2 / GPT-3：语言预训练</text>
+<text x="450.0" y="497" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">WebGPT / ChatGPT：在已有能力上训练行为</text>
+<path d="M 450 530 L 450 570" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="20" y="570" width="860" height="110" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="20" y="570" width="860" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="450.0" y="603" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">本书采用的工程顺序</text>
+<text x="450.0" y="650" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">检查先验能力 → 构造环境与反馈 → 选择优化方法</text>
 </svg>

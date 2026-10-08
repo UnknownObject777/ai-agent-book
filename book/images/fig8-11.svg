@@ -1,25 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 40 780 340" width="780" height="340" style="background:#ffffff">
-<defs><marker id="ah" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#333333"/></marker><marker id="ah-light" markerWidth="12" markerHeight="8" refX="12" refY="4" orient="auto"><polygon points="0 0, 12 4, 0 8" fill="#999999"/></marker></defs>
-
-<rect x="40" y="65" width="300" height="130" rx="6" fill="#f0f0f0" stroke="#333333" stroke-width="2"/>
-<text x="190" y="88" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">阶段一：SFT 固化格式</text>
-<text x="190" y="115" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">目标：输出可解析（JSON/工具调用）</text>
-<text x="190" y="137" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">数据：数千条高质量示范</text>
-<text x="190" y="159" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">停止条件：格式稳定，能力初具</text>
-<text x="190" y="181" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">⚠ 过度训练 → 模型塌缩到训练分布</text>
-<line x1="342" y1="130" x2="398" y2="130" stroke="#333333" stroke-width="2" marker-end="url(#ah)"/>
-<text x="370" y="115" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">格式</text>
-<text x="370" y="135" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">稳定</text>
-<rect x="400" y="65" width="340" height="130" rx="6" fill="#d0d0d0" stroke="#333333" stroke-width="2"/>
-<text x="570" y="88" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">阶段二：RL 塑形策略</text>
-<text x="570" y="115" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">目标：最大化任务奖励（准确率/成功率）</text>
-<text x="570" y="137" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">前提：输出格式稳定 → 奖励可计算</text>
-<text x="570" y="159" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">突破：发现超越 SFT 示范的新策略</text>
-<text x="570" y="181" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="normal">✓ 格式稳定 + 策略泛化 = 部署就绪</text>
-<rect x="40" y="220" width="700" height="70" rx="4" fill="#f5f5f5" stroke="#333333" stroke-width="2"/>
-<text x="390" y="238" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">为什么不能跳过 SFT 直接 RL？</text>
-<text x="390" y="262" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">基础模型输出无结构 → 无法解析 JSON → 奖励函数返回 NaN → 梯度全零 → 训练完全失败</text>
-<text x="390" y="310" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#333333" text-anchor="middle" dominant-baseline="central" font-weight="bold">SFT 记忆分布 → RL 泛化策略</text>
-<text x="390" y="338" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">SFT: max Σ log P(y|x)（拟合训练分布）    RL: max E[R(τ)]（优化任务目标）</text>
-<text x="390" y="362" font-family="Arial, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" fill="#666666" text-anchor="middle" dominant-baseline="central" font-weight="normal">当&quot;无论增加多少示范，新场景仍不佳&quot;时 → 转向 RL 的临界点</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="150mm" height="145.83mm" viewBox="0 0 900 875" role="img" aria-labelledby="title desc">
+<title id="title">Mid-training、SFT 与 RL 的选择与衔接</title><desc id="desc">从任务诊断进入训练，再以独立评估决定后续阶段。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#333333"/></marker></defs>
+<rect width="900" height="875" fill="#ffffff"/>
+<rect x="20" y="20" width="860" height="105" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="20" y="20" width="860" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="450.0" y="53" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">先诊断任务表现</text>
+<text x="450.0" y="100" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">pass@k · 格式解析率 · 部分进展 · 失败归因</text>
+<path d="M 160 125 L 160 180" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M 450 125 L 450 180" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M 740 125 L 740 180" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="20" y="180" width="270" height="215" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="20" y="180" width="270" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="155.0" y="213" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">Mid-training</text>
+<text x="155.0" y="260" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">领域知识与表示</text>
+<text x="155.0" y="292" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">长度与基础能力</text>
+<text x="155.0" y="324" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">领域语料</text>
+<text x="155.0" y="356" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">长度课程 / 混合数据</text>
+<rect x="315" y="180" width="270" height="215" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="315" y="180" width="270" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="450.0" y="213" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">SFT</text>
+<text x="450.0" y="260" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">回答与行动示范</text>
+<text x="450.0" y="292" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">格式 / 协议 / 恢复</text>
+<text x="450.0" y="324" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">高质量目标序列</text>
+<text x="450.0" y="356" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">逐 token 监督</text>
+<rect x="610" y="180" width="270" height="215" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="610" y="180" width="270" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="745.0" y="213" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">RL</text>
+<text x="745.0" y="260" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">可执行、可评分轨迹</text>
+<text x="745.0" y="292" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">组内差异 / 有效反馈</text>
+<text x="745.0" y="324" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">交互环境与奖励</text>
+<text x="745.0" y="356" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">采样 → 评价 → 更新</text>
+<path d="M 160 395 L 160 430 L 740 430 L 740 395" fill="none" stroke="#333333" stroke-width="1.8"/>
+<path d="M 450 395 L 450 470" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="20" y="470" width="860" height="145" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="20" y="470" width="860" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="450.0" y="503" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">独立评估与下一步选择</text>
+<text x="450.0" y="550" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">目标能力 · 迁移表现 · 保留能力 · 训练与运行成本</text>
+<text x="450.0" y="582" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">补基础能力 → 改善示范 → 优化策略；按问题选择衔接</text>
+<rect x="20" y="660" width="860" height="145" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="20" y="660" width="860" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="450.0" y="693" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">进入 RL 前的小规模采样</text>
+<text x="450.0" y="740" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">能否产生有效行为？奖励能否区分轨迹？</text>
+<text x="450.0" y="772" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">成功稀少：补训练起点或设计可达的课程与部分奖励</text>
 </svg>
