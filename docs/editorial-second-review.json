@@ -82,9 +82,17 @@
       "author_voice": "pending"
     },
     "afterword": {
-      "pass1": "pending",
-      "pass2": "pending",
-      "author_voice": "pending"
+      "pass1": "complete",
+      "pass2": "complete",
+      "author_voice": "compared_with_original_and_restored",
+      "method": "现稿和原稿全文对照，第一遍修改后重新通读全文，第二遍处理重复、句间和前后呼应",
+      "changes": [
+        "恢复活着的Agent、学习与适应终将成为模型最强能力的作者表达",
+        "恢复模型一层层吸收Harness能力、工程不断走向新前沿的判断",
+        "恢复业务反馈与模型迭代构成护城河，以及应用团队用Harness争取时间的建议",
+        "保留实时交互两条路线、具体推理速度、运行时职责与全部来源",
+        "完善两朵乌云到共同演进的过渡，结尾呼应前言的实践—方法—原则"
+      ]
     },
     "reference-answers": {
       "pass1": "pending",
@@ -103,16 +111,22 @@
       "第6章公式分隔符",
       "第7、8章公式内中文句号缺字",
       "下标字符字体缺字",
-      "竖向图高度上限从0.38提升到0.68正文高度"
+      "竖向图高度上限从0.38提升到0.68正文高度",
+      "前言不编号小节增加独立目录锚点，逐项跳转页核对通过"
     ],
     "remaining": [
-      "前言不编号小节目录跳转位置偏早，需修正锚点",
       "全书实页检查",
       "两遍文字修改后的最终重编译"
     ],
-    "final": "pending"
+    "final": "pending",
+    "checks": {
+      "pages": 313,
+      "out_of_page_text_spans": 24,
+      "missing_figure_numbers": [],
+      "latex_missing_glyph_warnings": 0
+    }
   },
   "editor_feedback_audit": "前言及第一章已按13项编辑反馈审读；后续章节待逐章复审，实验原始记录不再复核",
   "author_voice_candidates": "/tmp/agent-book-author-voice-candidates.json",
-  "next": "修正PDF不编号小节锚点；继续第二章两遍逐句审读及作者观点对照；每章更新PR"
+  "next": "核对PDF表格折行；继续第二章两遍逐句审读及作者观点对照；每章更新PR"
 }
