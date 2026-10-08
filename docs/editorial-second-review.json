@@ -155,9 +155,24 @@
       ]
     },
     "chapter8": {
-      "pass1": "pending",
-      "pass2": "pending",
-      "author_voice": "pending"
+      "pass1": "complete",
+      "pass2": "complete",
+      "author_voice": "compared_with_original_and_restored",
+      "method": "第一遍逐句审读并对照原稿作者判断；第二遍重新通读全部正文、代码、公式、表格、实验、脚注和思考题，并检查第9章开头的衔接",
+      "changes": [
+        "保留数据和环境比算法更重要的主张，恢复环境保真度优先于算法选择的建议",
+        "恢复先验、环境、算法的工程优先级及预算受限时比较算法和架构的建议",
+        "保留作者时间感研究，恢复对反馈密度、样本效率和分布一致性的判断",
+        "保留全部训练伪代码、公式、GeneralPoints算例、参数与实验结果",
+        "拆分算法长句，改善状态、数据、训练信号之间的解释及章节过渡",
+        "未复核实验原始记录"
+      ],
+      "checks": [
+        "保留5个代码块、18幅图、19个实验、13道思考题和5组独立公式",
+        "保留Q-learning算例、GeneralPoints规则变化、GRPO组内优势、在轨蒸馏及精确复制数据",
+        "提前解释rollout，拆分GeneralPoints训练设计与输出格式分析，明确RLVR名称与路径惩罚对象",
+        "未复核实验原始记录"
+      ]
     },
     "chapter9": {
       "pass1": "pending",
@@ -222,5 +237,5 @@
   },
   "editor_feedback_audit": "前言及第一章已按13项编辑反馈审读；后续章节待逐章复审，实验原始记录不再复核",
   "author_voice_candidates": "/tmp/agent-book-author-voice-candidates.json",
-  "next": "第8—10章与参考答案两遍逐句审读；最终PDF重编译和全部实页检查"
+  "next": "第9—10章与参考答案两遍逐句审读；最终PDF重编译和全部实页检查"
 }
