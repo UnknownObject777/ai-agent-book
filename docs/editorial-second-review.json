@@ -1,0 +1,118 @@
+{
+  "baseline_commit": "2662c17ec098234694d7ce45f2c17ce9c7f0850d",
+  "requirements": [
+    "编译现稿完整PDF并逐项检查编辑问题",
+    "逐句语言审读两遍，第二遍独立检查衔接与节奏",
+    "对照原稿恢复作者判断与个人经验，并保留事实边界",
+    "保留技术细节、灰度插图、教学式叙述；不复核实验原始记录",
+    "更新PR并交付最终PDF"
+  ],
+  "passes": {
+    "introduction": {
+      "pass1": "complete",
+      "pass2": "complete",
+      "author_voice": "compared_with_original_and_restored",
+      "method": "全文逐句审读后修改；重新通读修改稿检查句间、段间及下一章开头的衔接",
+      "changes": [
+        "恢复术语普及之前发现真实业务问题的作者判断",
+        "恢复人机协作参与知识创造的个人体验",
+        "保留第二章最关键、动手实验的强烈建议与原则穿越模型迭代的判断",
+        "把逐章介绍中的沿、进入等抽象连接改为明确的教学顺序",
+        "保留编辑确认的课程名称与时间"
+      ]
+    },
+    "chapter1": {
+      "pass1": "complete",
+      "pass2": "complete",
+      "author_voice": "compared_with_original_and_restored",
+      "method": "全文逐句审读后修改；重新通读修改稿检查句间、段间及下一章开头的衔接",
+      "changes": [
+        "恢复模型此刻的能力边界就是Harness价值所在的判断",
+        "恢复行业从能做事走向可靠地做事的原稿表达",
+        "保留上下文和工具作为主要能力杠杆的判断并使用编辑确认的比喻",
+        "用换汇到搜索分析的任务变化衔接两个实验",
+        "保留全部代码块、消息字段、工具结果、实验数字和图片引用",
+        "消融小结分别说明三类信息与历史推理信息的作用",
+        "完善本章小结与第二章上下文工程的衔接"
+      ]
+    },
+    "chapter2": {
+      "pass1": "pending",
+      "pass2": "pending",
+      "author_voice": "pending"
+    },
+    "chapter3": {
+      "pass1": "pending",
+      "pass2": "pending",
+      "author_voice": "pending"
+    },
+    "chapter4": {
+      "pass1": "pending",
+      "pass2": "pending",
+      "author_voice": "pending"
+    },
+    "chapter5": {
+      "pass1": "pending",
+      "pass2": "pending",
+      "author_voice": "pending"
+    },
+    "chapter6": {
+      "pass1": "pending",
+      "pass2": "pending",
+      "author_voice": "pending"
+    },
+    "chapter7": {
+      "pass1": "pending",
+      "pass2": "pending",
+      "author_voice": "pending"
+    },
+    "chapter8": {
+      "pass1": "pending",
+      "pass2": "pending",
+      "author_voice": "pending"
+    },
+    "chapter9": {
+      "pass1": "pending",
+      "pass2": "pending",
+      "author_voice": "pending"
+    },
+    "chapter10": {
+      "pass1": "pending",
+      "pass2": "pending",
+      "author_voice": "pending"
+    },
+    "afterword": {
+      "pass1": "pending",
+      "pass2": "pending",
+      "author_voice": "pending"
+    },
+    "reference-answers": {
+      "pass1": "pending",
+      "pass2": "pending",
+      "author_voice": "pending"
+    }
+  },
+  "pdf": {
+    "baseline": "initial_compile_saved",
+    "initial_pdf": "/tmp/agent-book-full-pdf-review/initial-full-book.pdf",
+    "initial_pages": 261,
+    "layout_revision_pages": 313,
+    "fixed": [
+      "Linux等宽字体回退",
+      "明确顶级标题为chapter，修正0.x章号",
+      "第6章公式分隔符",
+      "第7、8章公式内中文句号缺字",
+      "下标字符字体缺字",
+      "竖向图高度上限从0.38提升到0.68正文高度"
+    ],
+    "remaining": [
+      "前言不编号小节目录跳转位置偏早，需修正锚点",
+      "全书实页检查",
+      "两遍文字修改后的最终重编译"
+    ],
+    "final": "pending"
+  },
+  "editor_feedback_audit": "前言及第一章已按13项编辑反馈审读；后续章节待逐章复审，实验原始记录不再复核",
+  "author_voice_candidates": "/tmp/agent-book-author-voice-candidates.json",
+  "next": "修正PDF不编号小节锚点；继续第二章两遍逐句审读及作者观点对照；每章更新PR"
+}
