@@ -125,8 +125,16 @@
 \usepackage{float}
 \let\origfigure\figure
 \let\origendfigure\endfigure
-\renewenvironment{figure}[1][htbp]{\origfigure[H]}{\origendfigure}
-\setkeys{Gin}{width=\linewidth,height=0.68\textheight,keepaspectratio}
+\renewenvironment{figure}[1][htbp]{\ifinner\origfigure[H]\else\origfigure[!htbp]\fi}{\origendfigure}
+% Local image dimensions leave native formula boxes at their normal size.
+\setkeys{Gin}{width=!,height=!,keepaspectratio}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{5}
+\renewcommand{\topfraction}{.85}
+\renewcommand{\bottomfraction}{.75}
+\renewcommand{\textfraction}{.12}
+\renewcommand{\floatpagefraction}{.85}
 
 % ── Figure captions: manual numbering in text, so suppress label ──
 \usepackage{caption}
@@ -137,9 +145,9 @@
 % captions were off). Render Heiti SC at nominal size (no MatchLowercase) with a
 % faux bold, so 中文 matches the Latin in captions. Injected into captions only;
 % headings and body are untouched.
-\IfFontExistsTF{Heiti SC}{\setCJKfamilyfont{capcjksf}[AutoFakeBold=2.5]{Heiti SC}}{\IfFontExistsTF{Noto Sans CJK SC}{\setCJKfamilyfont{capcjksf}[AutoFakeBold=2.5]{Noto Sans CJK SC}}{\setCJKfamilyfont{capcjksf}[AutoFakeBold=2.5]{DejaVu Sans}}}
+\setCJKfamilyfont{capcjksf}[Path=fonts/,Scale=1,BoldFont=SourceHanSansCN-Bold.otf]{SourceHanSansCN-Regular.otf}
 \DeclareCaptionFont{cjkmatch}{\CJKfamily{capcjksf}}
-\captionsetup{font={normalsize,sf,bf,cjkmatch}, labelformat=empty, skip=4pt, justification=centering}
+\captionsetup{font={small,sf,cjkmatch}, labelformat=empty, skip=4pt, justification=centering}
 
 % ── Blockquotes: teal left bar (experiments render as quotes) ────
 \renewenvironment{quote}{%
@@ -157,17 +165,14 @@
 % ── Inline code: keep it tight ───────────────────────────────────
 \setlength{\parindent}{2em}
 
-% 正文中文字体：本地 macOS 用 Songti SC / Heiti SC；CI（无 Apple 字体）用 Noto Sans CJK SC。
-% fontset=none 由 build_pdf.sh 传入，避免 ctex 自动选择已被移除的 ST 系列旧字体。
+% Match AI Infra: Songti body; real Source Han Sans bold/headings/captions.
 \IfFontExistsTF{Songti SC}{%
-  \setCJKmainfont[AutoFakeBold=2.5]{Songti SC}%
-  \setCJKsansfont[AutoFakeBold=2.5]{Heiti SC}%
-  \setCJKmonofont[AutoFakeBold=2.5]{Songti SC}%
+  \setCJKmainfont[Scale=1,BoldFont=SourceHanSansCN-Bold.otf,BoldFeatures={Path=fonts/}]{Songti SC}%
 }{%
-  \setCJKmainfont[AutoFakeBold=2.5]{Noto Sans CJK SC}%
-  \setCJKsansfont[AutoFakeBold=2.5]{Noto Sans CJK SC}%
-  \setCJKmonofont[AutoFakeBold=2.5]{Noto Sans CJK SC}%
+  \setCJKmainfont[Scale=1,BoldFont=SourceHanSansCN-Bold.otf,BoldFeatures={Path=fonts/}]{Noto Serif CJK SC}%
 }
+\setCJKsansfont[Path=fonts/,Scale=1,BoldFont=SourceHanSansCN-Bold.otf]{SourceHanSansCN-Regular.otf}
+\setCJKmonofont[Path=fonts/,Scale=1,BoldFont=SourceHanSansCN-Bold.otf]{SourceHanSansCN-Regular.otf}
 
 % ElegantBook empties the `plain` page style used on chapter-opening pages.
 % Keep those pages numbered, matching the centered footer on regular pages.

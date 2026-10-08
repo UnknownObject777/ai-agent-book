@@ -3,7 +3,8 @@ from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2] / 'book' / 'images'
-FONT = 'Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif'
+FONT = 'Source Han Sans CN'
+from typography import typeset
 
 
 class Figure:
@@ -28,7 +29,7 @@ class Figure:
         self.parts.append(f'<path d="{d}" fill="none" stroke="#333333" stroke-width="1.8"'+(' marker-end="url(#arrow)"' if arrow else '')+'/>')
 
     def save(self, name):
-        (ROOT/name).write_text('\n'.join(self.parts+['</svg>'])+'\n')
+        (ROOT/name).write_text(typeset('\n'.join(self.parts+['</svg>']), name))
 
 
 def components():
@@ -55,9 +56,9 @@ def components():
         f.text(x+140,253,functions,20)
         f.text(x+140,351,chapters,22,True)
         f.text(x+140,386,details,20)
-    f.box(20,565,860,65)
+    f.box(20,565,860,72)
     f.text(450,594,'第 7 章 Agent 的评估',22,True)
-    f.text(450,619,'环境 · 指标 · 数据 · 系统反馈',20)
+    f.text(450,626,'环境 · 指标 · 数据 · 系统反馈',20)
     for x,title,details in [
         (20,'第 6 章 交互','多模态 · 语音\nComputer Use · 机器人\n异步事件架构'),
         (310,'第 9 章 持续进化','运行经验 · 持续更新\n验证 · 发布 · 回滚'),

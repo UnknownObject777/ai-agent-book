@@ -45,6 +45,7 @@ pandoc "${CHAPTERS[@]}" \
     --lua-filter=crossref.lua \
     --lua-filter=experiment_box.lua \
     --lua-filter=table_widths.lua \
+    --lua-filter=figure_size.lua \
     --toc \
     --toc-depth=3 \
     --number-sections \
