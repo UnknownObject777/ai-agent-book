@@ -254,13 +254,10 @@
       "前言不编号小节增加独立目录锚点，逐项跳转页核对通过",
       "为全部表格计算显式列宽并折行，修复24处页面边界外文字"
     ],
-    "remaining": [
-      "全书实页检查",
-      "两遍文字修改后的最终重编译"
-    ],
-    "final": "pending",
+    "remaining": [],
+    "final": "complete",
     "checks": {
-      "pages": 314,
+      "pages": 316,
       "out_of_page_text_spans": 0,
       "missing_figure_numbers": [],
       "latex_missing_glyph_warnings": 0,
@@ -268,10 +265,183 @@
         "图1-4竖向流程",
         "框架平台表格",
         "前言小节目录跳转"
+      ],
+      "figure_count": 114,
+      "toc_entries": 293,
+      "preface_toc_pdf_pages": [
+        9,
+        10,
+        11,
+        13,
+        13,
+        14
       ]
-    }
+    },
+    "visual_review": {
+      "pages": 316,
+      "reviewed_page_ranges": [
+        [
+          1,
+          316
+        ]
+      ],
+      "method": "渲染全部316页并逐页视觉检查；最终页眉/表题修订后按像素比较，重新检查全部39个变化页面",
+      "changed_pages_reviewed": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        86,
+        93,
+        94,
+        98,
+        112,
+        125,
+        135,
+        202,
+        203,
+        209,
+        217,
+        221,
+        227,
+        228,
+        229,
+        230,
+        232,
+        246,
+        263,
+        264,
+        265,
+        266,
+        267,
+        270,
+        271,
+        272,
+        281,
+        282,
+        286,
+        287,
+        288,
+        289,
+        315,
+        316
+      ],
+      "findings_resolved": [
+        "前言及后记页眉继承上一部分标题",
+        "表题与表格首行分离"
+      ],
+      "layout_decision": "部分高图前页保留空白，维持图内技术信息及字号，不通过缩小整图压缩页数。"
+    },
+    "final_file": "book/深入理解-AI-Agent-李博杰-v2.0.pdf",
+    "sha256": "d29b431d5315246c41c28349d420eeb590f0e609355bc4d8a6379896a2bd5901",
+    "final_pages": 316
   },
-  "editor_feedback_audit": "前言及第一章已按13项编辑反馈审读；后续章节待逐章复审，实验原始记录不再复核",
+  "editor_feedback_audit": {
+    "status": "complete",
+    "scope": "编辑13项意见对照全书审读结果；不复核实验原始记录",
+    "items": [
+      {
+        "number": 1,
+        "topic": "定位与方法—原则",
+        "sources": "book/introduction.md",
+        "evidence": "前言明确实践形成方法、评估检验方法、验证抽象沉淀原则；后记结尾呼应。",
+        "status": "addressed"
+      },
+      {
+        "number": 2,
+        "topic": "前言主线与使命",
+        "sources": "book/introduction.md",
+        "evidence": "使命聚焦基本结构、构建方法和能力边界；设计实体置于延伸思考文本框。",
+        "status": "addressed"
+      },
+      {
+        "number": 3,
+        "topic": "全书阅读地图",
+        "sources": "book/introduction.md",
+        "evidence": "逐章介绍与十章标题、主题和两部分阅读路线一致。",
+        "status": "addressed"
+      },
+      {
+        "number": 4,
+        "topic": "核心公式的功能组成",
+        "sources": "book/chapter1.md",
+        "evidence": "LLM、上下文、工具分别承担决策、信息组织及观测/行动接口。",
+        "status": "addressed"
+      },
+      {
+        "number": 5,
+        "topic": "功能比喻",
+        "sources": "book/introduction.md; book/chapter1.md",
+        "evidence": "统一为大脑、当前决策视野、感官和手脚；第2、4、6章按对应职责展开。",
+        "status": "addressed"
+      },
+      {
+        "number": 6,
+        "topic": "强化学习对应关系",
+        "sources": "book/chapter1.md; book/chapter6.md; book/chapter8.md",
+        "evidence": "具体观测和历史与空间定义分开，策略、工具接口和允许范围各有定义。",
+        "status": "addressed"
+      },
+      {
+        "number": 7,
+        "topic": "Model、Harness与环境",
+        "sources": "book/chapter1.md; book/chapter5.md; book/chapter10.md",
+        "evidence": "两套公式互补；Harness位于Agent内、Model外，环境承载外部状态，权限由执行机制落实。",
+        "status": "addressed"
+      },
+      {
+        "number": 8,
+        "topic": "观测、行动与开放式",
+        "sources": "book/chapter1.md; book/chapter6.md; book/chapter8.md",
+        "evidence": "专业交互使用观测；开放式指内容及组合难以穷举，同时保留接口、参数、权限与环境限制。",
+        "status": "addressed"
+      },
+      {
+        "number": 9,
+        "topic": "实验与循环说明",
+        "sources": "book/chapter1.md; book/images/fig1-3.svg",
+        "evidence": "完整基线与四组消融对应；ReAct作为典型实现，轨迹与历史消息区分；遵照作者要求沿用现有实验结果。",
+        "status": "addressed"
+      },
+      {
+        "number": 10,
+        "topic": "产品与工程判断",
+        "sources": "book/chapter1.md; book/afterword.md",
+        "evidence": "模型主导调用决策与实际执行分开；托管实验保留客户端/服务端职责；已移除K3连续200—300次调用的产品断言，保留有出处的模型介绍及作者工程判断。",
+        "status": "addressed"
+      },
+      {
+        "number": 11,
+        "topic": "五项功能与工程视角",
+        "sources": "book/chapter1.md; book/chapter10.md",
+        "evidence": "上下文管理、工具接口、约束、验证、纠正五项保留；五个工程视角按承载和组合解释。",
+        "status": "addressed"
+      },
+      {
+        "number": 12,
+        "topic": "正文、文本框与参考资料",
+        "sources": "book/introduction.md; book/chapter1.md; book/chapter4.md",
+        "evidence": "教学所需公式、参数示例与推理保留；旁支以文本框承载，来源用注释，实验完整运行细节留在README。",
+        "status": "addressed"
+      },
+      {
+        "number": 13,
+        "topic": "图文对应与灰度",
+        "sources": "book/images; book/chapter1.md; book/chapter2.md",
+        "evidence": "全书114幅图在PDF中完整显示；重点图1-4、1-5、1-6、2-1保留具体字段与机制；逐页检查灰度、箭头、图题和相邻文字。",
+        "status": "addressed"
+      }
+    ]
+  },
   "author_voice_candidates": "/tmp/agent-book-author-voice-candidates.json",
-  "next": "最终PDF重编译、全部实页检查和编辑13项意见全书核对"
+  "next": "作者审阅PR和PDF，按反馈继续迭代",
+  "html_checks": {
+    "files": 13,
+    "images": 114,
+    "math": 147,
+    "broken_images": 0,
+    "broken_footnotes": 0,
+    "math_errors": 0
+  }
 }

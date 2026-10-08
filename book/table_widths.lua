@@ -53,3 +53,29 @@ function Table(el)
   end
   return el
 end
+
+-- Attach manually numbered table titles to the table, keeping them on the
+-- same page as its first row. Markdown and HTML source stay unchanged.
+function Blocks(blocks)
+  if not FORMAT:match('latex') then return blocks end
+  local out = pandoc.List()
+  local i = 1
+  while i <= #blocks do
+    local block = blocks[i]
+    local next_block = blocks[i + 1]
+    if block.t == 'Para' and next_block and next_block.t == 'Table'
+      and pandoc.utils.stringify(block):match('^表%s*%d+%-%d+%s') then
+      if next_block.colspecs then
+        next_block.caption.long = {block}
+      else
+        next_block.caption = block.content
+      end
+      out:insert(next_block)
+      i = i + 2
+    else
+      out:insert(block)
+      i = i + 1
+    end
+  end
+  return out
+end
