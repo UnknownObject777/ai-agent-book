@@ -443,5 +443,6 @@
     "broken_images": 0,
     "broken_footnotes": 0,
     "math_errors": 0
-  }
+  },
+  "subsequent_typography_review": "editorial-typography-review.json"
 }
