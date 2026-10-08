@@ -1,8 +1,8 @@
 #!/bin/bash
 # Build the complete book as a single PDF (ElegantBook design, teal/cyan theme).
 # Requirements: pandoc, xelatex, ElegantBook class, rsvg-convert (librsvg),
-#               fonts: Songti SC / Heiti SC or Noto Sans CJK SC;
-#                      Menlo or DejaVu Sans Mono
+#               fonts: Songti SC (macOS review) or Noto Serif CJK SC (local draft);
+#                      Menlo or DejaVu Sans Mono; pinned Source Han Sans in fonts/
 # Usage: cd book && bash build_pdf.sh
 # Note: chapter/section numbers come from the document class; source headings
 #       carry no manual numbers (see git history for the de-numbering pass).
