@@ -116,9 +116,24 @@
       ]
     },
     "chapter6": {
-      "pass1": "pending",
-      "pass2": "pending",
-      "author_voice": "pending"
+      "pass1": "complete",
+      "pass2": "complete",
+      "author_voice": "compared_with_original_and_restored",
+      "changes": [
+        "恢复主动服务需要及时事件通知的判断",
+        "恢复独立虚拟身份、轻量语义路由与快慢分工的设计取向",
+        "恢复改进AOI观测接口和移动端生态壁垒的作者判断",
+        "恢复任务规划与底层控制分工的建议",
+        "保留异步状态、语音延迟、坐标换算、机器人控制等例子和公式",
+        "改善各交互形态之间的过渡与具体动作表述"
+      ],
+      "method": "第一遍逐句审读并对照原稿判断；第二遍重新通读全文、消息示例、公式、表格、实验、脚注和思考题，并检查第7章开头的衔接",
+      "checks": [
+        "保留代码块、图片引用、实验标题和思考题",
+        "补清任务句柄、事件示例补充字段及回合中途引导的说明",
+        "修正Computer Use阅读路线与实际内容顺序的一致性",
+        "未复核实验原始记录"
+      ]
     },
     "chapter7": {
       "pass1": "pending",
@@ -193,5 +208,5 @@
   },
   "editor_feedback_audit": "前言及第一章已按13项编辑反馈审读；后续章节待逐章复审，实验原始记录不再复核",
   "author_voice_candidates": "/tmp/agent-book-author-voice-candidates.json",
-  "next": "第6—10章与参考答案两遍逐句审读；最终PDF重编译和全部实页检查"
+  "next": "第7—10章与参考答案两遍逐句审读；最终PDF重编译和全部实页检查"
 }
