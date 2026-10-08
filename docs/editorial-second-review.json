@@ -57,9 +57,24 @@
       ]
     },
     "chapter3": {
-      "pass1": "pending",
-      "pass2": "pending",
-      "author_voice": "pending"
+      "pass1": "complete",
+      "pass2": "complete",
+      "author_voice": "compared_with_original_and_restored",
+      "changes": [
+        "保留八项记忆能力为作者归纳的口径",
+        "恢复自然语言与结构化索引分层配合的主张",
+        "恢复Markdown与版本控制、知识变更作为PR的主张",
+        "强调提议者与审核者应具备工具和持续查询能力",
+        "保留作者User as Code和User as Engram研究，改善机制说明",
+        "保留记忆字段、算法、手算例子、实验结果和所有图片",
+        "改善记忆表示到检索、以及第3—4章的衔接"
+      ],
+      "method": "第一遍逐句审读并对照原稿作者表达；第二遍重新通读全部正文、代码、实验、脚注和思考题，并检查第4章开头的衔接",
+      "checks": [
+        "保留全部代码块、图片引用、实验标题和思考题",
+        "第二遍修改表示到计算、索引到知识组织、知识维护到工具接口的衔接",
+        "未复核实验原始记录"
+      ]
     },
     "chapter4": {
       "pass1": "pending",
@@ -149,5 +164,5 @@
   },
   "editor_feedback_audit": "前言及第一章已按13项编辑反馈审读；后续章节待逐章复审，实验原始记录不再复核",
   "author_voice_candidates": "/tmp/agent-book-author-voice-candidates.json",
-  "next": "第三章两遍逐句审读和作者观点对照；继续第4—10章及参考答案；最终PDF须重编译"
+  "next": "第4—10章与参考答案两遍逐句审读；最终PDF重编译和全部实页检查"
 }
