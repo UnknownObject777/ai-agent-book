@@ -5,7 +5,42 @@
   "scope": "Restore technical trends, causal explanations, choices, and author judgments; preserve approved figures and experimental results. Review Chinese prose and integration in a second pass.",
   "chapters": {
     "introduction": {
-      "status": "pending"
+      "status": "restored_reviewed",
+      "restoration_items": [
+        {
+          "point": "从基座模型能力扩展到 Agent 落地的趋势",
+          "before": "2025 年以来，模型训练与 Agent 应用越来越相互依赖。",
+          "after": "2025 年以来，笔者看到一个重要变化：AI 研究与产业实践的重心，正从提升基座模型能力扩展到让 Agent 完成真实任务。模型训练与应用也因此更加紧密地结合起来。"
+        },
+        {
+          "point": "短期补模型短板与持久业务优势的因果判断",
+          "before": "下一次模型升级可以解决眼前的一些困难，深入业务的团队则会不断遇到新的问题，并从中形成自己的方法。",
+          "after": "如果一个产品的主要价值只是弥补某一代模型的短板，下一次模型升级就可能覆盖这部分价值，团队很难积累持久优势。深入复杂业务则能持续发现新的问题，促使团队形成经得住模型迭代的方法。"
+        },
+        {
+          "point": "第五章架构主张",
+          "before": "**第五章（Coding Agent 与通用 Agent）**讨论代码生成和文件系统怎样支撑通用能力。",
+          "after": "**第五章（Coding Agent 与通用 Agent）**提出通用 Agent 的一条核心架构思路：以 Coding Agent 为执行核心，以文件系统为工作空间。"
+        },
+        {
+          "point": "恢复后训练的投入优先级及泛化问题，保持阅读地图简洁",
+          "before": "**第八章（模型后训练）**讨论怎样用数据与环境更新模型能力。介绍监督微调、强化学习与奖励设计，并结合实验说明训练方法、数据质量和环境反馈各自起什么作用。",
+          "after": "**第八章（模型后训练）**讨论怎样用数据与环境更新模型能力，主张优先投入数据质量与训练环境。通过监督微调、强化学习和奖励设计，解释示范学习与探索为何带来不同的泛化表现，以及为什么只改算法往往收效有限。"
+        }
+      ],
+      "already_preserved": [
+        "实践在前、命名在后",
+        "复杂真实业务与系统评估两个条件",
+        "原则穿越模型迭代周期",
+        "第二章最关键及动手实验建议",
+        "代码生成、自举与设计实体延伸思考"
+      ],
+      "retained_corrections": [
+        "编辑确认的课程名称与日期",
+        "方法、评估、原则的层级",
+        "上下文与观测空间、工具与动作空间的边界"
+      ],
+      "review": "对照完整原稿后通读当前前言，保留逐章简介的阅读地图作用。"
     },
     "chapter1": {
       "status": "pending"
