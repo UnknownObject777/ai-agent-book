@@ -20,7 +20,10 @@ NS = {'s': 'http://www.w3.org/2000/svg'}
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--baseline')
+    parser.add_argument('--text-changes', type=Path,
+                        help='Reviewed removals/additions for the specified baseline')
     args = parser.parse_args()
+    changes = json.loads(args.text_changes.read_text()) if args.text_changes else {}
     figures = []
     for chapter in ['introduction'] + [f'chapter{i}' for i in range(1, 11)]:
         source = ROOT / 'book' / (chapter + '.md')
@@ -42,6 +45,12 @@ def main():
         if args.baseline:
             old = subprocess.check_output(['git', 'show', f'{args.baseline}:book/images/{path.name}'], cwd=ROOT, text=True)
             before = ''.join(el.text or '' for el in ET.fromstring(old).findall('s:text', NS))
+            if not before:
+                before = ''.join(el.get('aria-label', '') for el in
+                                 ET.fromstring(old).findall('s:g[@data-font]', NS))
+            for edit in changes.get(path.name, []):
+                assert before.count(edit['before']) == 1, f'Ambiguous text edit: {path}'
+                before = before.replace(edit['before'], edit['after'], 1)
             after = ''.join(el.get('aria-label', '') for el in root.findall('s:g[@data-font]', NS))
             assert before == after, f'Technical text changed: {path}'
             text_checks.append(path.name)
@@ -69,7 +78,9 @@ def main():
         })''')
         browser.close()
     report = {'referenced_figures': len(figures), 'outlined_vectors': len(vectors),
-              'unchanged_technical_text': len(text_checks), 'issues': issues}
+              'verified_technical_text': len(text_checks),
+              'reviewed_text_changes': len(set(vectors) & changes.keys()),
+              'issues': issues}
     (out / 'validation.json').write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n')
     print(json.dumps(report, ensure_ascii=False))
     assert not issues

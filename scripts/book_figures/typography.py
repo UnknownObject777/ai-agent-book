@@ -69,6 +69,63 @@ def wrap(text, width, size, weight):
     return lines
 
 
+def compact_vertical_space(root):
+    """Shorten empty horizontal bands without changing text or graph topology.
+
+    Protect text, horizontal edges and diagonal segments. Vertical connectors
+    and enclosing panels shrink together under the same coordinate mapping.
+    This removes spare panel height while retaining room around arrowheads.
+    """
+    height = float(root.get('viewBox').split()[3])
+    occupied = [(0, 0), (height, height)]
+    for el in root:
+        tag = el.tag.rsplit('}', 1)[-1]
+        if tag == 'text':
+            y, size = float(el.get('y')), float(el.get('font-size'))
+            occupied.append((y-size, y+8))
+        elif tag == 'rect' and 'x' in el.attrib:
+            y, h = float(el.get('y')), float(el.get('height'))
+            occupied.extend([(y-8, y+8), (y+h-8, y+h+8)])
+        elif tag == 'circle':
+            y, r = float(el.get('cy')), float(el.get('r'))
+            occupied.append((y-r-8, y+r+8))
+        elif tag == 'path':
+            points = [(float(x), float(y)) for x, y in
+                      re.findall(r'[ML]\s*(-?[\d.]+)[ ,]+(-?[\d.]+)', el.get('d'))]
+            for (x1, y1), (x2, y2) in zip(points, points[1:]):
+                if x1 != x2:
+                    occupied.append((min(y1, y2)-8, max(y1, y2)+8))
+            for _, y in points:
+                occupied.append((y-8, y+8))
+    merged = []
+    for lo, hi in sorted(occupied):
+        if merged and lo <= merged[-1][1]:
+            merged[-1][1] = max(merged[-1][1], hi)
+        else:
+            merged.append([lo, hi])
+    cuts = [(a[1]+10, b[0]-10) for a, b in zip(merged, merged[1:])
+            if b[0]-a[1] > 40]
+
+    def move(y):
+        return y-sum(max(0, min(y, end)-start) for start, end in cuts)
+
+    for el in root:
+        tag = el.tag.rsplit('}', 1)[-1]
+        if tag == 'rect':
+            y, h = float(el.get('y', 0)), float(el.get('height'))
+            el.set('y', f'{move(y):g}')
+            el.set('height', f'{move(y+h)-move(y):g}')
+        elif tag == 'text':
+            el.set('y', f'{move(float(el.get("y"))):g}')
+        elif tag == 'circle':
+            el.set('cy', f'{move(float(el.get("cy"))):g}')
+        elif tag == 'path':
+            el.set('d', re.sub(r'([ML])\s*(-?[\d.]+)[ ,]+(-?[\d.]+)',
+                              lambda m: f'{m[1]}{m[2]} {move(float(m[3])):g}', el.get('d')))
+    root.set('viewBox', f'0 0 900 {move(height):g}')
+    return move(height)
+
+
 def typeset(source, name):
     root = ET.fromstring(source)
     rects = [e for e in root if e.tag == f'{{{NS}}}rect' and 'x' in e.attrib]
@@ -122,6 +179,9 @@ def typeset(source, name):
     old_height = float(root.get('viewBox').split()[3])
     height = move(old_height)
     root.set('viewBox', f'0 0 900 {height:g}')
+    # Quantitative plots and spatial grids retain their coordinate scale.
+    if name not in {'fig6-7.svg', 'fig6-8.svg', 'fig8-3.svg'}:
+        height = compact_vertical_space(root)
     root.set('width', '106mm'); root.set('height', f'{height*106/900:.3f}mm')
     proof = ROOT / 'book/build/figure-text'
     proof.mkdir(parents=True, exist_ok=True)
