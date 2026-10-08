@@ -1,59 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="540" viewBox="0 0 880 540">
-  <title>同步接口兼容与模型原生异步</title>
-  <desc>运行时通过状态和事件队列兼容同步模型；原生异步模型可以边等待工具边工作，并根据用户中途更新调整后续行动。</desc>
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#555"/></marker>
-    <style>
-      text{font-family:Arial,'PingFang SC','Microsoft YaHei',sans-serif;fill:#333}
-      .title{font-size:20px;font-weight:700}
-      .label{font-size:17px;font-weight:600}
-      .small{font-size:15px}
-      .box{fill:#f4f4f4;stroke:#555;stroke-width:1.5}
-      .arrow{fill:none;stroke:#555;stroke-width:1.5;marker-end:url(#arrow)}
-    </style>
-  </defs>
-  <rect width="880" height="540" fill="#fff"/>
-  <rect x="20" y="20" width="840" height="145" rx="8" fill="#fff" stroke="#777" stroke-dasharray="7 4"/>
-  <text x="40" y="53" class="title">兼容方案：运行时安排异步节奏</text>
-  <rect x="40" y="75" width="230" height="60" rx="5" class="box"/>
-  <text x="155" y="100" text-anchor="middle" class="label">任务在后台运行</text>
-  <text x="155" y="122" text-anchor="middle" class="small">明确记录“尚未完成”</text>
-  <path d="M270 105 H313" class="arrow"/>
-  <rect x="320" y="75" width="240" height="60" rx="5" class="box"/>
-  <text x="440" y="100" text-anchor="middle" class="label">运行时接入新事件</text>
-  <text x="440" y="122" text-anchor="middle" class="small">决定排队、打断或并行处理</text>
-  <path d="M560 105 H603" class="arrow"/>
-  <rect x="610" y="75" width="230" height="60" rx="5" class="box"/>
-  <text x="725" y="100" text-anchor="middle" class="label">模型继续处理任务</text>
-  <text x="725" y="122" text-anchor="middle" class="small">仍按同步交互方式接收信息</text>
-
-  <rect x="20" y="185" width="840" height="250" rx="8" fill="#fff" stroke="#444" stroke-width="2"/>
-  <text x="40" y="218" class="title">原生异步：模型理解等待与中途变化</text>
-  <rect x="40" y="240" width="230" height="65" rx="5" class="box"/>
-  <text x="155" y="267" text-anchor="middle" class="label">发起耗时查询</text>
-  <text x="155" y="290" text-anchor="middle" class="small">例如：查询会议场地</text>
-  <path d="M270 272 H313" class="arrow"/>
-  <rect x="320" y="240" width="240" height="65" rx="5" class="box"/>
-  <text x="440" y="267" text-anchor="middle" class="label">等待期间继续工作</text>
-  <text x="440" y="290" text-anchor="middle" class="small">例如：整理议程与准备清单</text>
-  <path d="M560 272 H603" class="arrow"/>
-  <rect x="610" y="240" width="230" height="65" rx="5" class="box"/>
-  <text x="725" y="267" text-anchor="middle" class="label">结果到达后作出决策</text>
-  <text x="725" y="290" text-anchor="middle" class="small">依据真实信息比较场地</text>
-
-  <rect x="40" y="340" width="230" height="65" rx="5" class="box"/>
-  <text x="155" y="367" text-anchor="middle" class="label">用户中途补充要求</text>
-  <text x="155" y="390" text-anchor="middle" class="small">例如：预算与人数变化</text>
-  <path d="M270 372 H313" class="arrow"/>
-  <rect x="320" y="340" width="240" height="65" rx="5" class="box"/>
-  <text x="440" y="367" text-anchor="middle" class="label">保留已完成的工作</text>
-  <text x="440" y="390" text-anchor="middle" class="small">将新要求纳入当前任务</text>
-  <path d="M560 372 H603" class="arrow"/>
-  <rect x="610" y="340" width="230" height="65" rx="5" class="box"/>
-  <text x="725" y="367" text-anchor="middle" class="label">调整后续行动</text>
-  <text x="725" y="390" text-anchor="middle" class="small">综合已有信息与全部更新</text>
-
-  <rect x="20" y="455" width="840" height="65" rx="6" fill="#e9e9e9"/>
-  <text x="440" y="482" text-anchor="middle" class="label">模型理解变化、调整计划；运行时管理工具执行、任务状态与事件来源</text>
-  <text x="440" y="506" text-anchor="middle" class="small">能接收异步消息，还需要能正确恢复任务并控制实际动作。</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="150mm" height="168.33mm" viewBox="0 0 900 1010" role="img" aria-labelledby="title desc">
+<title id="title">同步接口兼容与模型原生异步</title><desc id="desc">后台任务句柄、原始调用标识与中途引导。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#333333"/></marker></defs>
+<rect width="900" height="1010" fill="#ffffff"/>
+<rect x="20" y="20" width="410" height="275" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="20" y="20" width="410" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="225.0" y="53" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">同步接口的运行时适配</text>
+<text x="225.0" y="100" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">工具返回 task_id 与 pending</text>
+<text x="225.0" y="132" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">本次调用结果与请求配对</text>
+<text x="225.0" y="164" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">模型处理其他消息</text>
+<text x="225.0" y="196" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">后台完成 → 新事件</text>
+<text x="225.0" y="228" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">按 task_id 恢复任务上下文</text>
+<rect x="470" y="20" width="410" height="275" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="470" y="20" width="410" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="675.0" y="53" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">模型原生异步工具</text>
+<text x="675.0" y="100" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">声明工具 async: true</text>
+<text x="675.0" y="132" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">工具执行期间模型继续工作</text>
+<text x="675.0" y="164" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">返回结果关联原始 call_id</text>
+<text x="675.0" y="196" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">结果接入最新响应状态</text>
+<text x="675.0" y="228" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">模型综合新结果继续决策</text>
+<rect x="20" y="340" width="860" height="150" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="20" y="340" width="860" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="450.0" y="373" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">场地查询：执行期间接收用户更新</text>
+<text x="450.0" y="420" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">初始条件：预算 2000 元、20 人</text>
+<text x="450.0" y="452" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">A：1800 元 / 30 人 · B：900 元 / 12 人 · C：600 元 / 8 人</text>
+<path d="M 450 490 L 450 510 L 225 510 L 225 530" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M 450 510 L 675 510 L 675 530" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="20" y="530" width="410" height="145" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="20" y="530" width="410" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="225.0" y="563" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">查询尚未完成</text>
+<text x="225.0" y="610" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">后台继续查询场地</text>
+<text x="225.0" y="642" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">前台整理议程与准备清单</text>
+<rect x="470" y="530" width="410" height="145" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="470" y="530" width="410" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="675.0" y="563" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">用户中途引导</text>
+<text x="675.0" y="610" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">更新：预算 1000 元、10 人</text>
+<text x="675.0" y="642" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">记录更新来源与接入状态</text>
+<path d="M 225 675 L 225 710 L 675 710 L 675 675" fill="none" stroke="#333333" stroke-width="1.8"/>
+<path d="M 450 710 L 450 750" fill="none" stroke="#333333" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="20" y="750" width="860" height="150" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<rect x="20" y="750" width="860" height="48" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
+<text x="450.0" y="783" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="23" font-weight="700" fill="#292929">结果与更新共同进入决策</text>
+<text x="450.0" y="830" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">按初始条件可选 A；按新条件选择 B</text>
+<text x="450.0" y="862" text-anchor="middle" font-family="Noto Sans CJK SC,Source Han Sans CN,Microsoft YaHei,sans-serif" font-size="20" font-weight="400" fill="#292929">运行时管理工具状态；模型采用更新后的任务条件</text>
 </svg>

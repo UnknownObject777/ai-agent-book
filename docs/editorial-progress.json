@@ -900,7 +900,78 @@
       ]
     },
     "chapter6": {
-      "status": "pending"
+      "status": "ready_for_author_review",
+      "completed_sections": [
+        "开篇、模态与触发时机",
+        "异步基本概念、OpenClaw与PineClaw案例",
+        "事件触发工具、用户沟通、虚拟身份与隔离执行环境",
+        "结构化事件、取消/队列/并行策略及紧急度路由",
+        "同步协议适配、任务句柄、批量事件状态",
+        "实验6-1及6-2方法与实际证据范围",
+        "原生异步与中途引导、异步可靠性、实验6-3",
+        "语音开篇、三类交互时序、级联与流式感知、实验6-4/6-5",
+        "Omni与自级联对照、实验6-6",
+        "全双工：Moshi、交互模型微轮次、GPT-Live后台委派",
+        "认知时序三方案、MGRD/MPS、模型升级与Pine案例",
+        "控制标记、参考语音库、实验6-7",
+        "Computer Use循环、三类工具、三种定位路线与坐标映射",
+        "实验6-8/6-9按各自实际天气查询路径书写",
+        "AOI动态观测与消融解释",
+        "Computer Use世界模型、Photon-1",
+        "移动端手势、接口与生态协作"
+      ],
+      "preserved": [
+        "Cron表达式、通话身份验证/三方通话/决策确认",
+        "一次性与周期定时、后台输出监控、外部事件通道",
+        "多渠道通知、虚拟电脑与手机、VNC/RDP、CSV共享存储过程"
+      ],
+      "localized_corrections": [
+        "同步/异步与并行执行区分",
+        "上下文与观测空间、工具与动作空间边界",
+        "外部Webhook能力核对；示意工具名与产品事实分开",
+        "虚拟化的隔离范围由权限、挂载、网络与凭证共同决定"
+      ],
+      "checks": [
+        "修改段禁用句式与关键技术项检查",
+        "Markdown渲染、脚注引用存在性、git diff --check",
+        "6-2运行器源码核对：四场景由确定性脚本调度真实进程；模型路径待单独评估",
+        "6-2 manifest产物：1项哈希一致，异常[['artifacts/scenario_4_report.json', 'changed'], ['protocol.json', 'changed'], ['scenarios/async_command_and_immediate_question.json', 'changed'], ['scenarios/interrupt_terminates_and_recovers.json', 'changed'], ['scenarios/parallel_progress_threshold_cancellation.json', 'changed'], ['scenarios/queued_batch_to_japanese_html.json', 'changed'], ['summary.json', 'changed']]",
+        "事件章节关键字段与示例、禁用句式、Markdown、脚注检查通过",
+        "实验6-3离线重放15/15与10项验收测试通过",
+        "实验6-3独立复算33项manifest哈希一致",
+        "核对OpenAI异步工具与steering官方文档，保留call_id及实际执行职责",
+        "本轮关键技术项、Markdown渲染、脚注及git diff --check通过",
+        "读取四份级联记录：localwhisper_ark_fish完成，另外三组未完成；按实际组件写正文",
+        "读取6-5 acceptance：13次前缀、8.4至11.3秒、停顿分段与噪声误报保留",
+        "VAD与端点判断、音频建模与双工时序区分；段落/脚注/Markdown检查",
+        "实验6-6读取正式四例汇总与11项验收记录，保留数字误听及快慢语速实例",
+        "Moshi论文、Thinking Machines官方微轮次和后台委派说明核对",
+        "本轮段落关键项、Markdown、脚注和git diff --check",
+        "MPS论文与Step-Audio R1.1官方模型卡核对：构思/表达双模块，修正单模型统一概括",
+        "Pine引用页当前榜名为τ²-bench voice，正文按厂商公开报告归属",
+        "控制标记解析器读取，24条参考音哈希核查：{'match': 24}",
+        "本轮Markdown、脚注、禁用句式与关键技术保留检查",
+        "保留四元素具体示例、分辨率与中心坐标手算",
+        "SoM论文、Anthropic动作接口与缩放实现、browser-use DOM来源核对",
+        "本轮正文Markdown、脚注、关键项与禁用句式检查",
+        "AOI原论文三组件与消融核对；Photon-1公司资料区分状态模拟和动作学习",
+        "保留VS Code案例、潜在token、GPU小时、移动手势和作者商业判断",
+        "本轮Markdown、脚注、关键项与禁用句式检查",
+        "23条脚注、14个实验、14幅图及12道题答案配对通过；16份Markdown渲染与git diff --check通过",
+        "14幅SVG逐图视觉检查、灰阶/最小字号与重复生成一致性检查通过；修复图6-1/6-5连线",
+        "Computer Use两组最终截图与正文数据来源抽查；哈希复核结果写入EXPERIMENT_LEDGER",
+        "段落教学改写及技术保留复审：事件JSON、异步状态、四个子进程场景、场地表、语音标记、DOM四元素、坐标计算、五个机器人技能及三组控制策略保留",
+        "未重新运行付费模型或真实机械臂实验；归档记录未重写"
+      ],
+      "pending": [
+        "作者审阅与修改意见",
+        "实验原始材料缺失/哈希变化及6-11控制器阶段转换问题见README和台账；未据此新增性能结论",
+        "最终PDF与印刷版式检查"
+      ],
+      "iteration_notes": [
+        "机器人部分及本章小结完成首轮教学式改写：保留任务、控制层级、技能接口、动作分块、世界模型与域随机化；按实现校正模拟范围。6-11 阶段切换问题记入 README 与 ledger，历史证据不改写。机器人三个项目共10项产物哈希通过。图6-1至6-5已重绘，图6-2/6-3预览检查后修正箭头与顺序。",
+        "图6-6至6-14已重绘，14幅图均通过SVG解析、灰阶与最小字号检查及渲染。图6-7/8/9/13已视觉复核。12道思考题与参考答案全部重写并同步。语音与Computer Use产物只读哈希检查完成，缺失或变化记录写入README与ledger；未重写历史证据。"
+      ]
     },
     "chapter7": {
       "status": "pending"
@@ -921,7 +992,7 @@
       "status": "pending"
     }
   },
-  "next": "第6章：对照原稿和编辑稿逐段修改，保留事件队列、多模态与Computer Use等技术例子，同步图示和实验。",
+  "next": "提交第6章并更新PR；开始第7章评估的原稿、实验与图示对照改写。",
   "publishing": {
     "status": "available",
     "pr": "https://github.com/bojieli/ai-agent-book/pull/1173",
@@ -932,7 +1003,8 @@
       "chapter2",
       "chapter3",
       "chapter4",
-      "chapter5"
+      "chapter5",
+      "chapter6"
     ]
   }
 }
