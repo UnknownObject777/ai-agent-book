@@ -193,9 +193,22 @@
       ]
     },
     "chapter10": {
-      "pass1": "pending",
-      "pass2": "pending",
-      "author_voice": "pending"
+      "pass1": "complete",
+      "pass2": "complete",
+      "author_voice": "compared_with_original_and_restored",
+      "method": "第一遍逐句审读并对照原稿主张；第二遍重新通读全部正文、接口字段、表格、实验、脚注和思考题，并检查后记开头的衔接",
+      "changes": [
+        "保留群体智能与组织能力的作者判断",
+        "恢复Loop工程中的验证瓶颈、工程师设计循环的主张及Pine AI实践先于命名的背景",
+        "恢复管理Agent与管理技术团队的类比和技术基本功的判断",
+        "保留消息信封、状态查询、取消传播、并发登记和跨组织协议等技术细节",
+        "改善角色转换、工作流、独立上下文与社会模拟之间的表达"
+      ],
+      "checks": [
+        "保留11幅图、6个实验和11道思考题",
+        "保留Phone/Computer字段与任务状态、Go生命周期例子、工作流接口及实验数据",
+        "未复核实验原始记录"
+      ]
     },
     "afterword": {
       "pass1": "complete",
@@ -250,5 +263,5 @@
   },
   "editor_feedback_audit": "前言及第一章已按13项编辑反馈审读；后续章节待逐章复审，实验原始记录不再复核",
   "author_voice_candidates": "/tmp/agent-book-author-voice-candidates.json",
-  "next": "第10章与参考答案两遍逐句审读；最终PDF重编译和全部实页检查"
+  "next": "参考答案两遍逐句审读；最终PDF重编译、全部实页检查和编辑13项意见全书核对"
 }
