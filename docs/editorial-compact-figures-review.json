@@ -327,5 +327,57 @@
     "issues": [],
     "technical_text_note": "112 幅图与基线逐字核对，明确列出的图外说明删改除外；清单见 editorial-figure-text-changes.json。"
   },
-  "macos_pdf": "pending"
+  "macos_pdf": {
+    "status": "complete",
+    "run_url": "https://github.com/bojieli/ai-agent-book/actions/runs/37777151792",
+    "pages": 297,
+    "bytes": 10397405,
+    "sha256": "2292194373ad117a51afff11d1cb4d3868543b08ad29d25f6a3eb339905a1f0e",
+    "caption_count": 114,
+    "missing_captions": [],
+    "outside_page_text": [],
+    "unembedded_fonts": [],
+    "font_names": [
+      "ArialUnicodeMS",
+      "LMRoman10-Regular",
+      "LMRoman6-Regular",
+      "LMRoman7-Italic",
+      "LMRoman7-Regular",
+      "LMRoman8-Italic",
+      "LMRoman8-Regular",
+      "LMRoman9-Regular",
+      "LMRomanDemi10-Regular",
+      "LMSans9-Regular",
+      "LatinModernMath-Regular",
+      "Menlo-Bold",
+      "Menlo-Regular",
+      "STHeitiSC-Light",
+      "STHeitiSC-Medium",
+      "STSongti-SC-Regular",
+      "SourceHanSansCN-Bold",
+      "SourceHanSansCN-Regular"
+    ],
+    "missing_glyph_warnings": 0,
+    "overfull_warnings": 0,
+    "key_figure_pages": {
+      "图1-4": 22,
+      "图1-5": 25,
+      "图1-6": 32,
+      "图2-1": 38,
+      "图5-1": 127,
+      "图5-2": 128,
+      "图5-3": 134,
+      "图5-5": 142,
+      "图8-16": 242,
+      "图10-9": 284
+    },
+    "artifact_url": "https://github.com/bojieli/ai-agent-book/actions/runs/37777151792/artifacts/11551351085",
+    "visual_review": "全书图示缩略图复核；最终 PDF 图5-1、5-2、5-3、8-16、10-9逐页检查。",
+    "printed_review_pages": {
+      "图5-1": 119,
+      "图5-2": 120,
+      "图5-3": 126
+    }
+  },
+  "build_source_commit": "0ef6a6d077280c9a3def6688e3a7686c99eecd5f"
 }
