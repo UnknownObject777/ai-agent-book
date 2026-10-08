@@ -43,6 +43,8 @@
 
 中文正文源码位于 [`book/`](book/)；英文/西班牙语/印度尼西亚语/阿拉伯语/繁體中文（台灣）/俄语/泰米尔/越南语/日语/土耳其语/韩语/匈牙利语/希伯来语/葡萄牙语（巴西）版本为社区贡献（可能滞后于中文原版），分别位于 [`book-en/`](book-en/)、[`book-es/`](book-es/)、[`book-id/`](book-id/)、[`book-ar/`](book-ar/)、[`book-zhtw/`](book-zhtw/)、[`book-ru/`](book-ru/)、[`book-ta/`](book-ta/)、[`book-vi/`](book-vi/)、[`book-ja/`](book-ja/)、[`book-tr/`](book-tr/)、[`book-ko/`](book-ko/)、[`book-hu/`](book-hu/)、[`book-he/`](book-he/)、[`book-ptbr/`](book-ptbr/)。
 
+> 想先用简明问题链路建立全书心智模型，可读[AI Agent 十章 ELI5 学习版](book/ELI5-学习版.md)；它是学习入口，原书正文和实验保持不变。
+
 <details>
 <summary><b>🔧 想自行编译 PDF / EPUB？</b>（PDF 需 pandoc / xelatex / ElegantBook）</summary>
 
