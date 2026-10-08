@@ -40,7 +40,7 @@ def local_model_tools():
 
 
 def context_example():
-    f = Figure('LLM 的上下文窗口', '北京天气示例：系统指令、天气工具定义、带调用ID的历史、当前推理和回答生成位置。', 885)
+    f = Figure('上下文窗口的构成概览', '北京天气示例：系统指令、天气工具定义、带调用ID的历史、当前推理和回答生成位置。', 885)
     f.box(20,20,795,825,'#ffffff')
     sections = [
         (35,120,'系统提示词（System Prompt）',[
@@ -144,7 +144,7 @@ def context_layout():
 
 
 def attention_example():
-    f = Figure('注意力权重与因果掩码', '四个语义单元示意：当前查询对各Key的权重为0.35、0.05、0.55、0.05；矩阵保留因果下三角。', 830)
+    f = Figure('注意力机制的直观理解', '四个语义单元示意：当前查询对各Key的权重为0.35、0.05、0.55、0.05；矩阵保留因果下三角。', 830)
     f.text(450,40,'① 当前查询与四个 Key',25,True)
     words=['北京','的','天气','怎么样']
     weights=[0.35,0.05,0.55,0.05]
@@ -179,7 +179,7 @@ def attention_example():
 
 
 def template_sequence():
-    f=Figure('Chat Template 将消息转换为 token 序列','保留北京天气示例与Qwen消息起止标记。',500)
+    f=Figure('Chat Template 的 Token 结构','保留北京天气示例与Qwen消息起止标记。',500)
     f.box(20,20,375,460)
     f.text(207,58,'结构化 API 消息',25,True)
     for y,role,body in [(100,'system','You are a helpful assistant.'),(220,'user','北京今天天气怎么样？'),(340,'assistant','待生成')]:
@@ -197,7 +197,7 @@ def template_sequence():
 
 
 def template_boundaries():
-    f=Figure('API 消息与模型输入的对应关系','两条消息经模板序列化，角色和起止标记界定边界，assistant标记后开始生成。',550)
+    f=Figure('API 消息到模型 Token 流的转换','两条消息经模板序列化，角色和起止标记界定边界，assistant标记后开始生成。',550)
     f.box(20,20,860,140)
     f.text(450,56,'API 消息',24,True)
     f.text(450,101,'{"role": "system", "content": "你是助手"}',22)
@@ -218,7 +218,7 @@ def template_boundaries():
 
 
 def prefix_reuse():
-    f=Figure('稳定前缀与 Prompt Cache','三次请求对比：共同系统指令和工具定义可复用；在最前部插入时间戳改变后续前缀。',600)
+    f=Figure('Prompt Cache：跨请求复用前缀的 KV Cache','三次请求对比：共同系统指令和工具定义可复用；在最前部插入时间戳改变后续前缀。',600)
     rows=[(20,'请求 1','System Prompt + Tools','user：天气如何？','首次处理（示例前缀：1200 token）','#ffffff'),
           (210,'请求 2','System Prompt + Tools','user：时间几点？','复用共同前缀','#dedede'),
           (400,'请求 3','10:30:45 + System Prompt + Tools','user：天气如何？','前缀改变，重新处理','#ffffff')]

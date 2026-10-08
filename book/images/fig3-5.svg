@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="150mm" height="158.33mm" viewBox="0 0 900 950" role="img" aria-labelledby="title desc">
-<title id="title">RAG 的检索、增强与生成</title><desc id="desc">退款问题经检索获得政策与操作片段，片段与问题共同构成模型输入，生成具体回答。</desc>
+<title id="title">RAG 查询流程：检索、增强与生成</title><desc id="desc">退款问题经检索获得政策与操作片段，片段与问题共同构成模型输入，生成具体回答。</desc>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#333333"/></marker></defs>
 <rect width="900" height="950" fill="#ffffff"/>
 <rect x="20" y="20" width="290" height="110" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>

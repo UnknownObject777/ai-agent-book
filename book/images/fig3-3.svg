@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="150mm" height="141.67mm" viewBox="0 0 900 850" role="img" aria-labelledby="title desc">
-<title id="title">Mem0 记忆更新与检索</title><desc id="desc">v2 在写入时比较和更新事实；v3 追加事实，在检索时结合语义、关键词、实体与时间背景。</desc>
+<title id="title">Mem0 记忆管理架构</title><desc id="desc">v2 在写入时比较和更新事实；v3 追加事实，在检索时结合语义、关键词、实体与时间背景。</desc>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#333333"/></marker></defs>
 <rect width="900" height="850" fill="#ffffff"/>
 <rect x="20" y="20" width="410" height="65" rx="6" fill="#dedede" stroke="#333333" stroke-width="1.8"/>
