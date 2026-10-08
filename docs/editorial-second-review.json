@@ -136,9 +136,23 @@
       ]
     },
     "chapter7": {
-      "pass1": "pending",
-      "pass2": "pending",
-      "author_voice": "pending"
+      "pass1": "complete",
+      "pass2": "complete",
+      "author_voice": "compared_with_original_and_restored",
+      "changes": [
+        "保留技术奇观与为未来模型开发产品的作者表达",
+        "恢复生产系统优先积累轨迹前缀回归的强判断及原因",
+        "恢复提示词变更按代码变更运行回归的主张",
+        "保留完整telecom案例、Rubric、统计公式、成本表和失败归因例子",
+        "改善评估结果到修复决策、评估到后训练的衔接",
+        "沿用现有实验材料，不追查或复核原始记录"
+      ],
+      "method": "第一遍逐句审读并对照原稿判断；第二遍重新通读正文、案例、表格、公式、实验、脚注和思考题，并检查第8章开头的衔接",
+      "checks": [
+        "保留图片引用、实验标题、思考题和统计公式",
+        "区分一次只调用一个工具的规则与调用顺序，补清失败线路案例的因果关系",
+        "未复核实验原始记录，未追查缺失文件"
+      ]
     },
     "chapter8": {
       "pass1": "pending",
@@ -208,5 +222,5 @@
   },
   "editor_feedback_audit": "前言及第一章已按13项编辑反馈审读；后续章节待逐章复审，实验原始记录不再复核",
   "author_voice_candidates": "/tmp/agent-book-author-voice-candidates.json",
-  "next": "第7—10章与参考答案两遍逐句审读；最终PDF重编译和全部实页检查"
+  "next": "第8—10章与参考答案两遍逐句审读；最终PDF重编译和全部实页检查"
 }
