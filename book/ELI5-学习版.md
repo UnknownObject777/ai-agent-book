@@ -18,6 +18,10 @@
 
 原章：[AI Agent 入门](./chapter1.md) · [配套实验](../chapter1/README.md)
 
+![Agent 的受控反馈循环](../diagrams/agent-feedback-loop.png)
+
+图源：[可编辑 Excalidraw 文件](../diagrams/agent-feedback-loop.excalidraw)
+
 ## 第 2 章：上下文工程
 
 **一句话概括：** 上下文工程是在有限输入空间里，安排模型完成当前任务所需的信息。
@@ -41,6 +45,10 @@
 - **记住：** 记忆要可更新、可删除；RAG 解决“找资料”，不自动保证“理解正确”；保留来源和权限边界。
 
 原章：[用户记忆和知识库](./chapter3.md) · [相关实验](../chapter3/README.md)
+
+![RAG 从检索证据到生成回答](../diagrams/rag-evidence-pipeline.png)
+
+图源：[可编辑 Excalidraw 文件](../diagrams/rag-evidence-pipeline.excalidraw)
 
 ## 第 4 章：工具
 
